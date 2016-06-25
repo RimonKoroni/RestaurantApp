@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */; };
+		185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */; };
+		185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */; };
+		185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A81D1F2116009AFFAB /* Labell.swift */; };
 		18B3AE321D1B0F8A00389895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3AE311D1B0F8900389895 /* AppDelegate.swift */; };
 		18B3AE371D1B0F8A00389895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B3AE351D1B0F8A00389895 /* Main.storyboard */; };
 		18B3AE3C1D1B0F8A00389895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B3AE3B1D1B0F8A00389895 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = VLADIMIR.TTF; path = "../../../../../../Volumes/VMware Shared Folders/iOS App Development with Swift Essential Training {AceMerlin}/Exercise Files/Restaurant app Images/VLADIMIR.TTF"; sourceTree = "<group>"; };
+		185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonLabel.swift; path = Extentions/ButtonLabel.swift; sourceTree = "<group>"; };
+		185EF3A81D1F2116009AFFAB /* Labell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Labell.swift; path = Extentions/Labell.swift; sourceTree = "<group>"; };
 		18B3AE2E1D1B0F8900389895 /* RestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B3AE311D1B0F8900389895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B3AE361D1B0F8A00389895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 				184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */,
 			);
 			name = FoodCell;
+			sourceTree = "<group>";
+		};
+		185EF3A41D1F201C009AFFAB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		18B3AE251D1B0F8900389895 = {
@@ -139,6 +153,8 @@
 		18B3AE491D1B101700389895 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */,
+				185EF3A81D1F2116009AFFAB /* Labell.swift */,
 			);
 			name = Extention;
 			sourceTree = "<group>";
@@ -162,6 +178,7 @@
 		18B3AE4C1D1B103200389895 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				185EF3A41D1F201C009AFFAB /* Fonts */,
 				18B3AE5A1D1B139200389895 /* RestaurantApp.xcdatamodeld */,
 				18B3AE521D1B122D00389895 /* Info.plist */,
 				18B3AE511D1B11E700389895 /* RestaurantApp-Bridging-Header.h */,
@@ -258,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */,
 				18B3AE531D1B122D00389895 /* Info.plist in Resources */,
 				18B3AE3F1D1B0F8A00389895 /* LaunchScreen.storyboard in Resources */,
 				18B3AE641D1B150000389895 /* Localization.strings in Resources */,
@@ -322,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */,
+				185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */,
 				18B3AE591D1B12D900389895 /* StartViewController.swift in Sources */,
 				18B3AE761D1B3F8000389895 /* FoofTypesViewController.swift in Sources */,
 				18B3AE741D1B36FB00389895 /* dropDownMenuCell.swift in Sources */,

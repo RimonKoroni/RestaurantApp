@@ -17,7 +17,7 @@ class FoodCollectionViewCell : UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.foodImage.layer.masksToBounds = true
-        self.foodImage.layer.cornerRadius = 75
+        self.foodImage.layer.cornerRadius = 60
     }
     
 }

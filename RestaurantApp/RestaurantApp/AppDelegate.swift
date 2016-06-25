@@ -11,12 +11,13 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        userDefaults.setValue(NSUserDefaults.standardUserDefaults().valueForKey("AppleLanguages")![0], forKey: "lang")
         return true
     }
 
