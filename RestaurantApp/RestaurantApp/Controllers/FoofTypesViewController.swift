@@ -11,6 +11,8 @@ import UIKit
 
 class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var tableNumber: UILabel!
+    
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var foodTypes : [String] = []
     var lang : String!
