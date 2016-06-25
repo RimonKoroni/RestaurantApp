@@ -15,9 +15,6 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var langImage: UIImageView!
     @IBOutlet weak var languageTableView: UITableView!
     
-    
-    
-    
     var languages : [String]!
     
     override func viewDidLoad() {
