@@ -15,7 +15,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var langImage: UIImageView!
     @IBOutlet weak var languageTableView: UITableView!
     
-    //Rimon
+    
     
     var languages : [String]!
     
