@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18074B321D207C060090098A /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18074B311D207C060090098A /* FoodDetailsViewController.swift */; };
 		184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */; };
+		1858F8471D205FA8002FE25A /* vrinda.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1858F8461D205F80002FE25A /* vrinda.ttf */; };
 		185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */; };
 		185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */; };
 		185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A81D1F2116009AFFAB /* Labell.swift */; };
@@ -28,7 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18074B311D207C060090098A /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		1858F8461D205F80002FE25A /* vrinda.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = vrinda.ttf; sourceTree = "<group>"; };
 		185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = VLADIMIR.TTF; path = "../../../../../../Volumes/VMware Shared Folders/iOS App Development with Swift Essential Training {AceMerlin}/Exercise Files/Restaurant app Images/VLADIMIR.TTF"; sourceTree = "<group>"; };
 		185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonLabel.swift; path = Extentions/ButtonLabel.swift; sourceTree = "<group>"; };
 		185EF3A81D1F2116009AFFAB /* Labell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Labell.swift; path = Extentions/Labell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		185EF3A41D1F201C009AFFAB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1858F8461D205F80002FE25A /* vrinda.ttf */,
 				185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */,
 			);
 			name = Fonts;
@@ -137,6 +142,7 @@
 			children = (
 				18B3AE581D1B12D900389895 /* StartViewController.swift */,
 				18B3AE751D1B3F8000389895 /* FoofTypesViewController.swift */,
+				18074B311D207C060090098A /* FoodDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1858F8471D205FA8002FE25A /* vrinda.ttf in Resources */,
 				185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */,
 				18B3AE531D1B122D00389895 /* Info.plist in Resources */,
 				18B3AE3F1D1B0F8A00389895 /* LaunchScreen.storyboard in Resources */,
@@ -343,6 +350,7 @@
 				185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */,
 				185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */,
 				18B3AE591D1B12D900389895 /* StartViewController.swift in Sources */,
+				18074B321D207C060090098A /* FoodDetailsViewController.swift in Sources */,
 				18B3AE761D1B3F8000389895 /* FoofTypesViewController.swift in Sources */,
 				18B3AE741D1B36FB00389895 /* dropDownMenuCell.swift in Sources */,
 				18B3AE321D1B0F8A00389895 /* AppDelegate.swift in Sources */,
