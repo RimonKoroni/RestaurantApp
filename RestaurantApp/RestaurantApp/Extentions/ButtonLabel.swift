@@ -37,8 +37,17 @@ public override func awakeFromNib() {
         
     }
     else {
-         let font = UIFontDescriptor.init(name: "Vladimir Script", size: (self.titleLabel?.font.pointSize)!)
-        self.titleLabel?.font = UIFont.init(descriptor: font, size: (self.titleLabel?.font.pointSize)!)
+        if (self.tag == 1) {
+            
+            let font = UIFontDescriptor.init(name: "Vrinda", size: (self.titleLabel?.font.pointSize)!)
+            self.titleLabel?.font = UIFont.init(descriptor: font, size: (self.titleLabel?.font.pointSize)!)
+            //print (self)
+            //print (self.font.familyName)
+        } else {
+            let font = UIFontDescriptor.init(name: "Vladimir Script", size: (self.titleLabel?.font.pointSize)!)
+            self.titleLabel?.font = UIFont.init(descriptor: font, size: (self.titleLabel?.font.pointSize)!)
+        }
+        
         //print (self)
         //print (self.titleLabel!.font.familyName)
         

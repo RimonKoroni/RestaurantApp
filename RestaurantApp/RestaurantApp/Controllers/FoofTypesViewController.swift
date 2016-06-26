@@ -54,6 +54,11 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
         
     }
 
+    @IBAction func goToHome(sender: AnyObject) {
+        let startViewController = storyboard!.instantiateViewControllerWithIdentifier("StartViewController") as! StartViewController
+        self.presentViewController(startViewController, animated:true, completion:nil)
+    }
+    
     /**
      The addLeftNavItemOnView function is used for add backe button to the navigation bar.
      */

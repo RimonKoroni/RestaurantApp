@@ -40,11 +40,16 @@ extension UILabel {
             
         }
         else {
+            if (self.tag == 1) {
             //self.attributedText = NSMutableAttributedString(string: self.text!, attributes: [NSFontAttributeName:UIFont(name: "Century Gothic", size: self.font.pointSize)!])
-            let font = UIFontDescriptor.init(name: "Vladimir Script", size: self.font.pointSize)
-            self.font = UIFont.init(descriptor: font, size: self.font.pointSize)
+                let font = UIFontDescriptor.init(name: "Vrinda", size: self.font.pointSize)
+                self.font = UIFont.init(descriptor: font, size: self.font.pointSize)
             //print (self)
             //print (self.font.familyName)
+            } else {
+                let font = UIFontDescriptor.init(name: "Vladimir Script", size: self.font.pointSize)
+                self.font = UIFont.init(descriptor: font, size: self.font.pointSize)
+            }
             
         }
         
