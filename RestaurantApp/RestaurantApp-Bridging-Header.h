@@ -10,6 +10,6 @@
 #define RestaurantApp_Bridging_Header_h
 
 
-
+#import "iCarousel.h"
 
 #endif /* RestaurantApp_Bridging_Header_h */

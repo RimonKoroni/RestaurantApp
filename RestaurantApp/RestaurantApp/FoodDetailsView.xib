@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodDetailsView" customModule="RestaurantApp" customModuleProvider="target">
+            <connections>
+                <outlet property="background" destination="HfM-hF-IlS" id="oTT-aW-XS3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pWU-zV-TUA">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-hF-IlS">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <color key="backgroundColor" red="0.38823529410000002" green="0.0" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.38823529410000002" green="0.0" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="HfM-hF-IlS" firstAttribute="leading" secondItem="pWU-zV-TUA" secondAttribute="leading" id="MBM-5m-j94"/>
+                <constraint firstAttribute="trailing" secondItem="HfM-hF-IlS" secondAttribute="trailing" id="Xiv-Md-8jX"/>
+                <constraint firstItem="HfM-hF-IlS" firstAttribute="top" secondItem="pWU-zV-TUA" secondAttribute="top" id="kcI-4e-bW8"/>
+                <constraint firstAttribute="bottom" secondItem="HfM-hF-IlS" secondAttribute="bottom" id="wfT-rL-ET8"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <point key="canvasLocation" x="329" y="301"/>
+        </view>
+    </objects>
+</document>

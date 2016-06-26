@@ -24,7 +24,7 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
         self.navigationController?.navigationBar.setBackgroundImage(navigationBarBackgroundImage, forBarMetrics: .Default)
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
-        
+        self.title = NSLocalizedString("foodTypeTitle", comment: "")
     }
     
  
@@ -51,6 +51,7 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        performSegueWithIdentifier("showFoodsDetailsSegue", sender: self)
         
     }
 
