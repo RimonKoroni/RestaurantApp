@@ -11,11 +11,14 @@ import UIKit
 
 class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarouselDataSource {
     
+    @IBOutlet weak var carousel: iCarousel!
+    
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
+        carousel.type = .Linear
     }
     
     @IBAction func goToMenu(sender: AnyObject) {
@@ -23,12 +26,24 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return 4
+        return 10
     }
     
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
-        return UIView()
+        let view = FoodDetailsView()
+        view.frame = self.carousel.bounds
+        return view
+        
+    }
+    
+    func carousel(carousel: iCarousel, valueForOption option: iCarouselOption, withDefault value: CGFloat) -> CGFloat
+    {
+        if (option == .Spacing)
+        {
+            return value * 1.1
+        }
+        return value
     }
     
     
