@@ -1,71 +1,64 @@
 //
-//  FoofTypesViewController.swift
+//  NotificationViewController.swift
 //  RestaurantApp
 //
-//  Created by SSS on 6/23/16.
+//  Created by SSS on 6/30/16.
 //  Copyright © 2016 SSS. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
-class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
+class NotificationViewController : UIViewController , UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tableNumber: UILabel!
+    @IBOutlet weak var numberOfNotificationView: UIView!
+    @IBOutlet weak var notificationCount: UILabel!
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
-    var foodTypes : [String] = []
     var lang : String!
-    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    var fromMenu : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let navigationBarBackgroundImage = UIImage(named: "navigationBar");
         self.navigationController?.navigationBar.setBackgroundImage(navigationBarBackgroundImage, forBarMetrics: .Default)
+
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
-        self.title = NSLocalizedString("foodTypeTitle", comment: "")
+        numberOfNotificationView.layer.cornerRadius = 10
+        
+        self.title = NSLocalizedString("notificationTitle", comment: "")
         self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Vladimir Script", size: 50)!]
     }
     
- 
+    @IBAction func goToHome(sender: AnyObject) {
+        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+        self.presentViewController(adminStartViewController, animated:true, completion:nil)
+    }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("foodCell", forIndexPath:indexPath) as! FoodCollectionViewCell
-        
-        cell.foodTypeName.text = "Fishes"
-        cell.foodImage.image = UIImage(named: "foodType")
+        let cell = tableView.dequeueReusableCellWithIdentifier("notificationCell") as! NotificationCell
         
         return cell
-    }
-    
-    
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        performSegueWithIdentifier("showFoodsDetailsSegue", sender: self)
         
     }
-
-    @IBAction func goToHome(sender: AnyObject) {
-        let startViewController = storyboard!.instantiateViewControllerWithIdentifier("StartViewController") as! StartViewController
-        self.presentViewController(startViewController, animated:true, completion:nil)
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("goToOrderViewControllerSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "moveFromMenuToCartSegue" {
-            let destinationViewController = segue.destinationViewController as! CartViewController
-            destinationViewController.fromMenu = true
-        }
+    
     }
     
     /**
@@ -99,9 +92,8 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
      The leftNavButtonClick function is an action which triggered when user press on the backButton.
      */
     func leftNavButtonClick(sender:UIButton!) {
-        let startViewController = storyboard!.instantiateViewControllerWithIdentifier("StartViewController") as! StartViewController
-        self.presentViewController(startViewController, animated:true, completion:nil)
+        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+        self.presentViewController(adminStartViewController, animated:true, completion:nil)
     }
 
-    
 }

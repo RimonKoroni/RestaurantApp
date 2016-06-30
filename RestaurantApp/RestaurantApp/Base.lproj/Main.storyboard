@@ -220,6 +220,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RLb-j2-YvY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.75686274509999996" green="0.47058823529999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -375,7 +376,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txy-8a-fxm">
                                                 <rect key="frame" x="0.0" y="0.0" width="121" height="102"/>
                                                 <connections>
-                                                    <segue destination="b19-R8-qhp" kind="show" id="V3s-L8-HIh"/>
+                                                    <segue destination="b19-R8-qhp" kind="show" identifier="moveFromMenuToCartSegue" id="V3s-L8-HIh"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -682,7 +683,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCa-cf-g4A">
                                         <rect key="frame" x="0.0" y="0.0" width="748" height="635"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="200" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-zU-t3A">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="200" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-zU-t3A">
                                                 <rect key="frame" x="0.0" y="0.0" width="748" height="635"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1175,6 +1176,6 @@
         <image name="rejectCartItem" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5BG-JL-Ggg"/>
+        <segue reference="V3s-L8-HIh"/>
     </inferredMetricsTieBreakers>
 </document>

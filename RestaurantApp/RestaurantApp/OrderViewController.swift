@@ -9,29 +9,30 @@
 import Foundation
 import UIKit
 
-class CartViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDataSource {
     
-    @IBOutlet weak var totalPrice: UILabel!
-    @IBOutlet weak var tableNumber: UILabel!
+
+    @IBOutlet weak var notificationView: UIView!
+    @IBOutlet weak var notificationCount: UILabel!
     
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var fromMenu : Bool = false
+    //var fromNotification : Bool = false
     
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
-        self.title = NSLocalizedString("cartTitle", comment: "")
+        notificationView.layer.cornerRadius = 10
+        self.title = NSLocalizedString("notificationTitle", comment: "")
     }
     
+    @IBAction func goToNotification(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 
     @IBAction func goToMenu(sender: AnyObject) {
-        if fromMenu {
-            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
-            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
-        } else {
-            self.navigationController?.popViewControllerAnimated(true)
-        }
+        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+        self.presentViewController(adminStartViewController, animated:true, completion:nil)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -44,15 +45,12 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cartCell") as! CartCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("orderCell") as! OrderCell
         
         return cell
         
     }
     
-    @IBAction func rejectOrder(sender: AnyObject) {
-        
-    }
     
     
     @IBAction func acceptOrder(sender: AnyObject) {
@@ -90,12 +88,8 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
      The leftNavButtonClick function is an action which triggered when user press on the backButton.
      */
     func leftNavButtonClick(sender:UIButton!) {
-        if fromMenu {
-            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
-            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
-        } else {
-            self.navigationController?.popViewControllerAnimated(true)
-        }
         
+        self.navigationController?.popViewControllerAnimated(true)
+
     }
 }

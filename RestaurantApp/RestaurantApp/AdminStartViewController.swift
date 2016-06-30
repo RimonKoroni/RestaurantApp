@@ -8,8 +8,8 @@
 
 import UIKit
 
-class StartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class AdminStartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var langImage: UIImageView!
@@ -24,14 +24,14 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         languages = ["US", "TR", "AR"]
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         self.languageTableView.layer.cornerRadius = 10
     }
-
-
+    
+    
     @IBAction func changeLang(sender: AnyObject) {
         self.languageTableView.hidden = false
         self.languageTableView.alpha = 0
@@ -43,8 +43,8 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
-    @IBAction func showMenu(sender: AnyObject) {
-        
+
+    @IBAction func startButton(sender: AnyObject) {
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
