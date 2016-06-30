@@ -217,9 +217,12 @@
                 <navigationController id="KT5-Xr-RIw" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RLb-j2-YvY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RLb-j2-YvY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="CQu-NM-QgP" kind="relationship" relationship="rootViewController" id="VEd-oG-vea"/>
