@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  RestaurantApp
+
+  Created by SSS on 6/30/16.
+  Copyright © 2016 SSS. All rights reserved.
+*/
+
+"foodTypeTitle" = "Menü";
+"cartTitle" = "Sepeti";
