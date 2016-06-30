@@ -22,8 +22,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>TableNumber</key>
-	<integer>0</integer>
 	<key>UIAppFonts</key>
 	<array>
 		<string>VLADIMIR.TTF</string>
