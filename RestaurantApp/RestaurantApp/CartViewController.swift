@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var tableNumber: UILabel!
     
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
@@ -22,6 +26,31 @@ class CartViewController: UIViewController {
 
     @IBAction func goToMenu(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("cartCell") as! CartCell
+        
+        return cell
+        
+    }
+    
+    @IBAction func rejectOrder(sender: AnyObject) {
+        
+    }
+    
+    
+    @IBAction func acceptOrder(sender: AnyObject) {
+        
     }
     
     /**

@@ -16,6 +16,8 @@ class FoodCollectionViewCell : UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.foodImage.layer.borderColor = UIColor.whiteColor().CGColor
+        self.foodImage.layer.borderWidth = 2
         self.foodImage.layer.masksToBounds = true
         self.foodImage.layer.cornerRadius = 60
     }
