@@ -76,7 +76,14 @@ import UIKit
     }
     
     @IBAction func addToCart(sender: AnyObject) {
-        
+        let data = NSUserDefaults.standardUserDefaults().objectForKey("carts") as? NSData
+        var carts = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! [Cart]
+        let cart = Cart(foodId: self.food.id, count: self.countNumber, foodName: self.food.getName(lang), foodPrice: self.food.price)
+        carts.append(cart)
+        let cartsData = NSKeyedArchiver.archivedDataWithRootObject(carts)
+        userDefaults.setObject(cartsData, forKey: "carts")
+        userDefaults.synchronize()
+
     }
     
     func setup() {

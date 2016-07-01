@@ -17,12 +17,13 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var fromMenu : Bool = false
-    var carts : [Cart]!
+    var carts : [Cart]! = []
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         self.title = NSLocalizedString("cartTitle", comment: "")
-        self.carts = userDefaults.valueForKey("carts") as! [Cart]
+        let data = NSUserDefaults.standardUserDefaults().objectForKey("carts") as? NSData
+        self.carts = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! [Cart]
         let tableNumber = self.userDefaults.valueForKey("tableNumber") as! Int
         self.tableNumber.text = String(tableNumber)
     }
@@ -42,13 +43,13 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.carts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cartCell") as! CartCell
-        
+        cell.cart = self.carts[indexPath.row]
         return cell
         
     }

@@ -32,6 +32,10 @@ class Food {
         self.price = json["price"].double
     }
     
+    init() {
+        
+    }
+    
     func getName(lang : String) -> String {
         if lang.containsString("ar") {
             return self.arabicName

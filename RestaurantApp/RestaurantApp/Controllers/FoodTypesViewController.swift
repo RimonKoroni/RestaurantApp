@@ -25,7 +25,9 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
         self.navigationController?.navigationBar.setBackgroundImage(navigationBarBackgroundImage, forBarMetrics: .Default)
         lang = userDefaults.valueForKey("lang") as! String
         let carts : [Cart] = []
-        userDefaults.setValue(carts, forKey: "carts")
+        let cartsData = NSKeyedArchiver.archivedDataWithRootObject(carts)
+        userDefaults.setObject(cartsData, forKey: "carts")
+        userDefaults.synchronize()
         addLeftNavItemOnView ()
         self.title = NSLocalizedString("foodTypeTitle", comment: "")
         self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Vladimir Script", size: 50)!]

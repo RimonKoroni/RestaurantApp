@@ -15,6 +15,7 @@ class CartCell : UITableViewCell {
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var count: UILabel!
+    var cart : Cart!
     var countNumber : Int = 1
     var price : Double!
     
