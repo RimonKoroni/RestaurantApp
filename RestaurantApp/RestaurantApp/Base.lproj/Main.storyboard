@@ -327,8 +327,8 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActionButton" translatesAutoresizingMaskIntoConstraints="NO" id="eda-fb-YHf">
                                                 <rect key="frame" x="0.0" y="0.0" width="121" height="132"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="occ-Nr-xCl">
-                                                <rect key="frame" x="23" y="-2" width="66" height="90"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="occ-Nr-xCl">
+                                                <rect key="frame" x="61" y="43" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Vrinda" family="Vrinda" pointSize="90"/>
                                                 <color key="textColor" red="0.82352941176470584" green="0.61960784313725492" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -351,7 +351,7 @@
                                             <constraint firstItem="eda-fb-YHf" firstAttribute="leading" secondItem="pTv-sF-p2a" secondAttribute="leading" id="cxu-or-JTN"/>
                                             <constraint firstItem="occ-Nr-xCl" firstAttribute="centerY" secondItem="pTv-sF-p2a" secondAttribute="centerY" constant="-23" id="jht-1w-xx2"/>
                                             <constraint firstItem="CGr-4t-bsE" firstAttribute="centerY" secondItem="pTv-sF-p2a" secondAttribute="centerY" constant="44.5" id="rlw-iq-FVl"/>
-                                            <constraint firstItem="occ-Nr-xCl" firstAttribute="centerX" secondItem="pTv-sF-p2a" secondAttribute="centerX" constant="-5" id="zaU-zr-Dta"/>
+                                            <constraint firstItem="occ-Nr-xCl" firstAttribute="centerX" secondItem="pTv-sF-p2a" secondAttribute="centerX" id="zaU-zr-Dta"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-a3-P7z" userLabel="tableNumber">
@@ -470,6 +470,7 @@
                     <navigationItem key="navigationItem" id="m0v-Fc-fV1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="foodTypesCollectionView" destination="V93-Gb-peu" id="Hhh-wz-cAF"/>
                         <outlet property="tableNumber" destination="occ-Nr-xCl" id="lMN-zf-s4D"/>
                         <segue destination="Jqd-rx-U4u" kind="show" identifier="showFoodsDetailsSegue" id="AFk-d6-p2t"/>
                     </connections>
@@ -656,6 +657,7 @@
                     </view>
                     <connections>
                         <outlet property="carousel" destination="zaC-dk-YkT" id="bE8-d8-Oa9"/>
+                        <outlet property="tableNumber" destination="bOH-PQ-0XJ" id="ayP-5P-rlj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8OV-WV-QQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1176,6 +1178,6 @@
         <image name="rejectCartItem" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V3s-L8-HIh"/>
+        <segue reference="5BG-JL-Ggg"/>
     </inferredMetricsTieBreakers>
 </document>

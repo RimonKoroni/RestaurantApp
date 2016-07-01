@@ -21,6 +21,11 @@ class RestApiManager: NSObject {
         let session = NSURLSession.sharedSession()
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            guard let realResponse = response as? NSHTTPURLResponse where
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
+            }
             if let jsonData = data {
                 let json:JSON = JSON(data: jsonData)
                 onCompletion(json, error)
@@ -45,6 +50,11 @@ class RestApiManager: NSObject {
             let session = NSURLSession.sharedSession()
             
             let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+                guard let realResponse = response as? NSHTTPURLResponse where
+                    realResponse.statusCode == 200 else {
+                        print("Not a 200 response")
+                        return
+                }
                 if let jsonData = data {
                     let json:JSON = JSON(data: jsonData)
                     onCompletion(json, nil)

@@ -17,11 +17,14 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var fromMenu : Bool = false
-    
+    var carts : [Cart]!
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         self.title = NSLocalizedString("cartTitle", comment: "")
+        self.carts = userDefaults.valueForKey("carts") as! [Cart]
+        let tableNumber = self.userDefaults.valueForKey("tableNumber") as! Int
+        self.tableNumber.text = String(tableNumber)
     }
     
 

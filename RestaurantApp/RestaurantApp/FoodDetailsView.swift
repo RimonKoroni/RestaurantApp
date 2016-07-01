@@ -19,22 +19,33 @@ import UIKit
     @IBOutlet weak var foodDescription: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var count: UILabel!
+    @IBOutlet weak var foodTitle: UILabel!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var lang : String!
     var countNumber : Int = 1
-    var price : Double!
-    override init(frame: CGRect) {
-        // properties
+    var food : Food!
+    var totalPrice : Double!
+    init(food: Food, frame: CGRect) {
         super.init(frame: frame)
-        
         setup()
-        
+        // properties
+        lang = userDefaults.valueForKey("lang") as! String
         foodImage.layer.borderColor = UIColor.whiteColor().CGColor
         foodImage.layer.borderWidth = 2
         foodImage.layer.masksToBounds = true
         foodImage.layer.cornerRadius = 5
-        price = Double(self.foodPrice.text!.substringToIndex(self.foodPrice.text!.endIndex.predecessor()))
+        self.foodDescription.text = food.getDescription(lang)
+        self.foodTitle.text = food.getName(lang)
+        self.foodPrice.text = "\(food.price)$"
+        self.food = food
+        if let url = NSURL(string: food.imageUrl) {
+            if let data = NSData(contentsOfURL: url) {
+                self.foodImage.image = UIImage(data: data)
+            }
+        }
+        self.totalPrice = food.price
+        
     }
     
     
@@ -49,21 +60,19 @@ import UIKit
     
     
     @IBAction func decreaseCount(sender: AnyObject) {
-        
         if self.countNumber > 1 {
-            self.price = self.price / Double(self.countNumber)
+            self.totalPrice = totalPrice - self.food.price
             self.countNumber = self.countNumber - 1
-            
+            self.foodPrice.text = "\(self.totalPrice)$"
+            self.count.text = "\(self.countNumber)"
         }
-        self.count.text = String(self.countNumber)
-        self.foodPrice.text = String(self.price) + "$"
     }
     
     @IBAction func increaseCount(sender: AnyObject) {
+        self.totalPrice = totalPrice + self.food.price
         self.countNumber = self.countNumber + 1
-        self.price = self.price * Double(self.countNumber)
-        self.count.text = String(self.countNumber)
-        self.foodPrice.text = String(self.price) + "$"
+        self.foodPrice.text = "\(self.totalPrice)$"
+        self.count.text = "\(self.countNumber)"
     }
     
     @IBAction func addToCart(sender: AnyObject) {
@@ -75,7 +84,7 @@ import UIKit
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         addSubview(view)
-        lang = userDefaults.valueForKey("lang") as! String
+        
         
     }
     

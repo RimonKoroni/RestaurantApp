@@ -12,13 +12,41 @@ import UIKit
 class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarouselDataSource {
     
     @IBOutlet weak var carousel: iCarousel!
+    @IBOutlet weak var tableNumber: UILabel!
     
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
+    var foodType : FoodType!
+    var foodService = FoodDetailsService()
+    var foods : [Food]! = []
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         carousel.type = .Linear
+        self.title = self.foodType.getName(lang)
+        loadFoods()
+        
+        let tableNumber = self.userDefaults.valueForKey("tableNumber") as! Int
+        self.tableNumber.text = String(tableNumber)
+    }
+    
+    
+    func loadFoods() {
+        EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
+        self.view.userInteractionEnabled = false
+        
+        foodService.getFoods(self.foodType.id, onComplition: {
+            (result) -> Void in
+            self.foods = result
+            dispatch_sync(dispatch_get_main_queue(), {
+                self.carousel.reloadData()
+                EZLoadingActivity.hide()
+                self.view.userInteractionEnabled = true
+            })
+        })
+
     }
     
     @IBAction func goToMenu(sender: AnyObject) {
@@ -26,13 +54,21 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return 10
+        return self.foods.count
     }
     
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
-        let view = FoodDetailsView()
-        view.frame = self.carousel.bounds
+        let view = FoodDetailsView(food: self.foods[index], frame: self.carousel.bounds)
+        //view.frame = self.carousel.bounds
+        /*view.foodDescription.text = self.foods[index].getDescription(lang)
+        view.foodTitle.text = self.foods[index].getName(lang)
+        if let url = NSURL(string: self.foods[index].imageUrl) {
+            if let data = NSData(contentsOfURL: url) {
+                view.foodImage.image = UIImage(data: data)
+            }
+        }
+        view.foodPrice.text = "\(self.foods[index].price)$"*/
         return view
         
     }
@@ -78,6 +114,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
      The leftNavButtonClick function is an action which triggered when user press on the backButton.
      */
     func leftNavButtonClick(sender:UIButton!) {
+        self.carousel.hidden = true
         self.navigationController?.popViewControllerAnimated(true)
     }
 }
