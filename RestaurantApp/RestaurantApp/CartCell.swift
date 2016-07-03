@@ -18,33 +18,34 @@ class CartCell : UITableViewCell {
     var cart : Cart!
     var countNumber : Int = 1
     var price : Double!
-    
+    var totalPrice : Double = 0
+    var delegate : CartDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.foodImage.layer.borderColor = UIColor.whiteColor().CGColor
         self.foodImage.layer.borderWidth = 2
-        price = Double(self.foodPrice.text!.substringToIndex(self.foodPrice.text!.endIndex.predecessor()))
     }
     
     @IBAction func minusAction(sender: AnyObject) {
         if self.countNumber > 1 {
-            self.price = self.price / Double(self.countNumber)
+            self.totalPrice = totalPrice - self.cart.foodPrice
             self.countNumber = self.countNumber - 1
-            
+            self.foodPrice.text = "\(self.totalPrice)$"
+            self.count.text = "\(self.countNumber)"
+            self.delegate.calculatePrice(-1 * self.cart.foodPrice)
         }
-        self.count.text = String(self.countNumber)
-        self.foodPrice.text = String(self.price) + "$"
     }
     
     @IBAction func plusAction(sender: AnyObject) {
+        self.totalPrice = totalPrice + self.cart.foodPrice
         self.countNumber = self.countNumber + 1
-        self.price = self.price * Double(self.countNumber)
-        self.count.text = String(self.countNumber)
-        self.foodPrice.text = String(self.price) + "$"
+        self.foodPrice.text = "\(self.totalPrice)$"
+        self.count.text = "\(self.countNumber)"
+        self.delegate.calculatePrice(self.cart.foodPrice)
     }
     
     @IBAction func deleteItem(sender: AnyObject) {
-        
+        self.delegate.deleteCart(self.cart)
     }
 }

@@ -78,12 +78,18 @@ import UIKit
     @IBAction func addToCart(sender: AnyObject) {
         let data = NSUserDefaults.standardUserDefaults().objectForKey("carts") as? NSData
         var carts = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! [Cart]
-        let cart = Cart(foodId: self.food.id, count: self.countNumber, foodName: self.food.getName(lang), foodPrice: self.food.price)
+        let cart = Cart(foodId: self.food.id, count: self.countNumber, foodName: self.food.getName(lang), foodImage : self.food.imageUrl , foodPrice: self.food.price)
+        for i in 0..<carts.count {
+            if carts[i].foodId == self.food.id {
+                carts.removeAtIndex(i)
+                break
+            }
+        }
         carts.append(cart)
         let cartsData = NSKeyedArchiver.archivedDataWithRootObject(carts)
         userDefaults.setObject(cartsData, forKey: "carts")
         userDefaults.synchronize()
-
+        self.makeToast(message: NSLocalizedString("addToCartSuccess", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
     }
     
     func setup() {

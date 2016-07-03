@@ -15,6 +15,7 @@
 		180D1A3F1D25B99900431466 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1A3E1D25B99900431466 /* NotificationCell.swift */; };
 		180D1A411D25BFD500431466 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1A401D25BFD500431466 /* OrderViewController.swift */; };
 		180D1A441D25C30F00431466 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1A431D25C30F00431466 /* OrderCell.swift */; };
+		181522621D286B450003A032 /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181522611D286B450003A032 /* OrderService.swift */; };
 		184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */; };
 		1858F8471D205FA8002FE25A /* vrinda.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1858F8461D205F80002FE25A /* vrinda.ttf */; };
 		185BCF8C1D26B1110000D51D /* FoodTypesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BCF8B1D26B1110000D51D /* FoodTypesService.swift */; };
@@ -23,6 +24,7 @@
 		185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */; };
 		185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */; };
 		185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A81D1F2116009AFFAB /* Labell.swift */; };
+		1861EDF81D28601D00E136F0 /* UIViewToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861EDF71D28601D00E136F0 /* UIViewToast.swift */; };
 		187359721D2543CF00053227 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187359711D2543CF00053227 /* CartCell.swift */; };
 		18880CEE1D270FF900ABF378 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18880CED1D270FF900ABF378 /* Cart.swift */; };
 		188BC5FE1D26DC4F00304873 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC5FD1D26DC4F00304873 /* GeneralService.swift */; };
@@ -58,6 +60,7 @@
 		180D1A3E1D25B99900431466 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		180D1A401D25BFD500431466 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		180D1A431D25C30F00431466 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		181522611D286B450003A032 /* OrderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		184C946F1D1C6B60004A165E /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		1858F8461D205F80002FE25A /* vrinda.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = vrinda.ttf; sourceTree = "<group>"; };
 		185BCF8B1D26B1110000D51D /* FoodTypesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTypesService.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = VLADIMIR.TTF; path = "../../../../../../Volumes/VMware Shared Folders/iOS App Development with Swift Essential Training {AceMerlin}/Exercise Files/Restaurant app Images/VLADIMIR.TTF"; sourceTree = "<group>"; };
 		185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonLabel.swift; path = Extentions/ButtonLabel.swift; sourceTree = "<group>"; };
 		185EF3A81D1F2116009AFFAB /* Labell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Labell.swift; path = Extentions/Labell.swift; sourceTree = "<group>"; };
+		1861EDF71D28601D00E136F0 /* UIViewToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewToast.swift; path = Extentions/UIViewToast.swift; sourceTree = "<group>"; };
 		187359711D2543CF00053227 /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		18880CED1D270FF900ABF378 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		188BC5FD1D26DC4F00304873 /* GeneralService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 				185BCF8B1D26B1110000D51D /* FoodTypesService.swift */,
 				188BC5FD1D26DC4F00304873 /* GeneralService.swift */,
 				189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */,
+				181522611D286B450003A032 /* OrderService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 		18B3AE491D1B101700389895 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				1861EDF71D28601D00E136F0 /* UIViewToast.swift */,
 				185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */,
 				185EF3A81D1F2116009AFFAB /* Labell.swift */,
 				185BCF8F1D26CCCF0000D51D /* ImageView.swift */,
@@ -470,6 +476,7 @@
 				185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */,
 				18B3AE591D1B12D900389895 /* StartViewController.swift in Sources */,
 				18074B321D207C060090098A /* FoodDetailsViewController.swift in Sources */,
+				1861EDF81D28601D00E136F0 /* UIViewToast.swift in Sources */,
 				18074B341D207FDA0090098A /* CartViewController.swift in Sources */,
 				18D75FC31D208BF7004A2013 /* iCarousel.m in Sources */,
 				18B3AE761D1B3F8000389895 /* FoodTypesViewController.swift in Sources */,
@@ -486,6 +493,7 @@
 				184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */,
 				18B3AE5C1D1B139200389895 /* RestaurantApp.xcdatamodeld in Sources */,
 				189FE8BD1D26EC7800479632 /* Food.swift in Sources */,
+				181522621D286B450003A032 /* OrderService.swift in Sources */,
 				18D75FC61D208EA9004A2013 /* FoodDetailsView.swift in Sources */,
 				188BC5FE1D26DC4F00304873 /* GeneralService.swift in Sources */,
 				180D1A381D25A76F00431466 /* AdminStartViewController.swift in Sources */,

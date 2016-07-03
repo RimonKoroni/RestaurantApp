@@ -10,3 +10,9 @@
 "cartTitle" = "Cart";
 "notificationTitle" = "Notifications";
 "loading" = "Loading...";
+"addToCartSuccess" = "Added to cart successfully";
+"rejectOrderMessage" = "The order is canceled";
+"noCartMessage" = "There is no items!";
+"acceptOrderErrorMessage" = "There is no item for send!";
+"acceptOrderSuccessMessage" = "The order is requested successfuly";
+"acceptOrderFaildMessage" = "The order is doesn't requested successfuly";

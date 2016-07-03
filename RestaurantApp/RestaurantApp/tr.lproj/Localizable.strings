@@ -10,3 +10,8 @@
 "cartTitle" = "Sepeti";
 "notificationTitle" = "Bildirimler";
 "loading" = "Yükleniyor ...";
+"addToCartSuccess" = "başarıyla sepetinize eklendi";
+"rejectOrderMessage" = "sipariş iptal edilir";
+"noCartMessage" = "hiçbir öğe yoktur!";
+"acceptOrderErrorMessage" = "hiçbir öğe gönderme için var!";
+"acceptOrderSuccessMessage" = "Sipariş başarıyla istenen";

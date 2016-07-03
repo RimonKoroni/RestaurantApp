@@ -9,4 +9,9 @@
 "foodTypeTitle" = "قائمة الطعام";
 "cartTitle" = "سلة المشتريات";
 "notificationTitle" = "الإشعارات";
-"loading" = "تحميل ...";
+"loading" = "جاري التحميل ...";
+"addToCartSuccess" = "تم إضافته للسلة بنجاح";
+"rejectOrderMessage" = "تم إلغاء الطلب";
+"noCartMessage" = "لا يوجد عناصر!";
+"acceptOrderErrorMessage" = "لا يوجد أي عنصر لإرساله!";
+"acceptOrderSuccessMessage" = "تمَّ إرسال الطلب بنجاح";

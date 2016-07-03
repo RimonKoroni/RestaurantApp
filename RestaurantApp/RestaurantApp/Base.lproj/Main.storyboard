@@ -1040,6 +1040,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9os-mF-IZJ">
+                                <rect key="frame" x="384" y="350" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.1176470588" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqW-28-Akq">
                                 <rect key="frame" x="0.0" y="774" width="768" height="186"/>
                                 <subviews>
@@ -1136,10 +1142,12 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bQw-Nf-ZKm" secondAttribute="trailing" constant="10" id="0aL-M7-qv0"/>
                             <constraint firstItem="gqW-28-Akq" firstAttribute="leading" secondItem="hUq-23-IeJ" secondAttribute="leadingMargin" constant="-20" id="1es-lI-WFT"/>
+                            <constraint firstItem="9os-mF-IZJ" firstAttribute="centerY" secondItem="hUq-23-IeJ" secondAttribute="centerY" constant="-130" id="3I0-Z6-38S"/>
                             <constraint firstItem="yNf-rg-1HC" firstAttribute="leading" secondItem="hUq-23-IeJ" secondAttribute="leading" id="AkE-UY-LEp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gqW-28-Akq" secondAttribute="trailing" constant="-20" id="E00-ym-04d"/>
                             <constraint firstItem="bQw-Nf-ZKm" firstAttribute="top" secondItem="ved-yy-fOo" secondAttribute="bottom" constant="15" id="jfE-PY-qWm"/>
                             <constraint firstItem="bQw-Nf-ZKm" firstAttribute="leading" secondItem="hUq-23-IeJ" secondAttribute="leading" constant="10" id="lLt-HH-1uw"/>
+                            <constraint firstItem="9os-mF-IZJ" firstAttribute="centerX" secondItem="hUq-23-IeJ" secondAttribute="centerX" id="mZW-L8-CHB"/>
                             <constraint firstItem="CKF-kh-jtf" firstAttribute="top" secondItem="gqW-28-Akq" secondAttribute="bottom" id="niD-bf-kQo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="bQw-Nf-ZKm" secondAttribute="bottom" constant="100" id="pYc-ql-4we"/>
                             <constraint firstItem="CKF-kh-jtf" firstAttribute="top" secondItem="yNf-rg-1HC" secondAttribute="bottom" id="qfa-V7-6aP"/>
@@ -1148,6 +1156,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cartTableView" destination="LNb-zU-t3A" id="ANE-5c-RRm"/>
+                        <outlet property="noCartsLabel" destination="9os-mF-IZJ" id="1rs-5P-sSQ"/>
                         <outlet property="tableNumber" destination="SP0-W8-lYy" id="igl-9X-bHB"/>
                         <outlet property="totalPrice" destination="yhk-fa-fnD" id="0Xt-Et-zR4"/>
                     </connections>
