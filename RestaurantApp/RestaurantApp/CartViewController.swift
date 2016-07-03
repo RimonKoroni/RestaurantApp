@@ -151,6 +151,7 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
     }
     
     func setTotalPrice()  {
+        totalPriceValue = 0
         for cart in self.carts {
             totalPriceValue += Double(cart.count) * cart.foodPrice
         }
