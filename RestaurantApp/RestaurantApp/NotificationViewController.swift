@@ -8,15 +8,25 @@
 
 import Foundation
 
-class NotificationViewController : UIViewController , UITableViewDataSource, UITableViewDelegate {
+protocol NotificationDelegate {
+   func refreshTable()
+}
+
+class NotificationViewController : UIViewController , UITableViewDataSource, UITableViewDelegate, NotificationDelegate {
     
     @IBOutlet weak var numberOfNotificationView: UIView!
     @IBOutlet weak var notificationCount: UILabel!
     
+    @IBOutlet weak var ordersTableView: UITableView!
+    
+    @IBOutlet weak var noNotificationLable: UILabel!
+    
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var fromMenu : Bool = false
-    
+    let notificationService = NotificationService()
+    var orders : [Order] = []
+    var selectedOrderId : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         let navigationBarBackgroundImage = UIImage(named: "navigationBar");
@@ -28,6 +38,35 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
         
         self.title = NSLocalizedString("notificationTitle", comment: "")
         self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Vladimir Script", size: 50)!]
+        self.noNotificationLable.text = NSLocalizedString("noNotificationMessage", comment: "")
+        getOrders()
+        
+        
+
+    }
+    
+    func getOrders() {
+        EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
+        self.view.userInteractionEnabled = false
+        
+        notificationService.getAllNotification({
+            (result) -> Void in
+            self.orders = result
+            dispatch_sync(dispatch_get_main_queue(), {
+                self.ordersTableView.reloadData()
+                EZLoadingActivity.hide()
+                self.view.userInteractionEnabled = true
+                if self.orders.count == 0 {
+                    self.noNotificationLable.hidden = false
+                } else {
+                    self.noNotificationLable.hidden = true
+                }
+            })
+        })
+    }
+    
+    func refreshTable() {
+        getOrders()
     }
     
     @IBAction func goToHome(sender: AnyObject) {
@@ -41,24 +80,31 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.orders.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("notificationCell") as! NotificationCell
-        
+        cell.tableNumber.text = cell.tableNumber.text! + "\(orders[indexPath.row].tableNumber)"
+        cell.notificationDate.text = orders[indexPath.row].requestDate.getTime()
         return cell
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        self.selectedOrderId = orders[indexPath.row].id
         self.performSegueWithIdentifier("goToOrderViewControllerSegue", sender: self)
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
+        if segue.identifier == "goToOrderViewControllerSegue" {
+            let controller = segue.destinationViewController as! OrderViewController
+            controller.orderId = self.selectedOrderId
+            controller.delegate = self
+        }
     }
     
     /**

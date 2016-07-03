@@ -42,4 +42,36 @@ class OrderService {
         })
         
     }
+    
+    
+    func getOrderItems(orderId : Int, onComplition: (orderItems : [OrderItem]) -> Void) {
+        let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")// Info.pList path
+        let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
+        let serverUrl = dict.objectForKey("serverUrl") as! String
+        let sreviceUrl = "\(serverUrl)/WebServiceProject/MobileServlet/OrderRest/getOrderItems/\(orderId)"
+        
+        RestApiManager.makeHTTPGetRequest(sreviceUrl, onCompletion: {(finalJsonResponse , error) -> Void in
+            var result : [OrderItem] = []
+            let orderItems = finalJsonResponse.array
+            
+            if orderItems != nil {
+                for item in orderItems! {
+                    result.append(OrderItem(json: item))
+                }
+            }
+            onComplition(orderItems: result)
+        })
+    }
+    
+    func serveOrder(orderId: Int, onComplition: (status : Int) -> Void) {
+        let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")// Info.pList path
+        let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
+        let serverUrl = dict.objectForKey("serverUrl") as! String
+        let sreviceUrl = "\(serverUrl)/WebServiceProject/MobileServlet/OrderRest/acceptOrder/\(orderId)"
+        
+        RestApiManager.makeHTTPGetRequest(sreviceUrl, onCompletion: {(finalJsonResponse , error) -> Void in
+            let status = finalJsonResponse["status"].int
+            onComplition(status: status!)
+        })
+    }
 }

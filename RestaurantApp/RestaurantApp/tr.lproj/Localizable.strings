@@ -15,3 +15,6 @@
 "noCartMessage" = "hiçbir öğe yoktur!";
 "acceptOrderErrorMessage" = "hiçbir öğe gönderme için var!";
 "acceptOrderSuccessMessage" = "Sipariş başarıyla istenen";
+"serveOrderFaildMessage" = "Hiçbir istek başarılı oldu!";
+"serveOrderSuccessMessage" = "Sipariş başarıyla devam eder!";
+"noNotificationMessage" = "Hiçbir bildirim yok!";

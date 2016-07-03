@@ -15,4 +15,7 @@
 "noCartMessage" = "There is no items!";
 "acceptOrderErrorMessage" = "There is no item for send!";
 "acceptOrderSuccessMessage" = "The order is requested successfuly";
-"acceptOrderFaildMessage" = "The order is doesn't requested successfuly";
+"acceptOrderFaildMessage" = "The order is not requested successfuly";
+"serveOrderFaildMessage" = "The order is not served successfuly!";
+"serveOrderSuccessMessage" = "The order is served successfuly!";
+"noNotificationMessage" = "There is no notification!";

@@ -14,9 +14,13 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
 
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var notificationCount: UILabel!
-    
+    @IBOutlet weak var orderItemsTableView: UITableView!
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
+    var orderId : Int!
+    let orderService : OrderService = OrderService()
+    var orderItems : [OrderItem] = []
+    var delegate : NotificationDelegate!
     //var fromNotification : Bool = false
     
     override func viewDidLoad() {
@@ -24,6 +28,22 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
         addLeftNavItemOnView ()
         notificationView.layer.cornerRadius = 10
         self.title = NSLocalizedString("notificationTitle", comment: "")
+        getOrderItems()
+    }
+    
+    func getOrderItems() {
+        EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
+        self.view.userInteractionEnabled = false
+        
+        orderService.getOrderItems(self.orderId, onComplition: {
+            (result) -> Void in
+            self.orderItems = result
+            dispatch_sync(dispatch_get_main_queue(), {
+                self.orderItemsTableView.reloadData()
+                EZLoadingActivity.hide()
+                self.view.userInteractionEnabled = true
+            })
+        })
     }
     
     @IBAction func goToNotification(sender: AnyObject) {
@@ -40,13 +60,19 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return orderItems.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("orderCell") as! OrderCell
-        
+        cell.count.text = "\(orderItems[indexPath.row].count)"
+        if let url = NSURL(string: orderItems[indexPath.row].foodImage) {
+            if let data = NSData(contentsOfURL: url) {
+                cell.foodImage.image = UIImage(data: data)
+            }
+        }
+        cell.foodName.text = orderItems[indexPath.row].getName(lang)
         return cell
         
     }
@@ -54,7 +80,18 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
     
     
     @IBAction func acceptOrder(sender: AnyObject) {
-        
+        self.orderService.serveOrder(self.orderId, onComplition: {
+            (status) -> Void in
+            dispatch_sync(dispatch_get_main_queue(), {
+                if status == 1 {
+                    self.view.makeToast(message: NSLocalizedString("serveOrderSuccessMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                    self.delegate.refreshTable()
+                    self.navigationController?.popViewControllerAnimated(true)
+                } else {
+                    self.view.makeToast(message: NSLocalizedString("serveOrderFaildMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                }
+            })
+        })
     }
     
     /**

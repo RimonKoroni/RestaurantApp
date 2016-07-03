@@ -15,3 +15,6 @@
 "noCartMessage" = "لا يوجد عناصر!";
 "acceptOrderErrorMessage" = "لا يوجد أي عنصر لإرساله!";
 "acceptOrderSuccessMessage" = "تمَّ إرسال الطلب بنجاح";
+"serveOrderFaildMessage" = "لم يتم تخديم الطلب بنجاح!";
+"serveOrderSuccessMessage" = "لقد تم تخديم الطلب بنجاح!";
+"noNotificationMessage" = "لا يوجد هناك أي إشعار!";
