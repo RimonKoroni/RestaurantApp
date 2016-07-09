@@ -27,6 +27,8 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
     var carts : [Cart]! = []
     var orderService  = OrderService()
     var totalPriceValue : Double = 0
+    var imageDataService = ImageDataService()
+    
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
@@ -67,11 +69,21 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCellWithIdentifier("cartCell") as! CartCell
         let cart = self.carts[indexPath.row]
         
-        if let url = NSURL(string: cart.foodImage) {
-            if let data = NSData(contentsOfURL: url) {
-                cell.foodImage.image = UIImage(data: data)
-            }
+        let imageData = self.imageDataService.getByUrl(cart.foodImage)
+        
+        if imageData == nil {
+            self.imageDataService.loadImage(cart.foodImage, onComplition: {
+                (data) -> Void in
+                self.imageDataService.insert(cart.foodImage, image: data)
+                dispatch_async(dispatch_get_main_queue()) {
+                    cell.foodImage.image = UIImage(data: data)
+                }
+            })
+            
+        } else {
+            cell.foodImage.image = UIImage(data: imageData!)
         }
+        
         cell.foodName.text = cart.foodName
         cell.foodPrice.text = "\(cart.foodPrice * Double(cart.count))$"
         cell.totalPrice = cart.foodPrice * Double(cart.count)

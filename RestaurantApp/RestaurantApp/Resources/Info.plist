@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>checkForNotificationTime</key>
-	<integer>10</integer>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -39,7 +37,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Admin</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>Admin</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -52,6 +50,8 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>checkForNotificationTime</key>
+	<integer>10</integer>
 	<key>serverUrl</key>
 	<string>http://192.168.1.6:8080</string>
 </dict>

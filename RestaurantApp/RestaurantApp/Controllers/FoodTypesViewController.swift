@@ -18,6 +18,7 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
     var lang : String!
     var foodTypeService = FoodTypesService()
     var generalService = GeneralService()
+    var imageDataService = ImageDataService()
     var selectedFoodType : FoodType!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,10 +77,20 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("foodCell", forIndexPath:indexPath) as! FoodCollectionViewCell
         
         cell.foodTypeName.text = self.foodTypes[indexPath.row].getName(lang)
-        if let url = NSURL(string: self.foodTypes[indexPath.row].imageUrl) {
-            if let data = NSData(contentsOfURL: url) {
-                cell.foodImage.image = UIImage(data: data)
-            }        
+        
+        let imageData = self.imageDataService.getByUrl(self.foodTypes[indexPath.row].imageUrl)
+        
+        if imageData == nil {
+            self.imageDataService.loadImage(self.foodTypes[indexPath.row].imageUrl, onComplition: {
+                (data) -> Void in
+                self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data)
+                dispatch_async(dispatch_get_main_queue()) {
+                    cell.foodImage.image = UIImage(data: data)
+                }
+            })
+
+        } else {
+            cell.foodImage.image = UIImage(data: imageData!)
         }
         
         return cell
@@ -120,12 +131,12 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
         
         // Create the back button
         let buttonBack: UIButton = UIButton(type: UIButtonType.Custom)
-        if (self.lang.containsString("en")) {
-            buttonBack.setImage(UIImage(named: "enBackButton"), forState: .Normal)
+        if (self.lang.containsString("ar")) {
+            buttonBack.setImage(UIImage(named: "arBackButton"), forState: .Normal)
             
         }
         else {
-            buttonBack.setImage(UIImage(named: "arBackButton"), forState: .Normal)
+            buttonBack.setImage(UIImage(named: "enBackButton"), forState: .Normal)
         }
         buttonBack.frame = CGRectMake(0, 0, 40, 40)
         buttonBack.addTarget(self, action: #selector(self.leftNavButtonClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)// Define the action of this button

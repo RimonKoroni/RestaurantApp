@@ -30,6 +30,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
         
         let tableNumber = self.userDefaults.valueForKey("tableNumber") as! Int
         self.tableNumber.text = String(tableNumber)
+        
     }
     
     

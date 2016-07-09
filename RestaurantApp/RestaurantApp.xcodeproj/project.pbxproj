@@ -31,6 +31,16 @@
 		189FE8B91D26E0CF00479632 /* EZLoadingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8B81D26E0CF00479632 /* EZLoadingActivity.swift */; };
 		189FE8BB1D26EC4600479632 /* FoodDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */; };
 		189FE8BD1D26EC7800479632 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8BC1D26EC7800479632 /* Food.swift */; };
+		18AEBE741D315C6D002CA275 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE721D315C6C002CA275 /* Order.swift */; };
+		18AEBE751D315C6D002CA275 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE731D315C6C002CA275 /* OrderItem.swift */; };
+		18AEBE771D315C8D002CA275 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE761D315C8D002CA275 /* NotificationService.swift */; };
+		18AEBE791D315CC1002CA275 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE781D315CC1002CA275 /* Date.swift */; };
+		18AEBE7D1D31A11C002CA275 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE7C1D31A11C002CA275 /* ImageData.swift */; };
+		18AEBE7F1D31A1AA002CA275 /* GenericDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE7E1D31A1AA002CA275 /* GenericDomain.swift */; };
+		18AEBE821D31A2D0002CA275 /* DaoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE801D31A2D0002CA275 /* DaoUtil.swift */; };
+		18AEBE831D31A2D0002CA275 /* GenericDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE811D31A2D0002CA275 /* GenericDao.swift */; };
+		18AEBE851D31A2F5002CA275 /* ImageDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE841D31A2F5002CA275 /* ImageDataDao.swift */; };
+		18AEBE871D31A3D0002CA275 /* ImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE861D31A3D0002CA275 /* ImageDataService.swift */; };
 		18B3AE321D1B0F8A00389895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3AE311D1B0F8900389895 /* AppDelegate.swift */; };
 		18B3AE371D1B0F8A00389895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B3AE351D1B0F8A00389895 /* Main.storyboard */; };
 		18B3AE3C1D1B0F8A00389895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B3AE3B1D1B0F8A00389895 /* Assets.xcassets */; };
@@ -76,6 +86,23 @@
 		189FE8B81D26E0CF00479632 /* EZLoadingActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZLoadingActivity.swift; path = Components/EZLoadingActivity.swift; sourceTree = "<group>"; };
 		189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsService.swift; sourceTree = "<group>"; };
 		189FE8BC1D26EC7800479632 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		18AEBE651D31586B002CA275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Admin.storyboard; sourceTree = "<group>"; };
+		18AEBE671D315915002CA275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Admin.strings; sourceTree = "<group>"; };
+		18AEBE691D315918002CA275 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Admin.strings; sourceTree = "<group>"; };
+		18AEBE6B1D31591B002CA275 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Admin.strings; sourceTree = "<group>"; };
+		18AEBE6D1D315969002CA275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		18AEBE6F1D31596D002CA275 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		18AEBE711D31596F002CA275 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		18AEBE721D315C6C002CA275 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		18AEBE731D315C6C002CA275 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		18AEBE761D315C8D002CA275 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		18AEBE781D315CC1002CA275 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		18AEBE7C1D31A11C002CA275 /* ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		18AEBE7E1D31A1AA002CA275 /* GenericDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDomain.swift; sourceTree = "<group>"; };
+		18AEBE801D31A2D0002CA275 /* DaoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaoUtil.swift; sourceTree = "<group>"; };
+		18AEBE811D31A2D0002CA275 /* GenericDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDao.swift; sourceTree = "<group>"; };
+		18AEBE841D31A2F5002CA275 /* ImageDataDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataDao.swift; sourceTree = "<group>"; };
+		18AEBE861D31A3D0002CA275 /* ImageDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataService.swift; sourceTree = "<group>"; };
 		18B3AE2E1D1B0F8900389895 /* RestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B3AE311D1B0F8900389895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B3AE361D1B0F8A00389895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,13 +114,7 @@
 		18B3AE551D1B12A900389895 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Utilities/SwiftyJSON.swift; sourceTree = "<group>"; };
 		18B3AE581D1B12D900389895 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = Controllers/StartViewController.swift; sourceTree = "<group>"; };
 		18B3AE5B1D1B139200389895 /* RestaurantApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantApp.xcdatamodel; sourceTree = "<group>"; };
-		18B3AE5D1D1B146300389895 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
-		18B3AE5E1D1B148B00389895 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		18B3AE5F1D1B148B00389895 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		18B3AE611D1B14D200389895 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		18B3AE6C1D1B154000389895 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Admin.storyboard; sourceTree = "<group>"; };
-		18B3AE6F1D1B154200389895 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Admin.strings; sourceTree = "<group>"; };
-		18B3AE711D1B154300389895 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Admin.strings; sourceTree = "<group>"; };
 		18B3AE731D1B36FB00389895 /* dropDownMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = dropDownMenuCell.swift; path = Components/dropDownMenuCell.swift; sourceTree = "<group>"; };
 		18B3AE751D1B3F8000389895 /* FoodTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodTypesViewController.swift; path = Controllers/FoodTypesViewController.swift; sourceTree = "<group>"; };
 		18D75FC11D208BF7004A2013 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = Components/iCarousel/iCarousel.h; sourceTree = "<group>"; };
@@ -144,8 +165,12 @@
 		185BCF8A1D26B0980000D51D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18AEBE7C1D31A11C002CA275 /* ImageData.swift */,
 				185BCF8D1D26B3490000D51D /* FoodType.swift */,
 				189FE8BC1D26EC7800479632 /* Food.swift */,
+				18AEBE721D315C6C002CA275 /* Order.swift */,
+				18AEBE7E1D31A1AA002CA275 /* GenericDomain.swift */,
+				18AEBE731D315C6C002CA275 /* OrderItem.swift */,
 				18880CED1D270FF900ABF378 /* Cart.swift */,
 			);
 			name = Model;
@@ -217,10 +242,15 @@
 		18B3AE461D1B0FBA00389895 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				18AEBE801D31A2D0002CA275 /* DaoUtil.swift */,
+				18AEBE811D31A2D0002CA275 /* GenericDao.swift */,
 				185BCF8B1D26B1110000D51D /* FoodTypesService.swift */,
 				188BC5FD1D26DC4F00304873 /* GeneralService.swift */,
 				189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */,
 				181522611D286B450003A032 /* OrderService.swift */,
+				18AEBE761D315C8D002CA275 /* NotificationService.swift */,
+				18AEBE841D31A2F5002CA275 /* ImageDataDao.swift */,
+				18AEBE861D31A3D0002CA275 /* ImageDataService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -255,6 +285,7 @@
 				185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */,
 				185EF3A81D1F2116009AFFAB /* Labell.swift */,
 				185BCF8F1D26CCCF0000D51D /* ImageView.swift */,
+				18AEBE781D315CC1002CA275 /* Date.swift */,
 			);
 			name = Extention;
 			sourceTree = "<group>";
@@ -468,7 +499,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */,
+				18AEBE771D315C8D002CA275 /* NotificationService.swift in Sources */,
+				18AEBE821D31A2D0002CA275 /* DaoUtil.swift in Sources */,
 				187359721D2543CF00053227 /* CartCell.swift in Sources */,
+				18AEBE7F1D31A1AA002CA275 /* GenericDomain.swift in Sources */,
 				189FE8BB1D26EC4600479632 /* FoodDetailsService.swift in Sources */,
 				18880CEE1D270FF900ABF378 /* Cart.swift in Sources */,
 				189FE8B91D26E0CF00479632 /* EZLoadingActivity.swift in Sources */,
@@ -476,20 +510,27 @@
 				185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */,
 				18B3AE591D1B12D900389895 /* StartViewController.swift in Sources */,
 				18074B321D207C060090098A /* FoodDetailsViewController.swift in Sources */,
+				18AEBE741D315C6D002CA275 /* Order.swift in Sources */,
 				1861EDF81D28601D00E136F0 /* UIViewToast.swift in Sources */,
 				18074B341D207FDA0090098A /* CartViewController.swift in Sources */,
+				18AEBE7D1D31A11C002CA275 /* ImageData.swift in Sources */,
 				18D75FC31D208BF7004A2013 /* iCarousel.m in Sources */,
 				18B3AE761D1B3F8000389895 /* FoodTypesViewController.swift in Sources */,
 				185BCF8E1D26B3490000D51D /* FoodType.swift in Sources */,
 				18B3AE741D1B36FB00389895 /* dropDownMenuCell.swift in Sources */,
+				18AEBE831D31A2D0002CA275 /* GenericDao.swift in Sources */,
 				18B3AE321D1B0F8A00389895 /* AppDelegate.swift in Sources */,
 				185BCF901D26CCCF0000D51D /* ImageView.swift in Sources */,
 				180D1A411D25BFD500431466 /* OrderViewController.swift in Sources */,
 				180D1A3F1D25B99900431466 /* NotificationCell.swift in Sources */,
 				18B3AE561D1B12A900389895 /* RestApiManager.swift in Sources */,
+				18AEBE751D315C6D002CA275 /* OrderItem.swift in Sources */,
+				18AEBE791D315CC1002CA275 /* Date.swift in Sources */,
 				18B3AE571D1B12A900389895 /* SwiftyJSON.swift in Sources */,
 				180D1A3C1D25B07600431466 /* NotificationViewController.swift in Sources */,
 				185BCF8C1D26B1110000D51D /* FoodTypesService.swift in Sources */,
+				18AEBE871D31A3D0002CA275 /* ImageDataService.swift in Sources */,
+				18AEBE851D31A2F5002CA275 /* ImageDataDao.swift in Sources */,
 				184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */,
 				18B3AE5C1D1B139200389895 /* RestaurantApp.xcdatamodeld in Sources */,
 				189FE8BD1D26EC7800479632 /* Food.swift in Sources */,
@@ -517,9 +558,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				18B3AE361D1B0F8A00389895 /* Base */,
-				18B3AE5D1D1B146300389895 /* tr */,
-				18B3AE5E1D1B148B00389895 /* ar */,
-				18B3AE611D1B14D200389895 /* en */,
+				18AEBE6D1D315969002CA275 /* en */,
+				18AEBE6F1D31596D002CA275 /* tr */,
+				18AEBE711D31596F002CA275 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -536,9 +577,10 @@
 		18B3AE6D1D1B154000389895 /* Admin.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				18B3AE6C1D1B154000389895 /* en */,
-				18B3AE6F1D1B154200389895 /* tr */,
-				18B3AE711D1B154300389895 /* ar */,
+				18AEBE651D31586B002CA275 /* Base */,
+				18AEBE671D315915002CA275 /* en */,
+				18AEBE691D315918002CA275 /* tr */,
+				18AEBE6B1D31591B002CA275 /* ar */,
 			);
 			name = Admin.storyboard;
 			path = ..;

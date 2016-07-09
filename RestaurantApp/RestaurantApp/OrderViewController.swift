@@ -21,6 +21,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
     let orderService : OrderService = OrderService()
     var orderItems : [OrderItem] = []
     var delegate : NotificationDelegate!
+    var imageDataService = ImageDataService()
     //var fromNotification : Bool = false
     
     override func viewDidLoad() {
@@ -70,11 +71,22 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
         let cell = tableView.dequeueReusableCellWithIdentifier("orderCell") as! OrderCell
         
         cell.count.text = "\(orderItems[indexPath.row].count)"
-        if let url = NSURL(string: orderItems[indexPath.row].foodImage) {
-            if let data = NSData(contentsOfURL: url) {
-                cell.foodImage.image = UIImage(data: data)
-            }
+        let imageData = self.imageDataService.getByUrl(self.orderItems[indexPath.row].foodImage)
+        
+        if imageData == nil {
+            self.imageDataService.loadImage(self.orderItems[indexPath.row].foodImage, onComplition: {
+                (data) -> Void in
+                self.imageDataService.insert(self.orderItems[indexPath.row].foodImage, image: data)
+                dispatch_async(dispatch_get_main_queue()) {
+                    cell.foodImage.image = UIImage(data: data)
+                }
+            })
+            
+        } else {
+            cell.foodImage.image = UIImage(data: imageData!)
         }
+
+        
         cell.foodName.text = orderItems[indexPath.row].getName(lang)
         return cell
         
