@@ -1,1 +1,63 @@
 
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "3BF-2V-z7H"; */
+"3BF-2V-z7H.text" = "Hoşgeldiniz";
+
+/* Class = "UILabel"; text = "40.0$"; ObjectID = "5S3-8Q-Mft"; */
+"5S3-8Q-Mft.text" = "40.0$";
+
+/* Class = "UILabel"; text = "Table number"; ObjectID = "CGr-4t-bsE"; */
+"CGr-4t-bsE.text" = "Tablo numarası";
+
+/* Class = "UIButton"; normalTitle = "Show Menu"; ObjectID = "CeI-Uu-DSS"; */
+"CeI-Uu-DSS.normalTitle" = "göster Menüsü";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "G2O-S9-JK5"; */
+"G2O-S9-JK5.text" = "Label";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "GNX-dT-AbS"; */
+"GNX-dT-AbS.text" = "sepeti";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nh2-al-j9M"; */
+"Nh2-al-j9M.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "R1U-TZ-Vze"; */
+"R1U-TZ-Vze.text" = "1";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "SP0-W8-lYy"; */
+"SP0-W8-lYy.text" = "10";
+
+/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "TUQ-zT-Bf1"; */
+"TUQ-zT-Bf1.text" = "sandviç";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UFq-C6-msM"; */
+"UFq-C6-msM.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Table number"; ObjectID = "UvB-Cr-TpM"; */
+"UvB-Cr-TpM.text" = "Tablo numarası";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "Zgp-n2-8pj"; */
+"Zgp-n2-8pj.text" = "sepeti";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "bOH-PQ-0XJ"; */
+"bOH-PQ-0XJ.text" = "10";
+
+/* Class = "UIButton"; normalTitle = "US"; ObjectID = "c4a-MS-aUA"; */
+"c4a-MS-aUA.normalTitle" = "US";
+
+/* Class = "UILabel"; text = "Table number"; ObjectID = "dBd-Xg-GvV"; */
+"dBd-Xg-GvV.text" = "Tablo numarası";
+
+/* Class = "UILabel"; text = "Menu"; ObjectID = "jzK-tf-BPm"; */
+"jzK-tf-BPm.text" = "Menü";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kkv-xD-of1"; */
+"kkv-xD-of1.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Menu"; ObjectID = "nbs-2P-lOW"; */
+"nbs-2P-lOW.text" = "Menü";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "yFM-Y8-c5l"; */
+"yFM-Y8-c5l.text" = "Ev";
+
+/* Class = "UILabel"; text = "200$"; ObjectID = "yhk-fa-fnD"; */
+"yhk-fa-fnD.text" = "200$";

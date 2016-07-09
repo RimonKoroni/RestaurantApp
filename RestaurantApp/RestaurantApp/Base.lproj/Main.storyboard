@@ -197,7 +197,7 @@
                             <constraint firstItem="I6D-Va-LXJ" firstAttribute="centerX" secondItem="f4r-Cd-fYw" secondAttribute="centerX" id="oav-H5-Sas"/>
                             <constraint firstItem="3BF-2V-z7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tJj-R0-dvu"/>
                             <constraint firstItem="3BF-2V-z7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="uMR-Ff-OaR"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="f4r-Cd-fYw" secondAttribute="leading" id="zyQ-ZH-27B"/>
+                            <constraint firstAttribute="leftMargin" secondItem="f4r-Cd-fYw" secondAttribute="left" id="zyQ-ZH-27B"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>

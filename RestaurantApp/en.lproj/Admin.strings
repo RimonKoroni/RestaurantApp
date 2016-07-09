@@ -1,15 +1,15 @@
 
 /* Class = "UILabel"; text = "Welcome"; ObjectID = "3BF-2V-z7H"; */
-"3BF-2V-z7H.text" = "Hoşgeldiniz";
+"3BF-2V-z7H.text" = "Welcome";
 
 /* Class = "UILabel"; text = "2"; ObjectID = "92U-ha-oEm"; */
 "92U-ha-oEm.text" = "2";
 
 /* Class = "UIButton"; normalTitle = "Start"; ObjectID = "CeI-Uu-DSS"; */
-"CeI-Uu-DSS.normalTitle" = "Başlama";
+"CeI-Uu-DSS.normalTitle" = "Start";
 
 /* Class = "UILabel"; text = "Notifications"; ObjectID = "DAZ-zJ-Ta4"; */
-"DAZ-zJ-Ta4.text" = "Bildirimler";
+"DAZ-zJ-Ta4.text" = "Notifications";
 
 /* Class = "UILabel"; text = "10:22"; ObjectID = "HPg-FC-vzg"; */
 "HPg-FC-vzg.text" = "10:22";
@@ -24,7 +24,7 @@
 "d2h-kB-mmC.text" = "1";
 
 /* Class = "UILabel"; text = "Notifications"; ObjectID = "dBd-Xg-GvV"; */
-"dBd-Xg-GvV.text" = "Bildirimler";
+"dBd-Xg-GvV.text" = "Notifications";
 
 /* Class = "UILabel"; text = "2"; ObjectID = "in5-3g-DmD"; */
 "in5-3g-DmD.text" = "2";
@@ -33,10 +33,10 @@
 "lkx-Ip-U2p.text" = "Sandwiches";
 
 /* Class = "UILabel"; text = "Home"; ObjectID = "nbs-2P-lOW"; */
-"nbs-2P-lOW.text" = "Ev";
+"nbs-2P-lOW.text" = "Home";
 
 /* Class = "UILabel"; text = "Home"; ObjectID = "t8D-xn-w7Q"; */
-"t8D-xn-w7Q.text" = "Ev";
+"t8D-xn-w7Q.text" = "Home";
 
 /* Class = "UILabel"; text = "Table"; ObjectID = "yaL-0S-PM1"; */
-"yaL-0S-PM1.text" = "tablo";
+"yaL-0S-PM1.text" = "Table";

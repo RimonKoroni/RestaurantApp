@@ -1,1 +1,42 @@
 
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "3BF-2V-z7H"; */
+"3BF-2V-z7H.text" = "أهلا بك";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "92U-ha-oEm"; */
+"92U-ha-oEm.text" = "2";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "CeI-Uu-DSS"; */
+"CeI-Uu-DSS.normalTitle" = "ابدأ";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "DAZ-zJ-Ta4"; */
+"DAZ-zJ-Ta4.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "10:22"; ObjectID = "HPg-FC-vzg"; */
+"HPg-FC-vzg.text" = "10:22";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "RPI-Ni-Mfu"; */
+"RPI-Ni-Mfu.text" = "10";
+
+/* Class = "UIButton"; normalTitle = "US"; ObjectID = "c4a-MS-aUA"; */
+"c4a-MS-aUA.normalTitle" = "US";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "d2h-kB-mmC"; */
+"d2h-kB-mmC.text" = "1";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "dBd-Xg-GvV"; */
+"dBd-Xg-GvV.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "in5-3g-DmD"; */
+"in5-3g-DmD.text" = "2";
+
+/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "lkx-Ip-U2p"; */
+"lkx-Ip-U2p.text" = "السندويش";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "nbs-2P-lOW"; */
+"nbs-2P-lOW.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "t8D-xn-w7Q"; */
+"t8D-xn-w7Q.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "Table"; ObjectID = "yaL-0S-PM1"; */
+"yaL-0S-PM1.text" = "الطاولة";
