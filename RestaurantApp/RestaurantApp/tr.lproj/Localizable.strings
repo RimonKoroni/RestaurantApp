@@ -18,3 +18,5 @@
 "serveOrderFaildMessage" = "Hiçbir istek başarılı oldu!";
 "serveOrderSuccessMessage" = "Sipariş başarıyla devam eder!";
 "noNotificationMessage" = "Hiçbir bildirim yok!";
+"changeLanguageTitle" = "Dil Değişti!";
+"changeLanguageMsg" = "While sonra Uygulamayı Yeniden edin.";

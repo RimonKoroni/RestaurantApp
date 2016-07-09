@@ -17,6 +17,7 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let notificationService = NotificationService()
     var languages : [String]!
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
         let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
         let schedualTime = dict.valueForKey("checkForNotificationTime") as! Double
         NSTimer.scheduledTimerWithTimeInterval(schedualTime, target: self.notificationService, selector: #selector(self.notificationService.checkForNewOrders), userInfo: nil, repeats: true)
+        
         languages = ["US", "TR", "AR"]
         
     }
@@ -41,7 +43,6 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
         self.languageTableView.alpha = 0
         UIView.animateWithDuration(0.7, delay: 0.1, options: .CurveEaseOut, animations: {
             self.languageTableView.alpha = 1
-            
             }, completion: { (finished:Bool) in
                 
         })
@@ -73,7 +74,28 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
         self.languageTableView.alpha = 1
         UIView.animateWithDuration(0.7, delay: 0.1, options: .CurveEaseOut, animations: {
             self.languageTableView.alpha = 0
+            var langCode = ""
+            if indexPath.row == 0 {
+                langCode = "en"
+            } else if indexPath.row == 1 {
+                langCode = "tr"
+            } else {
+                langCode = "ar"
+            }
             
+            NSUserDefaults.standardUserDefaults().setObject([langCode], forKey: "AppleLanguages")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            self.userDefaults.setValue(langCode, forKey: "lang")
+            
+            
+            let alertController = UIAlertController(title: NSLocalizedString("changeLanguageTitle", comment: ""), message: NSLocalizedString("changeLanguageMsg", comment: ""), preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                exit(0)
+            }
+            
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
             }, completion: { (finished:Bool) in
                 self.languageTableView.hidden = true
         })

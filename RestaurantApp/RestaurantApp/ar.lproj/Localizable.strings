@@ -18,3 +18,5 @@
 "serveOrderFaildMessage" = "لم يتم تخديم الطلب بنجاح!";
 "serveOrderSuccessMessage" = "لقد تم تخديم الطلب بنجاح!";
 "noNotificationMessage" = "لا يوجد هناك أي إشعار!";
+"changeLanguageTitle" = "تغيير اللغة!";
+"changeLanguageMsg" = "يرجى إعادة فتح التطبيق.";

@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userDefaults.setValue(NSUserDefaults.standardUserDefaults().valueForKey("AppleLanguages")![0], forKey: "lang")
         userDefaults.setBool(false, forKey: "isRun")
         userDefaults.setInteger(0, forKey: "notification")
+        
         return true
     }
 

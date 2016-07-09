@@ -19,3 +19,5 @@
 "serveOrderFaildMessage" = "The order is not served successfuly!";
 "serveOrderSuccessMessage" = "The order is served successfuly!";
 "noNotificationMessage" = "There is no notification!";
+"changeLanguageTitle" = "Language Changed!";
+"changeLanguageMsg" = "Please Reopen the Application after While.";

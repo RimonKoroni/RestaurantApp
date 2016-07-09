@@ -19,7 +19,7 @@ public override func awakeFromNib() {
     
     
     
-    if (lang.containsString("ar")){
+    /*if (lang.containsString("ar")){
 //        self.setAttributedTitle(NSMutableAttributedString(string: self.titleLabel!.text!, attributes: [NSFontAttributeName:UIFont(name: "Motken daeira", size: self.titleLabel!.font.pointSize)!]), forState: .Normal)
         if (self.tag == 1) {
 
@@ -36,7 +36,7 @@ public override func awakeFromNib() {
         
         
     }
-    else {
+    else {*/
         if (self.tag == 1) {
             
             let font = UIFontDescriptor.init(name: "Vrinda", size: (self.titleLabel?.font.pointSize)!)
@@ -51,7 +51,7 @@ public override func awakeFromNib() {
         //print (self)
         //print (self.titleLabel!.font.familyName)
         
-    }
+    //}
     
 }
 
