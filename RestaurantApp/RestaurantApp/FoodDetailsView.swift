@@ -44,6 +44,22 @@ import UIKit
                 self.foodImage.image = UIImage(data: data)
             }
         }
+        let imageDataService = ImageDataService()
+        let imageData = imageDataService.getByUrl(food.imageUrl)
+        
+        if imageData == nil {
+            imageDataService.loadImage(food.imageUrl, onComplition: {
+                (data) -> Void in
+                imageDataService.insert(food.imageUrl, image: data)
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.foodImage.image = UIImage(data: data)
+                }
+            })
+            
+        } else {
+            self.foodImage.image = UIImage(data: imageData!)
+        }
+
         self.totalPrice = food.price
         
     }
