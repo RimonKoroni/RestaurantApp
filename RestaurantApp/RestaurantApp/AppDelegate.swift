@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         userDefaults.setValue(NSUserDefaults.standardUserDefaults().valueForKey("AppleLanguages")![0], forKey: "lang")
-        
+        userDefaults.setBool(false, forKey: "isRun")
+        userDefaults.setInteger(0, forKey: "notification")
         return true
     }
 

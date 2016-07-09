@@ -10,11 +10,12 @@ import Foundation
 
 protocol NotificationDelegate {
    func refreshTable()
+   func refreshNotification(count : Int)
 }
 
 class NotificationViewController : UIViewController , UITableViewDataSource, UITableViewDelegate, NotificationDelegate {
     
-    @IBOutlet weak var numberOfNotificationView: UIView!
+    @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var notificationCount: UILabel!
     
     @IBOutlet weak var ordersTableView: UITableView!
@@ -34,15 +35,22 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
 
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
-        numberOfNotificationView.layer.cornerRadius = 10
+        notificationView.layer.cornerRadius = 15
         
         self.title = NSLocalizedString("notificationTitle", comment: "")
         self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Vladimir Script", size: 50)!]
         self.noNotificationLable.text = NSLocalizedString("noNotificationMessage", comment: "")
         getOrders()
+        notificationService.getNotiNumber({ (count) -> Void in
+            self.userDefaults.setInteger(count, forKey: "notification")
+            self.refreshNotification(count)
+        })
         
-        
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let count = self.userDefaults.valueForKey("notification") as! Int
+        self.refreshNotification(count)
     }
     
     func getOrders() {
@@ -74,6 +82,16 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
         self.presentViewController(adminStartViewController, animated:true, completion:nil)
     }
     
+    func refreshNotification(count : Int) {
+        dispatch_async(dispatch_get_main_queue()) {
+            if count == 0 {
+                self.notificationView.hidden = true
+            } else {
+                self.notificationView.hidden = false
+                self.notificationCount.text = String(count)
+            }
+        }
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -86,7 +104,7 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("notificationCell") as! NotificationCell
-        cell.tableNumber.text = cell.tableNumber.text! + "\(orders[indexPath.row].tableNumber)"
+        cell.tableNumber.text = "\(orders[indexPath.row].tableNumber)"
         cell.notificationDate.text = orders[indexPath.row].requestDate.getTime()
         return cell
         

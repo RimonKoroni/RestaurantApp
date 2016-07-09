@@ -15,12 +15,16 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var langImage: UIImageView!
     @IBOutlet weak var languageTableView: UITableView!
     
+    let notificationService = NotificationService()
     var languages : [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")// Info.pList path
+        let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
+        let schedualTime = dict.valueForKey("checkForNotificationTime") as! Double
+        NSTimer.scheduledTimerWithTimeInterval(schedualTime, target: self.notificationService, selector: #selector(self.notificationService.checkForNewOrders), userInfo: nil, repeats: true)
         languages = ["US", "TR", "AR"]
         
     }

@@ -26,9 +26,11 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
     override func viewDidLoad() {
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
-        notificationView.layer.cornerRadius = 10
+        notificationView.layer.cornerRadius = 15
         self.title = NSLocalizedString("notificationTitle", comment: "")
         getOrderItems()
+        let count = self.userDefaults.valueForKey("notification") as! Int
+        self.refreshNotification(count)
     }
     
     func getOrderItems() {
@@ -66,6 +68,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("orderCell") as! OrderCell
+        
         cell.count.text = "\(orderItems[indexPath.row].count)"
         if let url = NSURL(string: orderItems[indexPath.row].foodImage) {
             if let data = NSData(contentsOfURL: url) {
@@ -76,8 +79,17 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
         return cell
         
     }
-    
-    
+
+    func refreshNotification(count : Int) {
+        dispatch_async(dispatch_get_main_queue()) {
+            if count == 0 {
+                self.notificationView.hidden = true
+            } else {
+                self.notificationView.hidden = false
+                self.notificationCount.text = String(count)
+            }
+        }
+    }
     
     @IBAction func acceptOrder(sender: AnyObject) {
         self.orderService.serveOrder(self.orderId, onComplition: {
@@ -85,6 +97,9 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
             dispatch_sync(dispatch_get_main_queue(), {
                 if status == 1 {
                     self.view.makeToast(message: NSLocalizedString("serveOrderSuccessMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                    let count = self.userDefaults.valueForKey("notification") as! Int
+                    self.userDefaults.setInteger(count - 1 , forKey: "notification")
+                    self.refreshNotification(count)
                     self.delegate.refreshTable()
                     self.navigationController?.popViewControllerAnimated(true)
                 } else {
