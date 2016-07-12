@@ -17,8 +17,8 @@ extension UILabel {
         let lang = userDefaults.valueForKey("lang") as! String        
         
         
-        /*if (lang.containsString("ar")) {
-            if (self.tag == 1) {
+        if (lang.containsString("ar")) {
+            /*if (self.tag == 1) {
                               let font = UIFontDescriptor.init(name: "Motken daeira", size: self.font.pointSize)
                 self.font = UIFont.init(descriptor: font, size: self.font.pointSize)
 
@@ -33,13 +33,23 @@ extension UILabel {
             else{
                      let font = UIFontDescriptor.init(name: "GE Dinar Two Medium", size: self.font.pointSize)
                 self.font = UIFont.init(descriptor: font, size: self.font.pointSize)}
+            */
             
             //print (self)
             //print (self.font.familyName)
 
-            
+            if (self.tag == 1) {
+                //self.attributedText = NSMutableAttributedString(string: self.text!, attributes: [NSFontAttributeName:UIFont(name: "Century Gothic", size: self.font.pointSize)!])
+                let font = UIFontDescriptor.init(name: "Vrinda", size: self.font.pointSize)
+                self.font = UIFont.init(descriptor: font, size: self.font.pointSize)
+                //print (self)
+                //print (self.font.familyName)
+            } else {
+                let font = UIFontDescriptor.init(name: "Vladimir Script", size: self.font.pointSize)
+                self.font = UIFont.init(descriptor: font, size: self.font.pointSize - 4)
+            }
         }
-        else {*/
+        else {
             if (self.tag == 1) {
             //self.attributedText = NSMutableAttributedString(string: self.text!, attributes: [NSFontAttributeName:UIFont(name: "Century Gothic", size: self.font.pointSize)!])
                 let font = UIFontDescriptor.init(name: "Vrinda", size: self.font.pointSize)
@@ -53,10 +63,11 @@ extension UILabel {
             
         //}
         
-    }
+        }
     
    
     }
+}
 
 
 

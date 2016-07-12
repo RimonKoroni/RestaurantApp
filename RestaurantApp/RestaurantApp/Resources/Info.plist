@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>Menu</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -53,6 +53,6 @@
 	<key>checkForNotificationTime</key>
 	<integer>10</integer>
 	<key>serverUrl</key>
-	<string>http://192.168.1.6:8080</string>
+	<string>http://192.168.1.7:8080</string>
 </dict>
 </plist>

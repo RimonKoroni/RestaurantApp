@@ -16,13 +16,24 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var languageTableView: UITableView!
     
     var languages : [String]!
-    
+    var lang : String!
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        lang = userDefaults.valueForKey("lang") as! String
         languages = ["US", "TR", "AR"]
         
+        if lang.containsString("en") {
+            self.languageButton.setTitle(languages[0], forState: .Normal)
+            self.langImage.image = UIImage(named: languages[0])
+        } else if lang.containsString("ar") {
+            self.languageButton.setTitle(languages[2], forState: .Normal)
+            self.langImage.image = UIImage(named: languages[2])
+        } else {
+            self.languageButton.setTitle(languages[1], forState: .Normal)
+            self.langImage.image = UIImage(named: languages[1])
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +80,28 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.languageTableView.alpha = 1
         UIView.animateWithDuration(0.7, delay: 0.1, options: .CurveEaseOut, animations: {
             self.languageTableView.alpha = 0
+            var langCode = ""
+            if indexPath.row == 0 {
+                langCode = "en"
+            } else if indexPath.row == 1 {
+                langCode = "tr"
+            } else {
+                langCode = "ar"
+            }
             
+            NSUserDefaults.standardUserDefaults().setObject([langCode], forKey: "AppleLanguages")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            self.userDefaults.setValue(langCode, forKey: "lang")
+            
+            
+            let alertController = UIAlertController(title: NSLocalizedString("changeLanguageTitle", comment: ""), message: NSLocalizedString("changeLanguageMsg", comment: ""), preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                exit(0)
+            }
+            
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
             }, completion: { (finished:Bool) in
                 self.languageTableView.hidden = true
         })

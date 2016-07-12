@@ -60,7 +60,7 @@
                                     <constraint firstItem="ZyP-P4-ZDC" firstAttribute="leading" secondItem="f4r-Cd-fYw" secondAttribute="leading" id="WoL-RT-pJw"/>
                                     <constraint firstItem="c4a-MS-aUA" firstAttribute="leading" secondItem="f4r-Cd-fYw" secondAttribute="leading" id="eob-Jy-8xA"/>
                                     <constraint firstAttribute="width" constant="130" id="l6U-3v-E1N"/>
-                                    <constraint firstItem="srl-UU-0db" firstAttribute="leading" secondItem="f4r-Cd-fYw" secondAttribute="leading" constant="20" id="q20-Nn-2QP"/>
+                                    <constraint firstItem="srl-UU-0db" firstAttribute="left" secondItem="f4r-Cd-fYw" secondAttribute="left" constant="20" id="q20-Nn-2QP"/>
                                     <constraint firstAttribute="trailing" secondItem="ZyP-P4-ZDC" secondAttribute="trailing" id="qng-Dx-T7t"/>
                                     <constraint firstAttribute="trailing" secondItem="c4a-MS-aUA" secondAttribute="trailing" id="s36-Ky-3qk"/>
                                     <constraint firstAttribute="height" constant="36" id="y8M-OX-Wzr"/>
@@ -165,8 +165,8 @@
                                     <constraint firstItem="rFE-ZM-f5J" firstAttribute="leading" secondItem="azm-AC-jPR" secondAttribute="leading" id="yH0-hg-hil"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BF-2V-z7H">
-                                <rect key="frame" x="120" y="412" width="528" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hoşgeldin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BF-2V-z7H">
+                                <rect key="frame" x="137" y="412" width="495" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QHZ-oT-Bgm"/>
@@ -178,7 +178,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="3BF-2V-z7H" secondAttribute="trailing" constant="100" id="Fb4-fH-uBN"/>
                             <constraint firstItem="bEE-QK-HK4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="JhZ-hR-fMU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bEE-QK-HK4" secondAttribute="bottom" id="PsS-Vw-aMr"/>
                             <constraint firstItem="f4r-Cd-fYw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="XB1-gP-NJv"/>
@@ -191,7 +190,6 @@
                             <constraint firstItem="I6D-Va-LXJ" firstAttribute="top" secondItem="f4r-Cd-fYw" secondAttribute="bottom" constant="-1" id="ka3-dC-hrf"/>
                             <constraint firstItem="I6D-Va-LXJ" firstAttribute="centerX" secondItem="f4r-Cd-fYw" secondAttribute="centerX" id="oav-H5-Sas"/>
                             <constraint firstItem="3BF-2V-z7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tJj-R0-dvu"/>
-                            <constraint firstItem="3BF-2V-z7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="uMR-Ff-OaR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="f4r-Cd-fYw" secondAttribute="leading" id="zyQ-ZH-27B"/>
                         </constraints>
                     </view>

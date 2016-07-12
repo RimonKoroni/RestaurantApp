@@ -94,12 +94,12 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
         
         // Create the back button
         let buttonBack: UIButton = UIButton(type: UIButtonType.Custom)
-        if (self.lang.containsString("en")) {
-            buttonBack.setImage(UIImage(named: "enBackButton"), forState: .Normal)
+        if (self.lang.containsString("ar")) {
+            buttonBack.setImage(UIImage(named: "arBackButton"), forState: .Normal)
             
         }
         else {
-            buttonBack.setImage(UIImage(named: "arBackButton"), forState: .Normal)
+            buttonBack.setImage(UIImage(named: "enBackButton"), forState: .Normal)
         }
         buttonBack.frame = CGRectMake(0, 0, 40, 40)
         buttonBack.addTarget(self, action: #selector(self.leftNavButtonClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)// Define the action of this button

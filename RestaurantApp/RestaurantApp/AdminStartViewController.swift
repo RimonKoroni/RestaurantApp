@@ -18,6 +18,7 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
     let notificationService = NotificationService()
     var languages : [String]!
     let userDefaults = NSUserDefaults.standardUserDefaults()
+    var lang : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,19 @@ class AdminStartViewController: UIViewController, UITableViewDelegate, UITableVi
         let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
         let schedualTime = dict.valueForKey("checkForNotificationTime") as! Double
         NSTimer.scheduledTimerWithTimeInterval(schedualTime, target: self.notificationService, selector: #selector(self.notificationService.checkForNewOrders), userInfo: nil, repeats: true)
-        
+        lang = userDefaults.valueForKey("lang") as! String
         languages = ["US", "TR", "AR"]
+        
+        if lang.containsString("en") {
+            self.languageButton.setTitle(languages[0], forState: .Normal)
+            self.langImage.image = UIImage(named: languages[0])
+        } else if lang.containsString("ar") {
+            self.languageButton.setTitle(languages[2], forState: .Normal)
+            self.langImage.image = UIImage(named: languages[2])
+        } else {
+            self.languageButton.setTitle(languages[1], forState: .Normal)
+            self.langImage.image = UIImage(named: languages[1])
+        }
         
     }
     
