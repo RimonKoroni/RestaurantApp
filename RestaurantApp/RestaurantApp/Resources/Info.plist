@@ -37,7 +37,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Admin</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>Main</string>
+	<string>Admin</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -53,6 +53,6 @@
 	<key>checkForNotificationTime</key>
 	<integer>10</integer>
 	<key>serverUrl</key>
-	<string>http://192.168.1.7:8080</string>
+	<string>http://192.168.1.102:8080</string>
 </dict>
 </plist>

@@ -51,6 +51,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
     }
     
     @IBAction func goToMenu(sender: AnyObject) {
+        self.carousel.hidden = true
         self.navigationController?.popViewControllerAnimated(true)
     }
     

@@ -313,22 +313,25 @@
                                     <constraint firstItem="V93-Gb-peu" firstAttribute="top" secondItem="B4C-lC-kfo" secondAttribute="top" id="k32-Eg-2zg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ima-s6-70q" userLabel="footer">
+                            <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="ima-s6-70q" userLabel="footer">
                                 <rect key="frame" x="0.0" y="774" width="768" height="186"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-sF-p2a" userLabel="tableNumber">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Jlh-ON-6Og">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="186"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-sF-p2a" userLabel="tableNumber">
                                         <rect key="frame" x="336" y="48" width="121" height="132"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActionButton" translatesAutoresizingMaskIntoConstraints="NO" id="eda-fb-YHf">
                                                 <rect key="frame" x="0.0" y="0.0" width="121" height="132"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="occ-Nr-xCl">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="occ-Nr-xCl">
                                                 <rect key="frame" x="61" y="43" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Vrinda" family="Vrinda" pointSize="90"/>
                                                 <color key="textColor" red="0.82352941176470584" green="0.61960784313725492" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Table number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGr-4t-bsE">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGr-4t-bsE">
                                                 <rect key="frame" x="14" y="102" width="94" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -433,9 +436,6 @@
                                             <constraint firstItem="OOo-UF-rtT" firstAttribute="top" secondItem="N06-Zm-xY5" secondAttribute="top" id="x9K-CQ-nBR"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Jlh-ON-6Og">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="186"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -503,7 +503,7 @@
                                     <outlet property="delegate" destination="Jqd-rx-U4u" id="Fvs-lu-8i8"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-x9-Ud6">
+                            <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-x9-Ud6">
                                 <rect key="frame" x="0.0" y="774" width="768" height="186"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="OmT-wZ-xBq">
@@ -1047,7 +1047,7 @@
                                 <color key="textColor" red="0.23921568630000001" green="0.1176470588" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqW-28-Akq">
+                            <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="gqW-28-Akq">
                                 <rect key="frame" x="0.0" y="774" width="768" height="186"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="PzF-Ok-0hW">

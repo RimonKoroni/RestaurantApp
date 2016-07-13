@@ -39,11 +39,6 @@ import UIKit
         self.foodTitle.text = food.getName(lang)
         self.foodPrice.text = "\(food.price)$"
         self.food = food
-        if let url = NSURL(string: food.imageUrl) {
-            if let data = NSData(contentsOfURL: url) {
-                self.foodImage.image = UIImage(data: data)
-            }
-        }
         let imageDataService = ImageDataService()
         let imageData = imageDataService.getByUrl(food.imageUrl)
         
