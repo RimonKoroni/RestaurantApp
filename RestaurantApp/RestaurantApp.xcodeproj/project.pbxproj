@@ -21,7 +21,6 @@
 		185BCF8C1D26B1110000D51D /* FoodTypesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BCF8B1D26B1110000D51D /* FoodTypesService.swift */; };
 		185BCF8E1D26B3490000D51D /* FoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BCF8D1D26B3490000D51D /* FoodType.swift */; };
 		185BCF901D26CCCF0000D51D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BCF8F1D26CCCF0000D51D /* ImageView.swift */; };
-		185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */; };
 		185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */; };
 		185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EF3A81D1F2116009AFFAB /* Labell.swift */; };
 		1861EDF81D28601D00E136F0 /* UIViewToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861EDF71D28601D00E136F0 /* UIViewToast.swift */; };
@@ -57,6 +56,7 @@
 		18D75FC61D208EA9004A2013 /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D75FC51D208EA9004A2013 /* FoodDetailsView.swift */; };
 		18D75FC81D208EC6004A2013 /* FoodDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D75FC71D208EC6004A2013 /* FoodDetailsView.xib */; };
 		BFB884AD8F8278D6D8D8C0B3 /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E72EAD3F0C137FC1E71068 /* Pods_RestaurantApp.framework */; };
+		F79F9CF51D625DF300909BAA /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +76,6 @@
 		185BCF8B1D26B1110000D51D /* FoodTypesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTypesService.swift; sourceTree = "<group>"; };
 		185BCF8D1D26B3490000D51D /* FoodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodType.swift; sourceTree = "<group>"; };
 		185BCF8F1D26CCCF0000D51D /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = VLADIMIR.TTF; path = "../../../../../../Volumes/VMware Shared Folders/iOS App Development with Swift Essential Training {AceMerlin}/Exercise Files/Restaurant app Images/VLADIMIR.TTF"; sourceTree = "<group>"; };
 		185EF3A71D1F2116009AFFAB /* ButtonLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonLabel.swift; path = Extentions/ButtonLabel.swift; sourceTree = "<group>"; };
 		185EF3A81D1F2116009AFFAB /* Labell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Labell.swift; path = Extentions/Labell.swift; sourceTree = "<group>"; };
 		1861EDF71D28601D00E136F0 /* UIViewToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewToast.swift; path = Extentions/UIViewToast.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		C64D0CD9ED7423AED75345F3 /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
 		E989D42DD0200764532F27C1 /* Pods-RestaurantApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F1E72EAD3F0C137FC1E71068 /* Pods_RestaurantApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = VLADIMIR.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				1858F8461D205F80002FE25A /* vrinda.ttf */,
-				185EF3A51D1F2037009AFFAB /* VLADIMIR.TTF */,
+				F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -374,12 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18B3AE431D1B0F8A00389895 /* Build configuration list for PBXNativeTarget "RestaurantApp" */;
 			buildPhases = (
-				52B18FF69568FB30E56E6CBB /* 📦 Check Pods Manifest.lock */,
+				52B18FF69568FB30E56E6CBB /* [CP] Check Pods Manifest.lock */,
 				18B3AE2A1D1B0F8900389895 /* Sources */,
 				18B3AE2B1D1B0F8900389895 /* Frameworks */,
 				18B3AE2C1D1B0F8900389895 /* Resources */,
-				34128EC40431E8EE33E9A89E /* 📦 Embed Pods Frameworks */,
-				00F4218C6C191FD6262B8526 /* 📦 Copy Pods Resources */,
+				34128EC40431E8EE33E9A89E /* [CP] Embed Pods Frameworks */,
+				00F4218C6C191FD6262B8526 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -402,7 +402,6 @@
 				TargetAttributes = {
 					18B3AE2D1D1B0F8900389895 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = HPVMB4PN4W;
 					};
 				};
 			};
@@ -431,8 +430,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79F9CF51D625DF300909BAA /* VLADIMIR.TTF in Resources */,
 				1858F8471D205FA8002FE25A /* vrinda.ttf in Resources */,
-				185EF3A61D1F20BA009AFFAB /* VLADIMIR.TTF in Resources */,
 				18D75FC81D208EC6004A2013 /* FoodDetailsView.xib in Resources */,
 				18B3AE531D1B122D00389895 /* Info.plist in Resources */,
 				180D1A301D25A1FC00431466 /* Localizable.strings in Resources */,
@@ -446,14 +445,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00F4218C6C191FD6262B8526 /* 📦 Copy Pods Resources */ = {
+		00F4218C6C191FD6262B8526 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,14 +460,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		34128EC40431E8EE33E9A89E /* 📦 Embed Pods Frameworks */ = {
+		34128EC40431E8EE33E9A89E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,14 +475,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52B18FF69568FB30E56E6CBB /* 📦 Check Pods Manifest.lock */ = {
+		52B18FF69568FB30E56E6CBB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
