@@ -35,8 +35,18 @@ import UIKit
         foodImage.layer.borderWidth = 2
         foodImage.layer.masksToBounds = true
         foodImage.layer.cornerRadius = 5
-        self.foodDescription.text = food.getDescription(lang)
-        self.foodTitle.text = food.getName(lang)
+        let description = food.getDescription(lang)
+        if description == nil {
+            self.foodDescription.text = ""
+        } else {
+            self.foodDescription.text = description
+        }
+        let name = food.getName(lang)
+        if name == nil {
+            self.foodTitle.text = ""
+        } else {
+            self.foodTitle.text = name
+        }
         self.foodPrice.text = "\(food.price)$"
         self.food = food
         let imageDataService = ImageDataService()
@@ -89,7 +99,13 @@ import UIKit
     @IBAction func addToCart(sender: AnyObject) {
         let data = NSUserDefaults.standardUserDefaults().objectForKey("carts") as? NSData
         var carts = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! [Cart]
-        let cart = Cart(foodId: self.food.id, count: self.countNumber, foodName: self.food.getName(lang), foodImage : self.food.imageUrl , foodPrice: self.food.price)
+        let name = food.getName(lang)
+        if name == nil {
+            self.foodTitle.text = ""
+        } else {
+            self.foodTitle.text = name
+        }
+        let cart = Cart(foodId: self.food.id, count: self.countNumber, foodName: name!, foodImage : self.food.imageUrl , foodPrice: self.food.price)
         for i in 0..<carts.count {
             if carts[i].foodId == self.food.id {
                 carts.removeAtIndex(i)

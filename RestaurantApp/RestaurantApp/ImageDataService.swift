@@ -34,8 +34,11 @@ class ImageDataService {
     }
     
     func loadImage(url : String, onComplition: (data : NSData) -> Void) {
-       
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")// Info.pList path
+        let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
+        let serverUrl = dict.objectForKey("serverUrl") as! String
+        let fullUrl = serverUrl + url
+        let request = NSMutableURLRequest(URL: NSURL(string: fullUrl)!)
         
         let session = NSURLSession.sharedSession()
         

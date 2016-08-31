@@ -37,7 +37,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Admin</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>Main</string>
+	<string>Admin</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

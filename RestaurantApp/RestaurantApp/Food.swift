@@ -36,7 +36,7 @@ class Food {
         
     }
     
-    func getName(lang : String) -> String {
+    func getName(lang : String) -> String? {
         if lang.containsString("ar") {
             return self.arabicName
         } else {
@@ -48,7 +48,10 @@ class Food {
         }
     }
     
-    func getDescription(lang : String) -> String {
+    func getDescription(lang : String) -> String? {
+        if self.arabicDescription == nil {
+            return ""
+        }
         if lang.containsString("ar") {
             return self.arabicDescription
         } else {
