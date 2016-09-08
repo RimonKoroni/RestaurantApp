@@ -1,18 +1,24 @@
 //
-//  FoofTypesViewController.swift
+//  FoodTypeDMViewController.swift
 //  RestaurantApp
 //
-//  Created by SSS on 6/23/16.
+//  Created by Rimon on 9/6/16.
 //  Copyright © 2016 SSS. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
+protocol FoodTypeProtocol {
+    func deleteFoodType(foodType : FoodType)
+    func editFoodType(foodType : FoodType)
+    func addFoodToFoodType(foodType : FoodType)
+}
+
+class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     
-    @IBOutlet weak var tableNumber: UILabel!
-    @IBOutlet weak var foodTypesCollectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noFoodTypeLable: UILabel!
+    
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var foodTypes : [FoodType] = []
     var lang : String!
@@ -20,21 +26,17 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
     var generalService = GeneralService()
     var imageDataService = ImageDataService()
     var selectedFoodType : FoodType!
+    var selectForEdit : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationControllerHelper.configureNavigationController(self, title: "foodTypeTitle")
+        NavigationControllerHelper.configureNavigationController(self, title: "dataManagementTitle")
         lang = userDefaults.valueForKey("lang") as! String
-        let carts : [Cart] = []
-        let cartsData = NSKeyedArchiver.archivedDataWithRootObject(carts)
-        userDefaults.setObject(cartsData, forKey: "carts")
-        userDefaults.synchronize()
         addLeftNavItemOnView ()
-        
+        self.noFoodTypeLable.text = NSLocalizedString("noFoodTypesMessage", comment: "")
         getFoodTypes()
-        getTableNumber()
+        
     }
     
- 
     func getFoodTypes() {
         EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
         self.view.userInteractionEnabled = false
@@ -43,80 +45,95 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
             (result) -> Void in
             self.foodTypes = result
             dispatch_sync(dispatch_get_main_queue(), {
-                self.foodTypesCollectionView.reloadData()
+                self.tableView.reloadData()
                 EZLoadingActivity.hide()
                 self.view.userInteractionEnabled = true
             })
         })
     }
+ 
     
-    func getTableNumber() {
-        generalService.getTableNumber({
-            () -> Void in
-            dispatch_sync(dispatch_get_main_queue(), {
-                let tableNumber = self.userDefaults.valueForKey("tableNumber") as! Int
-                self.tableNumber.text = String(tableNumber)
-            })
-        })
-
+    @IBAction func goToHome(sender: AnyObject) {
+        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+        self.presentViewController(adminStartViewController, animated:true, completion:nil)
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.foodTypes.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("foodCell", forIndexPath:indexPath) as! FoodCollectionViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("DMFoodTypeCell") as! DMFoodTypeCell
         
-        cell.foodTypeName.text = self.foodTypes[indexPath.row].getName(lang)
-        
+        cell.delegate = self
+        cell.name.text = self.foodTypes[indexPath.row].getName(lang)
         let imageData = self.imageDataService.getByUrl(self.foodTypes[indexPath.row].imageUrl)
-        
         if imageData == nil {
             self.imageDataService.loadImage(self.foodTypes[indexPath.row].imageUrl, onComplition: {
                 (data) -> Void in
                 self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data)
                 dispatch_async(dispatch_get_main_queue()) {
-                    cell.foodImage.image = UIImage(data: data)
+                    cell.foodTypeImage.image = UIImage(data: data)
                 }
             })
-
+            
         } else {
-            cell.foodImage.image = UIImage(data: imageData!)
+            cell.foodTypeImage.image = UIImage(data: imageData!)
         }
-        
+        cell.foodType = self.foodTypes[indexPath.row]
         return cell
-    }
-    
-    
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.selectedFoodType = self.foodTypes[indexPath.row]
-        performSegueWithIdentifier("showFoodsDetailsSegue", sender: self)
         
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //self.selectedOrderId = orders[indexPath.row].id
+        //self.performSegueWithIdentifier("goToOrderViewControllerSegue", sender: self)
+        
+    }
+    
 
-    @IBAction func goToHome(sender: AnyObject) {
-        let startViewController = storyboard!.instantiateViewControllerWithIdentifier("StartViewController") as! StartViewController
-        self.presentViewController(startViewController, animated:true, completion:nil)
+    @IBAction func addFoodTypeAction(sender: AnyObject) {
+        self.selectForEdit = false
+        performSegueWithIdentifier("addOrEditFoodTypeSegue", sender: sender)
+    }
+    
+    
+    // Overwrite FoodTypeProtocol functions
+    
+    
+    func deleteFoodType(foodType : FoodType) {
+        
+    }
+    
+    func editFoodType(foodType: FoodType) {
+        self.selectForEdit = true
+        self.selectedFoodType = foodType
+        performSegueWithIdentifier("addOrEditFoodTypeSegue", sender: self)
+    }
+    
+    func addFoodToFoodType(foodType: FoodType) {
+        self.selectedFoodType = foodType
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "moveFromMenuToCartSegue" {
-            let destinationViewController = segue.destinationViewController as! CartViewController
-            destinationViewController.fromMenu = true
-        }
         
-        if segue.identifier == "showFoodsDetailsSegue" {
-            let destinationViewController = segue.destinationViewController as! FoodDetailsViewController
-            destinationViewController.foodType = self.selectedFoodType
+        if segue.identifier == "addOrEditFoodTypeSegue" {
+            let controller = segue.destinationViewController as! AddOrEditFoodTypeViewController
+            if self.selectForEdit {
+                controller.foodType = self.selectedFoodType
+                controller.forEditing = true
+            } else {
+                controller.forEditing = false
+            }
         }
     }
+    
     
     /**
      The addLeftNavItemOnView function is used for add backe button to the navigation bar.
@@ -149,9 +166,7 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
      The leftNavButtonClick function is an action which triggered when user press on the backButton.
      */
     func leftNavButtonClick(sender:UIButton!) {
-        let startViewController = storyboard!.instantiateViewControllerWithIdentifier("StartViewController") as! StartViewController
-        self.presentViewController(startViewController, animated:true, completion:nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
-
     
 }

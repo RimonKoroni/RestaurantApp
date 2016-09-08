@@ -20,3 +20,7 @@
 "noNotificationMessage" = "Hiçbir bildirim yok!";
 "changeLanguageTitle" = "Dil Değişti!";
 "changeLanguageMsg" = "While sonra Uygulamayı Yeniden edin.";
+"dataManagementTitle" = "Gestión de datos";
+"noFoodTypesMessage" = "No hay ningún tipo de alimento!";
+"addFoodTypeTitle" = "Gıda Tipi Ekle";
+"editFoodTypeTitle" = "Dit Gıda Tipi";

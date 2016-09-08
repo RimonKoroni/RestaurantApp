@@ -68,10 +68,10 @@
                                                 <constraint firstAttribute="height" constant="50" id="wRx-Vi-RbV"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-4S-8RZ">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-4S-8RZ">
                                             <rect key="frame" x="0.0" y="50" width="758" height="127"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2N-6Z-LUI">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2N-6Z-LUI">
                                                     <rect key="frame" x="10" y="0.0" width="738" height="127"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,13 +86,13 @@
                                                 <constraint firstAttribute="bottom" secondItem="l2N-6Z-LUI" secondAttribute="bottom" id="iMZ-LU-sls"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-la-Ufj">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-la-Ufj">
                                             <rect key="frame" x="0.0" y="177" width="758" height="75"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="qTZ-Kq-2Vp">
+                                                <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTZ-Kq-2Vp">
                                                     <rect key="frame" x="20" y="0.0" width="718" height="75"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4q-bZ-LJS">
+                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4q-bZ-LJS">
                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="75"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40.0$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-PZ-EqF">
@@ -110,10 +110,10 @@
                                                                 <constraint firstAttribute="right" secondItem="ngf-PZ-EqF" secondAttribute="right" constant="2" id="hgt-XD-cCe"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkY-M8-uEz">
+                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkY-M8-uEz">
                                                             <rect key="frame" x="398" y="0.0" width="80" height="75"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-v3-vdJ">
+                                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-v3-vdJ">
                                                                     <rect key="frame" x="20" y="13" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="G6Y-xv-y5I"/>
@@ -131,10 +131,10 @@
                                                                 <constraint firstItem="hVd-v3-vdJ" firstAttribute="centerY" secondItem="bkY-M8-uEz" secondAttribute="centerY" id="wt4-HC-WKa"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGn-9F-b0L">
+                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGn-9F-b0L">
                                                             <rect key="frame" x="478" y="0.0" width="80" height="75"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIN-tU-xJU">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIN-tU-xJU">
                                                                     <rect key="frame" x="5" y="18" width="70" height="40"/>
                                                                     <color key="backgroundColor" red="0.72941176470588232" green="0.47843137254901957" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
@@ -152,10 +152,10 @@
                                                                 <constraint firstItem="VIN-tU-xJU" firstAttribute="centerY" secondItem="LGn-9F-b0L" secondAttribute="centerY" id="hbM-Nc-qwf"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Mx-OK-ID4">
+                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Mx-OK-ID4">
                                                             <rect key="frame" x="558" y="0.0" width="80" height="75"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj6-ek-8iR">
+                                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj6-ek-8iR">
                                                                     <rect key="frame" x="10" y="13" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="1kS-jT-D3x"/>
@@ -173,10 +173,10 @@
                                                                 <constraint firstItem="sj6-ek-8iR" firstAttribute="centerX" secondItem="7Mx-OK-ID4" secondAttribute="centerX" constant="-5" id="r2I-op-Sv5"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lD4-Ky-ius">
+                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lD4-Ky-ius">
                                                             <rect key="frame" x="638" y="0.0" width="80" height="75"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-3e-XCg">
+                                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-3e-XCg">
                                                                     <rect key="frame" x="15" y="13" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="47t-KL-QIS"/>

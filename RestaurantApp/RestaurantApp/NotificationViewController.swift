@@ -30,15 +30,11 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
     var selectedOrderId : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationBarBackgroundImage = UIImage(named: "navigationBar");
-        self.navigationController?.navigationBar.setBackgroundImage(navigationBarBackgroundImage, forBarMetrics: .Default)
-
-        lang = userDefaults.valueForKey("lang") as! String
+        
+        NavigationControllerHelper.configureNavigationController(self, title: "notificationTitle")
+                lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         notificationView.layer.cornerRadius = 15
-        
-        self.title = NSLocalizedString("notificationTitle", comment: "")
-        self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Vladimir Script", size: 50)!]
         self.noNotificationLable.text = NSLocalizedString("noNotificationMessage", comment: "")
         getOrders()
         notificationService.getNotiNumber({ (count) -> Void in

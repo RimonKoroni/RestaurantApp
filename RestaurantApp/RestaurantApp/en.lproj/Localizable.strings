@@ -21,3 +21,7 @@
 "noNotificationMessage" = "There is no notification!";
 "changeLanguageTitle" = "Language Changed!";
 "changeLanguageMsg" = "Please Reopen the Application after While.";
+"dataManagementTitle" = "Data Management";
+"noFoodTypesMessage" = "There is no food type!";
+"addFoodTypeTitle" = "Add Food Type";
+"editFoodTypeTitle" = "Edit Food Type";

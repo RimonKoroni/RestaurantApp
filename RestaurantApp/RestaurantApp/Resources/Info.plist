@@ -53,6 +53,6 @@
 	<key>checkForNotificationTime</key>
 	<integer>10</integer>
 	<key>serverUrl</key>
-	<string>http://192.168.1.8:8080</string>
+	<string>http://192.168.1.101:8080</string>
 </dict>
 </plist>

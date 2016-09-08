@@ -31,7 +31,7 @@ class GenericDao<Domain : NSManagedObject> {
     }
     
     func delete(object : Domain) -> Bool {
-
+        
         managedContext.deleteObject(object)
         do{
             try managedContext.save()
@@ -135,16 +135,16 @@ class GenericDao<Domain : NSManagedObject> {
     }
     
     func fastDeleteObject() {
-//        
-//        let fetchRequest = NSFetchRequest(entityName:  DaoUtil.genericName(NSStringFromClass(Domain)))
-//        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-//        
-//        do {
-//            try appDelegate.persistentStoreCoordinator.executeRequest(deleteRequest, withContext: managedContext)
-//        } catch {
-//            // TODO: handle the error
-//        }
-    print(DaoUtil.genericName(NSStringFromClass(Domain) + "  " + "\(deletAll())"))
+        //
+        //        let fetchRequest = NSFetchRequest(entityName:  DaoUtil.genericName(NSStringFromClass(Domain)))
+        //        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        //
+        //        do {
+        //            try appDelegate.persistentStoreCoordinator.executeRequest(deleteRequest, withContext: managedContext)
+        //        } catch {
+        //            // TODO: handle the error
+        //        }
+        print(DaoUtil.genericName(NSStringFromClass(Domain) + "  " + "\(deletAll())"))
     }
     
 }
