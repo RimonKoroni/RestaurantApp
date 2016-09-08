@@ -24,3 +24,4 @@
 "noFoodTypesMessage" = "No hay ningún tipo de alimento!";
 "addFoodTypeTitle" = "Gıda Tipi Ekle";
 "editFoodTypeTitle" = "Dit Gıda Tipi";
+"deleteMessage" = "Silmek istediğiniz musunuz ";

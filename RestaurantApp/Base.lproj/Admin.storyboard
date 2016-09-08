@@ -350,7 +350,6 @@
                                                                                                                     <state key="normal" image="plusIcon"/>
                                                                                                                     <connections>
                                                                                                                         <action selector="addFoodToFoodType:" destination="gXx-cp-Dtv" eventType="touchUpInside" id="fz7-tQ-Lk0"/>
-                                                                                                                        <action selector="editFoodType:" destination="gXx-cp-Dtv" eventType="touchUpInside" id="cw9-hp-vud"/>
                                                                                                                     </connections>
                                                                                                                 </button>
                                                                                                             </subviews>
@@ -718,33 +717,121 @@
                                 <color key="textColor" red="0.23921568630000001" green="0.1176470588" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCg-Qp-A85">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-n7-8XK">
+                                        <rect key="frame" x="234" y="380" width="300" height="200"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-aY-ooz">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to delete? " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-SU-LZc">
+                                                <rect key="frame" x="10" y="24" width="280" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryr-cE-PUj">
+                                                <rect key="frame" x="200" y="120" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="g1Z-a3-qmc"/>
+                                                    <constraint firstAttribute="width" constant="60" id="oGq-GJ-JeQ"/>
+                                                </constraints>
+                                                <state key="normal" image="acceptCart"/>
+                                                <connections>
+                                                    <action selector="acceptDeleteAction:" destination="0Gd-54-Upz" eventType="touchUpInside" id="gQZ-vh-Vdy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp9-Pu-gSL">
+                                                <rect key="frame" x="40" y="120" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="sc2-fK-INF"/>
+                                                    <constraint firstAttribute="width" constant="60" id="wJ6-tp-u4g"/>
+                                                </constraints>
+                                                <state key="normal" image="rejectCart"/>
+                                                <connections>
+                                                    <action selector="rejectDeleteAction:" destination="0Gd-54-Upz" eventType="touchUpInside" id="XsS-2Z-5OW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Pp9-Pu-gSL" secondAttribute="bottom" constant="20" id="15Z-ft-lgc"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ryr-cE-PUj" secondAttribute="bottom" constant="20" id="Quj-uN-n5b"/>
+                                            <constraint firstItem="b0e-aY-ooz" firstAttribute="top" secondItem="4gh-n7-8XK" secondAttribute="top" id="TBs-pl-30Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Bp-SU-LZc" secondAttribute="trailing" constant="10" id="Un7-qx-cQu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ryr-cE-PUj" secondAttribute="trailing" constant="40" id="Ycl-4Y-Qfb"/>
+                                            <constraint firstAttribute="bottom" secondItem="b0e-aY-ooz" secondAttribute="bottom" id="cCZ-rb-r9o"/>
+                                            <constraint firstItem="9Bp-SU-LZc" firstAttribute="leading" secondItem="4gh-n7-8XK" secondAttribute="leading" constant="10" id="chw-Ta-fLw"/>
+                                            <constraint firstAttribute="height" constant="200" id="e3u-vE-ggU"/>
+                                            <constraint firstItem="b0e-aY-ooz" firstAttribute="leading" secondItem="4gh-n7-8XK" secondAttribute="leading" id="gEo-K8-xpi"/>
+                                            <constraint firstItem="9Bp-SU-LZc" firstAttribute="centerY" secondItem="4gh-n7-8XK" secondAttribute="centerY" constant="-40" id="geV-T3-rg8"/>
+                                            <constraint firstItem="Pp9-Pu-gSL" firstAttribute="leading" secondItem="4gh-n7-8XK" secondAttribute="leading" constant="40" id="pTk-GC-czE"/>
+                                            <constraint firstAttribute="width" constant="300" id="rQ5-O6-3d0"/>
+                                            <constraint firstAttribute="trailing" secondItem="b0e-aY-ooz" secondAttribute="trailing" id="tQM-tz-wsP"/>
+                                            <constraint firstItem="9Bp-SU-LZc" firstAttribute="centerX" secondItem="4gh-n7-8XK" secondAttribute="centerX" id="u49-TX-HJ8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4gh-n7-8XK" firstAttribute="centerX" secondItem="vCg-Qp-A85" secondAttribute="centerX" id="ILw-ZO-cUL"/>
+                                    <constraint firstItem="4gh-n7-8XK" firstAttribute="centerY" secondItem="vCg-Qp-A85" secondAttribute="centerY" id="s2Z-Vq-haD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FNl-b3-h14" firstAttribute="top" secondItem="eag-3q-C89" secondAttribute="bottom" id="8K4-o3-v43"/>
                             <constraint firstItem="23G-nK-l8U" firstAttribute="leading" secondItem="zx5-YZ-vdR" secondAttribute="leading" id="Anv-MQ-VMv"/>
+                            <constraint firstItem="XVm-uJ-JHu" firstAttribute="top" secondItem="vCg-Qp-A85" secondAttribute="bottom" id="L7D-aw-ukh"/>
                             <constraint firstItem="XVm-uJ-JHu" firstAttribute="top" secondItem="23G-nK-l8U" secondAttribute="bottom" id="MX7-EJ-eKF"/>
                             <constraint firstAttribute="trailing" secondItem="AC4-fj-OU1" secondAttribute="trailing" constant="10" id="QGW-Xe-1iA"/>
                             <constraint firstItem="EiD-yJ-9gY" firstAttribute="centerY" secondItem="zx5-YZ-vdR" secondAttribute="centerY" id="TZp-fK-1Wy"/>
                             <constraint firstItem="AC4-fj-OU1" firstAttribute="leading" secondItem="zx5-YZ-vdR" secondAttribute="leading" constant="10" id="VdQ-QF-CFU"/>
+                            <constraint firstAttribute="trailing" secondItem="vCg-Qp-A85" secondAttribute="trailing" id="ck7-5e-JPG"/>
                             <constraint firstItem="EiD-yJ-9gY" firstAttribute="centerX" secondItem="zx5-YZ-vdR" secondAttribute="centerX" id="diO-bn-3ZE"/>
                             <constraint firstItem="AC4-fj-OU1" firstAttribute="top" secondItem="eag-3q-C89" secondAttribute="bottom" constant="10" id="fsj-Gg-YzE"/>
                             <constraint firstItem="XVm-uJ-JHu" firstAttribute="top" secondItem="FNl-b3-h14" secondAttribute="bottom" id="hfW-C4-itS"/>
                             <constraint firstAttribute="trailing" secondItem="FNl-b3-h14" secondAttribute="trailing" id="ico-MX-f1E"/>
                             <constraint firstAttribute="trailing" secondItem="23G-nK-l8U" secondAttribute="trailing" id="qFP-eK-IfJ"/>
+                            <constraint firstItem="vCg-Qp-A85" firstAttribute="leading" secondItem="zx5-YZ-vdR" secondAttribute="leading" id="qOJ-fo-av9"/>
                             <constraint firstItem="XVm-uJ-JHu" firstAttribute="top" secondItem="AC4-fj-OU1" secondAttribute="bottom" constant="100" id="rQg-la-Ci4"/>
+                            <constraint firstItem="vCg-Qp-A85" firstAttribute="top" secondItem="eag-3q-C89" secondAttribute="bottom" id="wiQ-74-98c"/>
                             <constraint firstItem="FNl-b3-h14" firstAttribute="leading" secondItem="zx5-YZ-vdR" secondAttribute="leading" id="zMJ-N3-rlt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteConfirmationLabel" destination="9Bp-SU-LZc" id="wAt-N1-6CG"/>
+                        <outlet property="modalViewContainer" destination="vCg-Qp-A85" id="VAZ-jN-RWj"/>
                         <outlet property="noFoodTypeLable" destination="EiD-yJ-9gY" id="ocN-fN-uaa"/>
                         <outlet property="tableView" destination="AhT-Jx-Pnf" id="OAE-s0-4Ib"/>
                         <segue destination="1vX-ny-CeW" kind="show" identifier="addOrEditFoodTypeSegue" id="YHE-a7-Wpj"/>
+                        <segue destination="Wyd-ii-cB6" kind="show" identifier="showFoodsSegue" id="R6Y-2h-8if"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Njf-ww-PH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="1112"/>
+            <point key="canvasLocation" x="724" y="1104"/>
+        </scene>
+        <!--FoodDM View Controller-->
+        <scene sceneID="H5j-AY-KDE">
+            <objects>
+                <viewController id="Wyd-ii-cB6" customClass="FoodDMViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K7U-g2-ujY"/>
+                        <viewControllerLayoutGuide type="bottom" id="BOX-mB-Lgm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ckg-IM-o5W">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UEq-Gg-oP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="2316"/>
         </scene>
         <!--Add Or Edit Food Type View Controller-->
         <scene sceneID="IbU-F5-SwY">
@@ -2041,8 +2128,10 @@
         <image name="foodDetailsBackground" width="540" height="181"/>
         <image name="footer" width="768" height="186"/>
         <image name="homeIcon" width="256" height="256"/>
+        <image name="modalBackground" width="300" height="200"/>
         <image name="notificationIcon" width="100" height="100"/>
         <image name="plusIcon" width="512" height="512"/>
+        <image name="rejectCart" width="100" height="100"/>
         <image name="rejectIcon" width="256" height="256"/>
         <image name="tableNumberIcon" width="100" height="100"/>
         <image name="textFieldBackground" width="465" height="156"/>

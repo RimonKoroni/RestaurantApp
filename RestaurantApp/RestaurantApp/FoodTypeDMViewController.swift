@@ -16,8 +16,10 @@ protocol FoodTypeProtocol {
 
 class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     
+    @IBOutlet weak var modalViewContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noFoodTypeLable: UILabel!
+    @IBOutlet weak var deleteConfirmationLabel: UILabel!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var foodTypes : [FoodType] = []
@@ -106,9 +108,10 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     
     // Overwrite FoodTypeProtocol functions
     
-    
     func deleteFoodType(foodType : FoodType) {
-        
+        self.selectedFoodType = foodType
+        self.deleteConfirmationLabel.text = NSLocalizedString("deleteMessage", comment: "") + foodType.getName(self.lang) + "?"
+        showModal()
     }
     
     func editFoodType(foodType: FoodType) {
@@ -117,8 +120,42 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
         performSegueWithIdentifier("addOrEditFoodTypeSegue", sender: self)
     }
     
+    @IBAction func acceptDeleteAction(sender: AnyObject) {
+        
+        hideModal()
+    }
+    
+    
+    @IBAction func rejectDeleteAction(sender: AnyObject) {
+        hideModal()
+    }
+    
+    func showModal() {
+        self.modalViewContainer.alpha = 0
+        self.modalViewContainer.hidden = false
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.modalViewContainer.alpha = 1
+            
+            }, completion: { (finished: Bool) -> Void in
+                
+        })
+    }
+    
+    func hideModal() {
+        self.modalViewContainer.alpha = 1
+        
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.modalViewContainer.alpha = 0
+            
+            }, completion: { (finished: Bool) -> Void in
+                self.modalViewContainer.hidden = true
+        })
+    }
+    
+    
     func addFoodToFoodType(foodType: FoodType) {
         self.selectedFoodType = foodType
+        performSegueWithIdentifier("showFoodsSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -132,6 +169,12 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
                 controller.forEditing = false
             }
         }
+        
+        if segue.identifier == "showFoodsSegue" {
+            let controller = segue.destinationViewController as! FoodDMViewController
+            controller.foodType = self.selectedFoodType
+        }
+        
     }
     
     

@@ -24,3 +24,4 @@
 "noFoodTypesMessage" = "لا يوجدهنالك أية صنف!";
 "addFoodTypeTitle" = "إضافة صنف جديد";
 "editFoodTypeTitle" = "تعديل صنف طعام";
+"deleteMessage" = " هل تريد حذف";

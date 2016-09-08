@@ -25,3 +25,4 @@
 "noFoodTypesMessage" = "There is no food type!";
 "addFoodTypeTitle" = "Add Food Type";
 "editFoodTypeTitle" = "Edit Food Type";
+"deleteMessage" = "Do you want to delete ";
