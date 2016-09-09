@@ -26,3 +26,8 @@
 "addFoodTypeTitle" = "Add Food Type";
 "editFoodTypeTitle" = "Edit Food Type";
 "deleteMessage" = "Do you want to delete ";
+"askToFillFields" = "Fill the fields, please!";
+"addedSuccessfully" = "Added successfully";
+"operationFaild" = "The operation failed, check your connection please!";
+"deletedSuccessfully" = "Deleted successfully";
+"editedSuccessfully" = "Edited successfully";

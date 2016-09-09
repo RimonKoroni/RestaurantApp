@@ -19,6 +19,21 @@ class ImageDataService {
         imageDataDao.save()
     }
     
+    func delete(url : String){
+        let predicate = NSPredicate(format: "url = %@", url)
+        var predicates = [NSPredicate]()
+        predicates.append(predicate)
+        
+        let imageData = imageDataDao.getByWhere(predicates).first as! ImageData?
+        if imageData != nil {
+            imageDataDao.delete(imageData!)
+            print("image deleted")
+        } else {
+            print("image not deleted")
+        }
+        
+    }
+    
     func getByUrl(url : String) -> NSData? {
         
         let predicate = NSPredicate(format: "url = %@", url)
@@ -33,7 +48,7 @@ class ImageDataService {
         }
     }
     
-    func loadImage(url : String, onComplition: (data : NSData) -> Void) {
+    func loadImage(url : String, onComplition: (data : NSData?) -> Void) {
         let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")// Info.pList path
         let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
         let serverUrl = dict.objectForKey("serverUrl") as! String
@@ -46,6 +61,7 @@ class ImageDataService {
             guard let realResponse = response as? NSHTTPURLResponse where
                 realResponse.statusCode == 200 else {
                     print("Not a 200 response")
+                    onComplition(data: nil)
                     return
             }
             onComplition(data: data!)

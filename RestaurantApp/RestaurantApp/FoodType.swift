@@ -15,6 +15,11 @@ class FoodType {
     var englishName : String!
     var turkishName : String!
     var imageUrl : String!
+    var imageData : NSData?
+    
+    init() {
+        
+    }
     
     init(id : Int, arabicName : String, englishName : String, turkishName : String, imageUrl : String!) {
         self.id = id
@@ -45,4 +50,18 @@ class FoodType {
     }
     
     
+    func getJson() -> JSON {
+        var dic = Dictionary<String , String>()
+        dic["arabicName"] = self.arabicName
+        dic["englishName"] = self.englishName
+        dic["turkishName"] = self.turkishName
+        if self.id != nil {
+            dic["id"] = "\(self.id)"
+        }
+        if self.imageData != nil {
+            let data = self.imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+            dic["image"] = data
+        }
+        return JSON.init(dic)
+    }
 }

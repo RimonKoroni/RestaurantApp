@@ -25,3 +25,8 @@
 "addFoodTypeTitle" = "إضافة صنف جديد";
 "editFoodTypeTitle" = "تعديل صنف طعام";
 "deleteMessage" = " هل تريد حذف";
+"askToFillFields" = "إملأ الحقول، من فضلك!";
+"addedSuccessfully" = "تمت عملية الإضافة بنجاح";
+"operationFaild" = "فشلت العملية، يرجى التحقق من اتصالك!";
+"deletedSuccessfully" = "تمت عملية الحذف بنجاح";
+"editedSuccessfully" = "تمت عملية التعديل بنجاح";

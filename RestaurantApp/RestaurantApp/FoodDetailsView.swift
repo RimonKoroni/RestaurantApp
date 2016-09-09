@@ -55,9 +55,9 @@ import UIKit
         if imageData == nil {
             imageDataService.loadImage(food.imageUrl, onComplition: {
                 (data) -> Void in
-                imageDataService.insert(food.imageUrl, image: data)
+                imageDataService.insert(food.imageUrl, image: data!)
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.foodImage.image = UIImage(data: data)
+                    self.foodImage.image = UIImage(data: data!)
                 }
             })
             

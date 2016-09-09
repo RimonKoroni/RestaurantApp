@@ -80,9 +80,9 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
         if imageData == nil {
             self.imageDataService.loadImage(self.foodTypes[indexPath.row].imageUrl, onComplition: {
                 (data) -> Void in
-                self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data)
+                self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data!)
                 dispatch_async(dispatch_get_main_queue()) {
-                    cell.foodImage.image = UIImage(data: data)
+                    cell.foodImage.image = UIImage(data: data!)
                 }
             })
 

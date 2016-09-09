@@ -10,10 +10,10 @@
 "cartTitle" = "Sepeti";
 "notificationTitle" = "Bildirimler";
 "loading" = "Yükleniyor ...";
-"addToCartSuccess" = "başarıyla sepetinize eklendi";
-"rejectOrderMessage" = "sipariş iptal edilir";
-"noCartMessage" = "hiçbir öğe yoktur!";
-"acceptOrderErrorMessage" = "hiçbir öğe gönderme için var!";
+"addToCartSuccess" = "Başarıyla sepetinize eklendi";
+"rejectOrderMessage" = "Sipariş iptal edilir";
+"noCartMessage" = "Hiçbir öğe yoktur!";
+"acceptOrderErrorMessage" = "Hiçbir öğe gönderme için var!";
 "acceptOrderSuccessMessage" = "Sipariş başarıyla istenen";
 "serveOrderFaildMessage" = "Hiçbir istek başarılı oldu!";
 "serveOrderSuccessMessage" = "Sipariş başarıyla devam eder!";
@@ -25,3 +25,8 @@
 "addFoodTypeTitle" = "Gıda Tipi Ekle";
 "editFoodTypeTitle" = "Dit Gıda Tipi";
 "deleteMessage" = "Silmek istediğiniz musunuz ";
+"askToFillFields" = "Alanları lütfen doldurun!";
+"addedSuccessfully" = "Başarıyla eklendi";
+"operationFaild" = "Operasyon bağlantınızı lütfen kontrol başarısız!";
+"deletedSuccessfully" = "Başarıyla silindi";
+"editedSuccessfully" = "Başarıyla Düzenlendi";

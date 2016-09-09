@@ -76,9 +76,9 @@ class OrderViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
         if imageData == nil {
             self.imageDataService.loadImage(self.orderItems[indexPath.row].foodImage, onComplition: {
                 (data) -> Void in
-                self.imageDataService.insert(self.orderItems[indexPath.row].foodImage, image: data)
+                self.imageDataService.insert(self.orderItems[indexPath.row].foodImage, image: data!)
                 dispatch_async(dispatch_get_main_queue()) {
-                    cell.foodImage.image = UIImage(data: data)
+                    cell.foodImage.image = UIImage(data: data!)
                 }
             })
             

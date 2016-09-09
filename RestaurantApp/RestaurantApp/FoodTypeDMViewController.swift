@@ -29,14 +29,18 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     var imageDataService = ImageDataService()
     var selectedFoodType : FoodType!
     var selectForEdit : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationControllerHelper.configureNavigationController(self, title: "dataManagementTitle")
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         self.noFoodTypeLable.text = NSLocalizedString("noFoodTypesMessage", comment: "")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         getFoodTypes()
-        
+        self.tableView.reloadData()
     }
     
     func getFoodTypes() {
@@ -60,6 +64,10 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
         self.presentViewController(adminStartViewController, animated:true, completion:nil)
     }
     
+    @IBAction func goToNotification(sender: AnyObject) {
+        
+    }
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -75,19 +83,23 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
         
         cell.delegate = self
         cell.name.text = self.foodTypes[indexPath.row].getName(lang)
-        let imageData = self.imageDataService.getByUrl(self.foodTypes[indexPath.row].imageUrl)
-        if imageData == nil {
+        //let imageData = self.imageDataService.getByUrl(self.foodTypes[indexPath.row].imageUrl)
+        //if imageData == nil {
             self.imageDataService.loadImage(self.foodTypes[indexPath.row].imageUrl, onComplition: {
                 (data) -> Void in
-                self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data)
-                dispatch_async(dispatch_get_main_queue()) {
-                    cell.foodTypeImage.image = UIImage(data: data)
+                if data != nil {
+                    self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data!)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        cell.foodTypeImage.image = UIImage(data: data!)
+                    }
+                } else {
+                    cell.foodTypeImage.image = nil
                 }
             })
             
-        } else {
-            cell.foodTypeImage.image = UIImage(data: imageData!)
-        }
+       // } else {
+        //    cell.foodTypeImage.image = UIImage(data: imageData!)
+        //}
         cell.foodType = self.foodTypes[indexPath.row]
         return cell
         
@@ -121,8 +133,23 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     }
     
     @IBAction func acceptDeleteAction(sender: AnyObject) {
-        
-        hideModal()
+        EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
+        self.view.userInteractionEnabled = false
+        foodTypeService.deleteFoodType(self.selectedFoodType.id, onComplition: {(status: Int) -> Void in
+            if status == 1 {
+                //self.imageDataService.delete(self.selectedFoodType.imageUrl)
+                self.view.makeToast(message: NSLocalizedString("deletedSuccessfully", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                self.getFoodTypes()
+                dispatch_sync(dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                    EZLoadingActivity.hide()
+                    self.view.userInteractionEnabled = true
+                    self.hideModal()
+                })
+            } else {
+                self.view.makeToast(message: NSLocalizedString("operationFaild", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+            }
+        })
     }
     
     
@@ -157,6 +184,9 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
         self.selectedFoodType = foodType
         performSegueWithIdentifier("showFoodsSegue", sender: self)
     }
+    
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

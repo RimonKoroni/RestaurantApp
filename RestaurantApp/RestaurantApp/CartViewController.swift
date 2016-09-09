@@ -74,9 +74,9 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
         if imageData == nil {
             self.imageDataService.loadImage(cart.foodImage, onComplition: {
                 (data) -> Void in
-                self.imageDataService.insert(cart.foodImage, image: data)
+                self.imageDataService.insert(cart.foodImage, image: data!)
                 dispatch_async(dispatch_get_main_queue()) {
-                    cell.foodImage.image = UIImage(data: data)
+                    cell.foodImage.image = UIImage(data: data!)
                 }
             })
             
