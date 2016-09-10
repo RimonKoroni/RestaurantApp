@@ -17,7 +17,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
     var lang : String!
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var foodType : FoodType!
-    var foodService = FoodDetailsService()
+    var foodService = FoodService()
     var foods : [Food]! = []
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
         EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
         self.view.userInteractionEnabled = false
         
-        foodService.getFoods(self.foodType.id, onComplition: {
+        foodService.getFoods(self.foodType.id, forEditing: 0, onComplition: {
             (result) -> Void in
             self.foods = result
             dispatch_sync(dispatch_get_main_queue(), {
@@ -70,7 +70,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
                 view.foodImage.image = UIImage(data: data)
             }
         }
-        view.foodPrice.text = "\(self.foods[index].price)$"*/
+        view.foodPrice.text = "\(self.foods[index].price)TL"*/
         return view
         
     }

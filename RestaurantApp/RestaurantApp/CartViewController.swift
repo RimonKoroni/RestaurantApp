@@ -85,7 +85,7 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
         }
         
         cell.foodName.text = cart.foodName
-        cell.foodPrice.text = "\(cart.foodPrice * Double(cart.count))$"
+        cell.foodPrice.text = "\(cart.foodPrice * Double(cart.count))TL"
         cell.totalPrice = cart.foodPrice * Double(cart.count)
         cell.count.text = "\(cart.count)"
         cell.countNumber = cart.count
@@ -104,7 +104,7 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
         self.view.makeToast(message: NSLocalizedString("rejectOrderMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
         self.carts.removeAll()
         self.cartTableView.reloadData()
-        self.totalPrice.text = "0.0$"
+        self.totalPrice.text = "0.0TL"
         noCartsLabel.hidden = false
         goToPreviousController()
     }
@@ -134,7 +134,7 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
                         let cartsData = NSKeyedArchiver.archivedDataWithRootObject(carts)
                         self.userDefaults.setObject(cartsData, forKey: "carts")
                         self.userDefaults.synchronize()
-                        self.totalPrice.text = "0.0$"
+                        self.totalPrice.text = "0.0TL"
                         self.goToPreviousController()
                     } else {
                         self.view.makeToast(message: NSLocalizedString("acceptOrderFaildMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
@@ -167,12 +167,12 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
         for cart in self.carts {
             totalPriceValue += Double(cart.count) * cart.foodPrice
         }
-        self.totalPrice.text = "\(totalPriceValue)$"
+        self.totalPrice.text = "\(totalPriceValue)TL"
     }
     
     func calculatePrice(price: Double) {
         self.totalPriceValue += price
-        self.totalPrice.text = "\(totalPriceValue)$"
+        self.totalPrice.text = "\(totalPriceValue)TL"
     }
     
     /**

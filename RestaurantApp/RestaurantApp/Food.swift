@@ -19,6 +19,8 @@ class Food {
     var turkishDescription : String!
     var imageUrl : String!
     var price : Double!
+    var imageData : NSData?
+    var isValid : Int!
     
     init(json : JSON) {
         self.id = json["id"].int
@@ -30,6 +32,7 @@ class Food {
         self.turkishDescription = json["turkishDescription"].string
         self.imageUrl = json["image"].string
         self.price = json["price"].double
+        self.isValid = json["isvalid"].int
     }
     
     init() {
@@ -61,6 +64,28 @@ class Food {
                 return self.turkishDescription
             }
         }
+    }
+    
+    
+    func getJson() -> JSON {
+        var dic = Dictionary<String , String>()
+        dic["arabicName"] = self.arabicName
+        dic["englishName"] = self.englishName
+        dic["turkishName"] = self.turkishName
+        dic["arabicDescription"] = self.arabicDescription
+        dic["englishDescription"] = self.englishDescription
+        dic["turkishDescription"] = self.turkishDescription
+        dic["price"] = "\(self.price)"
+        dic["isvalid"] = "\(self.isValid)"
+        
+        if self.id != nil {
+            dic["id"] = "\(self.id)"
+        }
+        if self.imageData != nil {
+            let data = self.imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+            dic["image"] = data
+        }
+        return JSON.init(dic)
     }
     
 }

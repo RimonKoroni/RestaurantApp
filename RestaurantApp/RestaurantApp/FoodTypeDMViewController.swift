@@ -16,6 +16,9 @@ protocol FoodTypeProtocol {
 
 class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     
+    @IBOutlet weak var notificationView: UIView!
+    @IBOutlet weak var notificationCount: UILabel!
+    
     @IBOutlet weak var modalViewContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noFoodTypeLable: UILabel!
@@ -41,6 +44,17 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     override func viewDidAppear(animated: Bool) {
         getFoodTypes()
         self.tableView.reloadData()
+    }
+    
+    func refreshNotification(count : Int) {
+        dispatch_async(dispatch_get_main_queue()) {
+            if count == 0 {
+                self.notificationView.hidden = true
+            } else {
+                self.notificationView.hidden = false
+                self.notificationCount.text = String(count)
+            }
+        }
     }
     
     func getFoodTypes() {
@@ -83,23 +97,24 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
         
         cell.delegate = self
         cell.name.text = self.foodTypes[indexPath.row].getName(lang)
-        //let imageData = self.imageDataService.getByUrl(self.foodTypes[indexPath.row].imageUrl)
-        //if imageData == nil {
+        let imageData = self.foodTypes[indexPath.row].imageData
+        if imageData == nil {
             self.imageDataService.loadImage(self.foodTypes[indexPath.row].imageUrl, onComplition: {
                 (data) -> Void in
-                if data != nil {
-                    self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data!)
-                    dispatch_async(dispatch_get_main_queue()) {
+                dispatch_async(dispatch_get_main_queue()) {
+                    if data != nil {
+                        //self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data!)
                         cell.foodTypeImage.image = UIImage(data: data!)
+                        self.foodTypes[indexPath.row].imageData = data
+                    } else {
+                        cell.foodTypeImage.image = UIImage(named: "emptyImage")
                     }
-                } else {
-                    cell.foodTypeImage.image = nil
                 }
             })
             
-       // } else {
-        //    cell.foodTypeImage.image = UIImage(data: imageData!)
-        //}
+        } else {
+          cell.foodTypeImage.image = UIImage(data: imageData!)
+        }
         cell.foodType = self.foodTypes[indexPath.row]
         return cell
         

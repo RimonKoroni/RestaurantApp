@@ -12,7 +12,8 @@ import UIKit
 class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    
+    @IBOutlet weak var notificationView: UIView!
+    @IBOutlet weak var notificationCount: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageViewContainer: UIView!
@@ -46,6 +47,17 @@ class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControlle
         interfacesDesign()
     }
     
+    func refreshNotification(count : Int) {
+        dispatch_async(dispatch_get_main_queue()) {
+            if count == 0 {
+                self.notificationView.hidden = true
+            } else {
+                self.notificationView.hidden = false
+                self.notificationCount.text = String(count)
+            }
+        }
+    }
+    
     func interfacesDesign() {
     
         if self.forEditing! {
@@ -59,12 +71,17 @@ class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControlle
             //if imageData == nil {
                 self.imageDataService.loadImage(self.foodType!.imageUrl, onComplition: {
                     (data) -> Void in
-                    self.imageDataService.insert(self.foodType!.imageUrl, image: data!)
+                    //self.imageDataService.insert(self.foodType!.imageUrl, image: data!)
                     dispatch_async(dispatch_get_main_queue()) {
-                        self.imageView.image = UIImage(data: data!)
+                        if data != nil {
+                            //self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data!)
+                            self.imageView.image = UIImage(data: data!)
+                        } else {
+                            self.imageView.image = UIImage(named: "emptyImage")
+                        }
                     }
                 })
-                
+            
             //} else {
             //    self.imageView.image = UIImage(data: imageData!)
             //}
@@ -108,7 +125,12 @@ class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControlle
                         self.view.userInteractionEnabled = true
                     })
                 } else {
-                    self.view.makeToast(message: NSLocalizedString("operationFaild", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                    dispatch_sync(dispatch_get_main_queue(), {
+                        self.view.makeToast(message: NSLocalizedString("operationFaild", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                        EZLoadingActivity.hide()
+                        self.view.userInteractionEnabled = true
+                    })
+                    
                 }
             })
             

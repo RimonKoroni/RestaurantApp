@@ -152,8 +152,12 @@ class NotificationViewController : UIViewController , UITableViewDataSource, UIT
      The leftNavButtonClick function is an action which triggered when user press on the backButton.
      */
     func leftNavButtonClick(sender:UIButton!) {
-        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
-        self.presentViewController(adminStartViewController, animated:true, completion:nil)
+        if self.navigationController?.viewControllers.count > 1 {
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+            self.presentViewController(adminStartViewController, animated:true, completion:nil)
+        }
     }
 
 }
