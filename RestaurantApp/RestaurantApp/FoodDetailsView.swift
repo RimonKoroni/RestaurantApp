@@ -47,7 +47,7 @@ import UIKit
         } else {
             self.foodTitle.text = name
         }
-        self.foodPrice.text = "\(food.price)$"
+        self.foodPrice.text = "\(food.price)TL"
         self.food = food
         let imageDataService = ImageDataService()
         let imageData = imageDataService.getByUrl(food.imageUrl)
@@ -84,7 +84,7 @@ import UIKit
         if self.countNumber > 1 {
             self.totalPrice = totalPrice - self.food.price
             self.countNumber = self.countNumber - 1
-            self.foodPrice.text = "\(self.totalPrice)$"
+            self.foodPrice.text = "\(self.totalPrice)TL"
             self.count.text = "\(self.countNumber)"
         }
     }
@@ -92,7 +92,7 @@ import UIKit
     @IBAction func increaseCount(sender: AnyObject) {
         self.totalPrice = totalPrice + self.food.price
         self.countNumber = self.countNumber + 1
-        self.foodPrice.text = "\(self.totalPrice)$"
+        self.foodPrice.text = "\(self.totalPrice)TL"
         self.count.text = "\(self.countNumber)"
     }
     

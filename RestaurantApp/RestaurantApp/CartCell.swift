@@ -31,7 +31,7 @@ class CartCell : UITableViewCell {
         if self.countNumber > 1 {
             self.totalPrice = totalPrice - self.cart.foodPrice
             self.countNumber = self.countNumber - 1
-            self.foodPrice.text = "\(self.totalPrice)$"
+            self.foodPrice.text = "\(self.totalPrice)TL"
             self.count.text = "\(self.countNumber)"
             self.delegate.calculatePrice(-1 * self.cart.foodPrice)
         }
@@ -40,7 +40,7 @@ class CartCell : UITableViewCell {
     @IBAction func plusAction(sender: AnyObject) {
         self.totalPrice = totalPrice + self.cart.foodPrice
         self.countNumber = self.countNumber + 1
-        self.foodPrice.text = "\(self.totalPrice)$"
+        self.foodPrice.text = "\(self.totalPrice)TL"
         self.count.text = "\(self.countNumber)"
         self.delegate.calculatePrice(self.cart.foodPrice)
     }
