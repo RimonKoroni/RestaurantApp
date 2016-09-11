@@ -58,6 +58,8 @@ class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControlle
         }
     }
     
+   
+    
     func interfacesDesign() {
     
         if self.forEditing! {
@@ -138,6 +140,17 @@ class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControlle
             
         }
     }
+    
+    
+    
+    
+    @IBAction func goToHome(sender: AnyObject) {
+        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+        self.presentViewController(adminStartViewController, animated:true, completion:nil)
+    }
+    
+    
+    
     
     func generateFoodType() -> FoodType {
         let foodType = FoodType()

@@ -17,7 +17,7 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
     var foodTypes : [FoodType] = []
     var lang : String!
     var foodTypeService = FoodTypesService()
-    var generalService = GeneralService()
+    var tableNumberService = TableNumberService()
     var imageDataService = ImageDataService()
     var selectedFoodType : FoodType!
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class FoodTypesViewController: UIViewController , UICollectionViewDataSource, UI
     }
     
     func getTableNumber() {
-        generalService.getTableNumber({
+        tableNumberService.getTableNumber({
             () -> Void in
             dispatch_sync(dispatch_get_main_queue(), {
                 let tableNumber = self.userDefaults.valueForKey("tableNumber") as! Int

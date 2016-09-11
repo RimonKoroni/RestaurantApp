@@ -37,3 +37,9 @@
 "englishDescription" = "التوصيف باللغة الاجنبية";
 "turkishDescription" = "التوصيف باللغة التركية";
 "priceValidationError" = "خطأ، السعر يجب أن يكون رقم!";
+"tableNumberTitle" = "إدارة أرقام الطاولات";
+"noTableNumberMessage" = "لا يوجد هنالك أية ارقام طاولات!";
+"tableNumberValidationError" = "خطأ، رقم الطاولة يجب أن يكون رقم!";
+"deleteTableMessage" = " هل تريد حذف الطاولة";
+"tableNumbersNotUniqueError" = "خطأ، يوجد هناك أكثر من جهاز على طاولة واحدة";
+"updateTableNumberSuccessfully" = "تم تعديل أرقام الطاولات بنجاح";

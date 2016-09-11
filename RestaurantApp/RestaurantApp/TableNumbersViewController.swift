@@ -1,74 +1,79 @@
 //
-//  File.swift
+//  TableNumbersViewController.swift
 //  RestaurantApp
 //
-//  Created by Rimon on 9/8/16.
+//  Created by Rimon on 9/11/16.
 //  Copyright © 2016 SSS. All rights reserved.
 //
 
 import UIKit
 
-protocol FoodProtocol {
-    func deleteFood(food : Food)
-    func editFood(food : Food)
+protocol TableNumberDelegate {
+    func deleteTableNumber(tableNumber : TableNumber)
 }
 
-class FoodDMViewController : UIViewController, FoodProtocol {
+
+class TableNumbersViewController: UIViewController, TableNumberDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var notificationCount: UILabel!
     
     @IBOutlet weak var modalViewContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var noFoodLable: UILabel!
+    @IBOutlet weak var noTableNumberLable: UILabel!
     @IBOutlet weak var deleteConfirmationLabel: UILabel!
     
+    
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    var foods : [Food] = []
+    var tableNumbers : [TableNumber] = []
+    var newNumbers : [Int] = []
     var lang : String!
-    var foodService = FoodService()
     var tableNumberService = TableNumberService()
-    var imageDataService = ImageDataService()
-    var selectedFood : Food!
-    var selectForEdit : Bool = false
-    var foodType : FoodType!
+    var selectedTableNumber : TableNumber!
+    var selectedIndex : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lang = userDefaults.valueForKey("lang") as! String
-        NavigationControllerHelper.configureNavigationController(self, title: self.foodType!.getName(lang))
+        NavigationControllerHelper.configureNavigationController(self, title: NSLocalizedString("tableNumberTitle", comment: ""))
         addLeftNavItemOnView ()
-        self.noFoodLable.text = NSLocalizedString("noFoodMessage", comment: "")
+        self.noTableNumberLable.text = NSLocalizedString("noTableNumberMessage", comment: "")
+        hideKeyboardWhenTappedAround()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        getFoods()
-        
+        getTableNumbers()
+       
         self.tableView.reloadData()
         notificationView.layer.cornerRadius = 15
         self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
     }
     
     
-    func getFoods() {
+    func getTableNumbers() {
         EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
         self.view.userInteractionEnabled = false
         
-        foodService.getFoods(self.foodType!.id, forEditing: 1, onComplition: {
+        tableNumberService.getAllTableNumbers({
             (result) -> Void in
-            self.foods = result
+            self.newNumbers.removeAll()
+            self.tableNumbers = result
+            for item in self.tableNumbers {
+                self.newNumbers.append(item.number)
+            }
             dispatch_sync(dispatch_get_main_queue(), {
-                if self.foods.count == 0 {
-                    self.noFoodLable.hidden = false
+                if self.tableNumbers.count == 0 {
+                    self.noTableNumberLable.hidden = false
                 }
                 self.tableView.reloadData()
                 EZLoadingActivity.hide()
                 self.view.userInteractionEnabled = true
             })
         })
-
+        
     }
-
+    
     
     func refreshNotification(count : Int) {
         dispatch_async(dispatch_get_main_queue()) {
@@ -92,72 +97,92 @@ class FoodDMViewController : UIViewController, FoodProtocol {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.foods.count
+        return self.tableNumbers.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("DMFoodCell") as! DMFoodCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("tableNumberCell") as! TableNumberCell
         cell.delegate = self
-        cell.name.text = self.foods[indexPath.row].getName(lang)
-        let imageData = self.foods[indexPath.row].imageData
-        if imageData == nil {
-            self.imageDataService.loadImage(self.foods[indexPath.row].imageUrl, onComplition: {
-                (data) -> Void in
-                dispatch_async(dispatch_get_main_queue()) {
-                    if data != nil {
-                        //self.imageDataService.insert(self.foodTypes[indexPath.row].imageUrl, image: data!)
-                        cell.foodImage.image = UIImage(data: data!)
-                        self.foods[indexPath.row].imageData = data
-                    } else {
-                        cell.foodImage.image = UIImage(named: "emptyImage")
-                    }
-                }
-            })
-            
-        } else {
-            cell.foodImage.image = UIImage(data: imageData!)
-        }
-        cell.food = self.foods[indexPath.row]
+        cell.oldNumber.text = "\(tableNumbers[indexPath.row].number)"
+        cell.tableNumber = tableNumbers[indexPath.row]
+        //cell.newNumber.delegate = self
         return cell
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //self.selectedOrderId = orders[indexPath.row].id
-        //self.performSegueWithIdentifier("goToOrderViewControllerSegue", sender: self)
+        self.selectedIndex = indexPath.row
+        self.selectedTableNumber = tableNumbers[indexPath.row]
+    }
+    
+    @IBAction func confirmAction(sender: AnyObject) {
+        for i in 0..<self.tableNumbers.count {
+            let indexPath = NSIndexPath(forRow:i, inSection:0)
+            let cell : TableNumberCell = self.tableView.cellForRowAtIndexPath(indexPath) as! TableNumberCell
+            if !cell.newNumber.text!.isEmpty {
+                if cell.newNumber.text!.integerValue == nil {
+                    self.view.makeToast(message: NSLocalizedString("tableNumberValidationError", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                    return
+                }
+                self.newNumbers[i] = cell.newNumber.text!.integerValue!
+            } else {
+                self.newNumbers[i] = self.tableNumbers[i].number
+            }
+        }
         
+        let unique = Array(Set(self.newNumbers))
+        if unique.count != self.newNumbers.count {
+            self.view.makeToast(message: NSLocalizedString("tableNumbersNotUniqueError", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+            
+        } else {
+            var newTableNumbers : [JSON] = []
+            
+            for i in 0..<self.newNumbers.count {
+                if self.tableNumbers[i].number != self.newNumbers[i] {
+                    newTableNumbers.append(TableNumber(id: self.tableNumbers[i].id, number: self.newNumbers[i]).getJson())
+                }
+            }
+            if newTableNumbers.count > 0 {
+                var dic : [String : JSON] = [:]
+                dic["tableNumbers"] = JSON.init(newTableNumbers)
+                tableNumberService.updateTableNumbers(JSON.init(dic), onComplition: { (status) -> Void in
+                    if status == 1 {
+                        dispatch_sync(dispatch_get_main_queue(), {
+                            self.view.makeToast(message: NSLocalizedString("updateTableNumberSuccessfully", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                            self.getTableNumbers()
+                            self.tableView.reloadData()
+                            EZLoadingActivity.hide()
+                            self.view.userInteractionEnabled = true
+                        })
+                    } else {
+                        dispatch_sync(dispatch_get_main_queue(), {
+                            self.view.makeToast(message: NSLocalizedString("operationFaild", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                            EZLoadingActivity.hide()
+                            self.view.userInteractionEnabled = true
+                        })
+                        
+                    }
+                })
+            }
+        }
     }
     
-    @IBAction func addFoodAction(sender: AnyObject) {
-        self.selectForEdit = false
-        performSegueWithIdentifier("addOrEditFoodSegue", sender: sender)
-    }
+    // Override tableNumber delegation functions
     
-    // Overwrite FoodProtocol functions
-    
-    func deleteFood(food : Food) {
-        self.selectedFood = food
-        self.deleteConfirmationLabel.text = NSLocalizedString("deleteMessage", comment: "") + food.getName(self.lang)! + "?"
+    func deleteTableNumber(tableNumber: TableNumber) {
+        self.deleteConfirmationLabel.text = NSLocalizedString("deleteTableMessage", comment: "") + "\(tableNumber.number)" + "?"
         showModal()
+        self.selectedTableNumber = tableNumber
     }
-    
-    func editFood(food: Food) {
-        self.selectForEdit = true
-        self.selectedFood = food
-        performSegueWithIdentifier("addOrEditFoodSegue", sender: self)
-    }
-    
     
     @IBAction func acceptDeleteAction(sender: AnyObject) {
         EZLoadingActivity.show(NSLocalizedString("loading", comment: ""), disableUI: false)
         self.view.userInteractionEnabled = false
-        foodService.deleteFood(self.selectedFood.id, onComplition: {(status: Int) -> Void in
+        tableNumberService.deleteTableNumber(self.selectedTableNumber.id, onComplition: {(status: Int) -> Void in
             if status == 1 {
                 //self.imageDataService.delete(self.selectedFoodType.imageUrl)
-                
-                self.getFoods()
+                self.getTableNumbers()
                 dispatch_sync(dispatch_get_main_queue(), {
                     self.tableView.reloadData()
                     EZLoadingActivity.hide()
@@ -198,22 +223,6 @@ class FoodDMViewController : UIViewController, FoodProtocol {
         })
     }
     
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "addOrEditFoodSegue" {
-            let controller = segue.destinationViewController as! addOrEditFoodViewController
-            controller.foodType = self.foodType
-            if self.selectForEdit {
-                controller.food = self.selectedFood
-                controller.forEditing = true
-            } else {
-                controller.forEditing = false
-            }
-        }
-        
-    }
-    
     /**
      The addLeftNavItemOnView function is used for add backe button to the navigation bar.
      */
@@ -247,4 +256,6 @@ class FoodDMViewController : UIViewController, FoodProtocol {
     func leftNavButtonClick(sender:UIButton!) {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    
 }

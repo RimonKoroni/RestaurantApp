@@ -37,3 +37,9 @@
 "englishDescription" = "İngilizce Açıklaması";
 "turkishDescription" = "Türk Açıklama";
 "priceValidationError" = "Hata, Fiyat bir sayı olmalıdır!";
+"tableNumberTitle" = "Masa Numaraları yönet";
+"noTableNumberMessage" = "Hiçbir tablo numarası yoktur!";
+"tableNumberValidationError" = "Hata, Tablo numarası bir sayı olmalıdır!";
+"deleteTableMessage" = "Tabloyu silmek istiyor musunuz ";
+"tableNumbersNotUniqueError" = "Hata, bir masanın üzerine birden fazla cihaz var!";
+"updateTableNumberSuccessfully" = "Tablo numaraları başarıyla güncellendi";

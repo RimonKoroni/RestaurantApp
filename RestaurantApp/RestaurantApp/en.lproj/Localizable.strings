@@ -38,3 +38,9 @@
 "englishDescription" = "English Description";
 "turkishDescription" = "Turkish Description";
 "priceValidationError" = "Error, Price must be a number!";
+"tableNumberTitle" = "Manage Table Numbers";
+"noTableNumberMessage" = "There is no table number!";
+"tableNumberValidationError" = "Error, Table number must be a number!";
+"deleteTableMessage" = "Do you want to delete table ";
+"tableNumbersNotUniqueError" = "Error, There is more than one device on a one table!";
+"updateTableNumberSuccessfully" = "Table numbers updated successfully";

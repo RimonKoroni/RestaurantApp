@@ -28,7 +28,7 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     var foodTypes : [FoodType] = []
     var lang : String!
     var foodTypeService = FoodTypesService()
-    var generalService = GeneralService()
+    var tableNumberService = TableNumberService()
     var imageDataService = ImageDataService()
     var selectedFoodType : FoodType!
     var selectForEdit : Bool = false
@@ -155,13 +155,14 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
         foodTypeService.deleteFoodType(self.selectedFoodType.id, onComplition: {(status: Int) -> Void in
             if status == 1 {
                 //self.imageDataService.delete(self.selectedFoodType.imageUrl)
-                self.view.makeToast(message: NSLocalizedString("deletedSuccessfully", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                
                 self.getFoodTypes()
                 dispatch_sync(dispatch_get_main_queue(), {
                     self.tableView.reloadData()
                     EZLoadingActivity.hide()
                     self.view.userInteractionEnabled = true
                     self.hideModal()
+                    self.view.makeToast(message: NSLocalizedString("deletedSuccessfully", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
                 })
             } else {
                 self.view.makeToast(message: NSLocalizedString("operationFaild", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)

@@ -121,6 +121,13 @@ class addOrEditFoodViewController: UIViewController, UITextViewDelegate, UIImage
         self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
     }
     
+    
+    @IBAction func goToHome(sender: AnyObject) {
+        let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
+        self.presentViewController(adminStartViewController, animated:true, completion:nil)
+    }
+    
+    
     func refreshNotification(count : Int) {
         dispatch_async(dispatch_get_main_queue()) {
             if count == 0 {
