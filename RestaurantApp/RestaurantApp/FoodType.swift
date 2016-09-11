@@ -34,7 +34,7 @@ class FoodType {
         self.arabicName = json["arabicName"].string
         self.englishName = json["englishName"].string
         self.turkishName = json["turkishName"].string
-        self.imageUrl = json["image"].string
+        self.imageUrl = "/WebServiceProject/MobileServlet/ImageLoaderRest/getImage/1/\(self.id)"
     }
     
     func getName(lang : String) -> String {

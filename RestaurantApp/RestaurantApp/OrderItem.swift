@@ -17,7 +17,8 @@ class OrderItem {
     var count : Int!
     
     init(json : JSON) {
-        self.foodImage = json["foodImage"].string
+        let foodId = json["foodId"].int
+        self.foodImage =  "/WebServiceProject/MobileServlet/ImageLoaderRest/getImage/2/\(foodId!)"
         self.arabicName = json["arabicName"].string
         self.englishName = json["englishName"].string
         self.turkishName = json["turkishName"].string

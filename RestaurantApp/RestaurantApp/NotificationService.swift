@@ -91,6 +91,10 @@ class NotificationService {
                         if let  foodDmVC = naviationController.viewControllers[0] as? FoodDMViewController {
                             foodDmVC.refreshNotification(count)
                         }
+                        
+                        if let  addOrEditFoodVC = naviationController.viewControllers[0] as? addOrEditFoodViewController {
+                            addOrEditFoodVC.refreshNotification(count)
+                        }
                     }
                     
                 }

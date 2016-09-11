@@ -117,6 +117,19 @@ class addOrEditFoodViewController: UIViewController, UITextViewDelegate, UIImage
             self.turkishDescription.textColor = self.placeHolderColor
         }
         self.confirmButton.updateConstraints()
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
+    }
+    
+    func refreshNotification(count : Int) {
+        dispatch_async(dispatch_get_main_queue()) {
+            if count == 0 {
+                self.notificationView.hidden = true
+            } else {
+                self.notificationView.hidden = false
+                self.notificationCount.text = String(count)
+            }
+        }
     }
     
     @IBAction func uploadImageAction(sender: AnyObject) {

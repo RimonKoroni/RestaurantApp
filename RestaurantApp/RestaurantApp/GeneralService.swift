@@ -19,7 +19,7 @@ class GeneralService {
         let dict: AnyObject = NSDictionary(contentsOfFile: path!)!// Dictionary for "info.pList" properties
         let serverUrl = dict.objectForKey("serverUrl") as! String
         let deviceName = UIDevice.currentDevice().identifierForVendor!.UUIDString
-        let sreviceUrl = "\(serverUrl)/WebServiceProject/MobileServlet/TableNumberRest/getFoodTypes/\(deviceName)"
+        let sreviceUrl = "\(serverUrl)/WebServiceProject/MobileServlet/TableNumberRest/getTableNumber/\(deviceName)"
         
         RestApiManager.makeHTTPGetRequest(sreviceUrl, onCompletion: {(finalJsonResponse , error) -> Void in
             let tableNumber = finalJsonResponse["tableNumber"].int

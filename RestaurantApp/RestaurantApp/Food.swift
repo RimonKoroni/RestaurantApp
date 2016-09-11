@@ -30,9 +30,9 @@ class Food {
         self.arabicDescription = json["arabicDescription"].string
         self.englishDescription = json["englishDescription"].string
         self.turkishDescription = json["turkishDescription"].string
-        self.imageUrl = json["image"].string
         self.price = json["price"].double
         self.isValid = json["isvalid"].int
+        self.imageUrl = "/WebServiceProject/MobileServlet/ImageLoaderRest/getImage/2/\(self.id)"
     }
     
     init() {

@@ -28,7 +28,7 @@
 		18880CEE1D270FF900ABF378 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18880CED1D270FF900ABF378 /* Cart.swift */; };
 		188BC5FE1D26DC4F00304873 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC5FD1D26DC4F00304873 /* GeneralService.swift */; };
 		189FE8B91D26E0CF00479632 /* EZLoadingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8B81D26E0CF00479632 /* EZLoadingActivity.swift */; };
-		189FE8BB1D26EC4600479632 /* FoodDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */; };
+		189FE8BB1D26EC4600479632 /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8BA1D26EC4600479632 /* FoodService.swift */; };
 		189FE8BD1D26EC7800479632 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FE8BC1D26EC7800479632 /* Food.swift */; };
 		18AEBE741D315C6D002CA275 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE721D315C6C002CA275 /* Order.swift */; };
 		18AEBE751D315C6D002CA275 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AEBE731D315C6C002CA275 /* OrderItem.swift */; };
@@ -56,7 +56,16 @@
 		18D75FC61D208EA9004A2013 /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D75FC51D208EA9004A2013 /* FoodDetailsView.swift */; };
 		18D75FC81D208EC6004A2013 /* FoodDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D75FC71D208EC6004A2013 /* FoodDetailsView.xib */; };
 		BFB884AD8F8278D6D8D8C0B3 /* Pods_RestaurantApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E72EAD3F0C137FC1E71068 /* Pods_RestaurantApp.framework */; };
+		F71865931D7F4537003BF4A3 /* FoodTypeDMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71865921D7F4537003BF4A3 /* FoodTypeDMViewController.swift */; };
+		F71B1C751D836A1200340EB0 /* DMFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B1C741D836A1200340EB0 /* DMFoodCell.swift */; };
+		F71B1C771D83ED3700340EB0 /* addOrEditFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B1C761D83ED3700340EB0 /* addOrEditFoodViewController.swift */; };
+		F794DA371D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */; };
+		F794DA391D81A0DB009FA0CA /* NavigationControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */; };
+		F794DA3B1D81BAA0009FA0CA /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */; };
+		F794DA3D1D81DE24009FA0CA /* FoodDMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */; };
 		F79F9CF51D625DF300909BAA /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */; };
+		F7D1B1F01D7E121A00BA0AD3 /* DMFoodTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B1EF1D7E121A00BA0AD3 /* DMFoodTypeCell.swift */; };
+		F7E0CA641D842F1300E625B7 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0CA631D842F1300E625B7 /* StringExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +92,7 @@
 		18880CED1D270FF900ABF378 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		188BC5FD1D26DC4F00304873 /* GeneralService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
 		189FE8B81D26E0CF00479632 /* EZLoadingActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZLoadingActivity.swift; path = Components/EZLoadingActivity.swift; sourceTree = "<group>"; };
-		189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsService.swift; sourceTree = "<group>"; };
+		189FE8BA1D26EC4600479632 /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
 		189FE8BC1D26EC7800479632 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		18AEBE651D31586B002CA275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Admin.storyboard; sourceTree = "<group>"; };
 		18AEBE671D315915002CA275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Admin.strings; sourceTree = "<group>"; };
@@ -123,7 +132,16 @@
 		C64D0CD9ED7423AED75345F3 /* Pods-RestaurantApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.release.xcconfig"; sourceTree = "<group>"; };
 		E989D42DD0200764532F27C1 /* Pods-RestaurantApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestaurantApp/Pods-RestaurantApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F1E72EAD3F0C137FC1E71068 /* Pods_RestaurantApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71865921D7F4537003BF4A3 /* FoodTypeDMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTypeDMViewController.swift; sourceTree = "<group>"; };
+		F71B1C741D836A1200340EB0 /* DMFoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFoodCell.swift; sourceTree = "<group>"; };
+		F71B1C761D83ED3700340EB0 /* addOrEditFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOrEditFoodViewController.swift; sourceTree = "<group>"; };
+		F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOrEditFoodTypeViewController.swift; sourceTree = "<group>"; };
+		F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerHelper.swift; sourceTree = "<group>"; };
+		F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
+		F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDMViewController.swift; sourceTree = "<group>"; };
 		F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = VLADIMIR.TTF; sourceTree = "<group>"; };
+		F7D1B1EF1D7E121A00BA0AD3 /* DMFoodTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFoodTypeCell.swift; sourceTree = "<group>"; };
+		F7E0CA631D842F1300E625B7 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,7 +264,7 @@
 				18AEBE811D31A2D0002CA275 /* GenericDao.swift */,
 				185BCF8B1D26B1110000D51D /* FoodTypesService.swift */,
 				188BC5FD1D26DC4F00304873 /* GeneralService.swift */,
-				189FE8BA1D26EC4600479632 /* FoodDetailsService.swift */,
+				189FE8BA1D26EC4600479632 /* FoodService.swift */,
 				181522611D286B450003A032 /* OrderService.swift */,
 				18AEBE761D315C8D002CA275 /* NotificationService.swift */,
 				18AEBE841D31A2F5002CA275 /* ImageDataDao.swift */,
@@ -265,6 +283,10 @@
 				180D1A371D25A76F00431466 /* AdminStartViewController.swift */,
 				180D1A3B1D25B07600431466 /* NotificationViewController.swift */,
 				180D1A401D25BFD500431466 /* OrderViewController.swift */,
+				F71865921D7F4537003BF4A3 /* FoodTypeDMViewController.swift */,
+				F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */,
+				F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */,
+				F71B1C761D83ED3700340EB0 /* addOrEditFoodViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +296,7 @@
 			children = (
 				18B3AE541D1B12A900389895 /* RestApiManager.swift */,
 				18B3AE551D1B12A900389895 /* SwiftyJSON.swift */,
+				F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -286,6 +309,8 @@
 				185EF3A81D1F2116009AFFAB /* Labell.swift */,
 				185BCF8F1D26CCCF0000D51D /* ImageView.swift */,
 				18AEBE781D315CC1002CA275 /* Date.swift */,
+				F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */,
+				F7E0CA631D842F1300E625B7 /* StringExtention.swift */,
 			);
 			name = Extention;
 			sourceTree = "<group>";
@@ -293,6 +318,7 @@
 		18B3AE4A1D1B102100389895 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F7D1B1EE1D7E11E800BA0AD3 /* DataManagmentCells */,
 				189FE8B71D26E0BB00479632 /* loading */,
 				180D1A421D25C2F300431466 /* OrderCell */,
 				180D1A3D1D25B98100431466 /* NotificationCell */,
@@ -367,6 +393,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7D1B1EE1D7E11E800BA0AD3 /* DataManagmentCells */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1B1EF1D7E121A00BA0AD3 /* DMFoodTypeCell.swift */,
+				F71B1C741D836A1200340EB0 /* DMFoodCell.swift */,
+			);
+			name = DataManagmentCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,6 +437,7 @@
 				TargetAttributes = {
 					18B3AE2D1D1B0F8900389895 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 825H48GV9C;
 					};
 				};
 			};
@@ -499,19 +535,23 @@
 			files = (
 				185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */,
 				18AEBE771D315C8D002CA275 /* NotificationService.swift in Sources */,
+				F7E0CA641D842F1300E625B7 /* StringExtention.swift in Sources */,
 				18AEBE821D31A2D0002CA275 /* DaoUtil.swift in Sources */,
 				187359721D2543CF00053227 /* CartCell.swift in Sources */,
 				18AEBE7F1D31A1AA002CA275 /* GenericDomain.swift in Sources */,
-				189FE8BB1D26EC4600479632 /* FoodDetailsService.swift in Sources */,
+				189FE8BB1D26EC4600479632 /* FoodService.swift in Sources */,
 				18880CEE1D270FF900ABF378 /* Cart.swift in Sources */,
+				F71B1C751D836A1200340EB0 /* DMFoodCell.swift in Sources */,
 				189FE8B91D26E0CF00479632 /* EZLoadingActivity.swift in Sources */,
 				180D1A441D25C30F00431466 /* OrderCell.swift in Sources */,
+				F71865931D7F4537003BF4A3 /* FoodTypeDMViewController.swift in Sources */,
 				185EF3AA1D1F2116009AFFAB /* Labell.swift in Sources */,
 				18B3AE591D1B12D900389895 /* StartViewController.swift in Sources */,
 				18074B321D207C060090098A /* FoodDetailsViewController.swift in Sources */,
 				18AEBE741D315C6D002CA275 /* Order.swift in Sources */,
 				1861EDF81D28601D00E136F0 /* UIViewToast.swift in Sources */,
 				18074B341D207FDA0090098A /* CartViewController.swift in Sources */,
+				F7D1B1F01D7E121A00BA0AD3 /* DMFoodTypeCell.swift in Sources */,
 				18AEBE7D1D31A11C002CA275 /* ImageData.swift in Sources */,
 				18D75FC31D208BF7004A2013 /* iCarousel.m in Sources */,
 				18B3AE761D1B3F8000389895 /* FoodTypesViewController.swift in Sources */,
@@ -519,10 +559,13 @@
 				18B3AE741D1B36FB00389895 /* dropDownMenuCell.swift in Sources */,
 				18AEBE831D31A2D0002CA275 /* GenericDao.swift in Sources */,
 				18B3AE321D1B0F8A00389895 /* AppDelegate.swift in Sources */,
+				F71B1C771D83ED3700340EB0 /* addOrEditFoodViewController.swift in Sources */,
 				185BCF901D26CCCF0000D51D /* ImageView.swift in Sources */,
 				180D1A411D25BFD500431466 /* OrderViewController.swift in Sources */,
+				F794DA3B1D81BAA0009FA0CA /* UIViewControllerExtention.swift in Sources */,
 				180D1A3F1D25B99900431466 /* NotificationCell.swift in Sources */,
 				18B3AE561D1B12A900389895 /* RestApiManager.swift in Sources */,
+				F794DA3D1D81DE24009FA0CA /* FoodDMViewController.swift in Sources */,
 				18AEBE751D315C6D002CA275 /* OrderItem.swift in Sources */,
 				18AEBE791D315CC1002CA275 /* Date.swift in Sources */,
 				18B3AE571D1B12A900389895 /* SwiftyJSON.swift in Sources */,
@@ -533,7 +576,9 @@
 				184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */,
 				18B3AE5C1D1B139200389895 /* RestaurantApp.xcdatamodeld in Sources */,
 				189FE8BD1D26EC7800479632 /* Food.swift in Sources */,
+				F794DA391D81A0DB009FA0CA /* NavigationControllerHelper.swift in Sources */,
 				181522621D286B450003A032 /* OrderService.swift in Sources */,
+				F794DA371D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift in Sources */,
 				18D75FC61D208EA9004A2013 /* FoodDetailsView.swift in Sources */,
 				188BC5FE1D26DC4F00304873 /* GeneralService.swift in Sources */,
 				180D1A381D25A76F00431466 /* AdminStartViewController.swift in Sources */,
@@ -683,7 +728,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/RestaurantApp/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SSS.RestaurantApp;
+				PRODUCT_BUNDLE_IDENTIFIER = RestaurantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RestaurantApp-Bridging-Header.h";
@@ -701,7 +746,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/RestaurantApp/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SSS.RestaurantApp;
+				PRODUCT_BUNDLE_IDENTIFIER = RestaurantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RestaurantApp-Bridging-Header.h";

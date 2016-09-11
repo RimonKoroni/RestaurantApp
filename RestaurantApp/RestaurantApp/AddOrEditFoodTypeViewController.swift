@@ -90,6 +90,8 @@ class AddOrEditFoodTypeViewController: UIViewController , UIImagePickerControlle
             
         }
         self.confirmButton.updateConstraints()
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
     }
     
     @IBAction func uploadImageAction(sender: AnyObject) {

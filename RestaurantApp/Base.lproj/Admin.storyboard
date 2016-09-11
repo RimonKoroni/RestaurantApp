@@ -817,7 +817,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Njf-ww-PH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564" y="1084"/>
+            <point key="canvasLocation" x="352" y="1296"/>
         </scene>
         <!--FoodDM View Controller-->
         <scene sceneID="H5j-AY-KDE">
@@ -1404,7 +1404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEq-Gg-oP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="2316"/>
+            <point key="canvasLocation" x="352" y="2742"/>
         </scene>
         <!--Add Or Edit Food View Controller-->
         <scene sceneID="jvY-Im-6uT">
@@ -2094,7 +2094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sv5-Sp-38g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="2346"/>
+            <point key="canvasLocation" x="1312" y="2766"/>
         </scene>
         <!--Add Or Edit Food Type View Controller-->
         <scene sceneID="IbU-F5-SwY">
@@ -2550,7 +2550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D75-US-gYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="1112"/>
+            <point key="canvasLocation" x="1312" y="1296"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="fuM-A0-H2W">
@@ -3011,7 +3011,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeH-72-Qdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-113"/>
+            <point key="canvasLocation" x="682" y="-107"/>
         </scene>
         <!--Order View Controller-->
         <scene sceneID="2Fq-TG-ckp">
@@ -3065,7 +3065,7 @@
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5be-2c-jSO">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="187" height="187"/>
                                                                                             <subviews>
-                                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="mGp-FT-b5h">
+                                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyImage" translatesAutoresizingMaskIntoConstraints="NO" id="mGp-FT-b5h">
                                                                                                     <rect key="frame" x="10" y="10" width="167" height="167"/>
                                                                                                 </imageView>
                                                                                             </subviews>
@@ -3373,7 +3373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPo-10-Dkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="-113"/>
+            <point key="canvasLocation" x="1701" y="-81"/>
         </scene>
     </scenes>
     <resources>
@@ -3391,7 +3391,7 @@
         <image name="countOfFood" width="100" height="99"/>
         <image name="dataManagementIcon" width="100" height="100"/>
         <image name="editIcon" width="256" height="256"/>
-        <image name="food" width="4446" height="3145"/>
+        <image name="emptyImage" width="300" height="200"/>
         <image name="foodDetailsBackground" width="540" height="181"/>
         <image name="footer" width="768" height="186"/>
         <image name="homeIcon" width="256" height="256"/>

@@ -44,6 +44,8 @@ class FoodTypeDMViewController: UIViewController , FoodTypeProtocol {
     override func viewDidAppear(animated: Bool) {
         getFoodTypes()
         self.tableView.reloadData()
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
     }
     
     func refreshNotification(count : Int) {

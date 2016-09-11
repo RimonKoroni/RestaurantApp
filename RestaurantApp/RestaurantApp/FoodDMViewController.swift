@@ -43,7 +43,10 @@ class FoodDMViewController : UIViewController, FoodProtocol {
     
     override func viewDidAppear(animated: Bool) {
         getFoods()
+        
         self.tableView.reloadData()
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
     }
     
     
@@ -55,6 +58,9 @@ class FoodDMViewController : UIViewController, FoodProtocol {
             (result) -> Void in
             self.foods = result
             dispatch_sync(dispatch_get_main_queue(), {
+                if self.foods.count == 0 {
+                    self.noFoodLable.hidden = false
+                }
                 self.tableView.reloadData()
                 EZLoadingActivity.hide()
                 self.view.userInteractionEnabled = true
