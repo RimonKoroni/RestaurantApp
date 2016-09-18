@@ -43,3 +43,10 @@
 "deleteTableMessage" = "Tabloyu silmek istiyor musunuz ";
 "tableNumbersNotUniqueError" = "Hata, bir masanın üzerine birden fazla cihaz var!";
 "updateTableNumberSuccessfully" = "Tablo numaraları başarıyla güncellendi";
+"statisticsTitle" = "Istatistik";
+"clientRequest" = "Müşterinin Siparişler";
+"bestFoodType" = "En iyi gıda türü";
+"bestFood" = "En iyi yiyecek";
+"month" = "Ay";
+"week" = "Hafta";
+"year" = "Yıl";

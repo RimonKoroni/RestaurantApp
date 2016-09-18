@@ -44,3 +44,10 @@
 "deleteTableMessage" = "Do you want to delete table ";
 "tableNumbersNotUniqueError" = "Error, There is more than one device on a one table!";
 "updateTableNumberSuccessfully" = "Table numbers updated successfully";
+"statisticsTitle" = "Statistics";
+"clientRequest" = "Client's Orders";
+"bestFoodType" = "Best Food Type";
+"bestFood" = "Best Food";
+"month" = "Month";
+"week" = "Week";
+"year" = "Year";

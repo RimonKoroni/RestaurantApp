@@ -43,3 +43,10 @@
 "deleteTableMessage" = " هل تريد حذف الطاولة";
 "tableNumbersNotUniqueError" = "خطأ، يوجد هناك أكثر من جهاز على طاولة واحدة";
 "updateTableNumberSuccessfully" = "تم تعديل أرقام الطاولات بنجاح";
+"statisticsTitle" = "إحصائيات";
+"clientRequest" = "طلبات الزبون";
+"bestFoodType" = "أفضل صنف";
+"bestFood" = "أفضل طعام";
+"month" = "شهر";
+"week" = "أسبوع";
+"year" = "سنة";

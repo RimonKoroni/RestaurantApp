@@ -99,6 +99,18 @@ class NotificationService {
                         if let  tableNumberVC = naviationController.viewControllers[0] as? TableNumbersViewController {
                             tableNumberVC.refreshNotification(count)
                         }
+                        
+                        if let  statisticsVC = naviationController.viewControllers[0] as? StatisticsViewController {
+                            statisticsVC.refreshNotification(count)
+                        }
+                        
+                        if let  chartVC = naviationController.viewControllers[0] as? ChartViewController {
+                            chartVC.refreshNotification(count)
+                        }
+                        
+                        if let  dataVC = naviationController.viewControllers[0] as? DataViewController {
+                            dataVC.refreshNotification(count)
+                        }
                     }
                     
                 }
