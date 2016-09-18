@@ -59,10 +59,16 @@
 		F71865931D7F4537003BF4A3 /* FoodTypeDMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71865921D7F4537003BF4A3 /* FoodTypeDMViewController.swift */; };
 		F71B1C751D836A1200340EB0 /* DMFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B1C741D836A1200340EB0 /* DMFoodCell.swift */; };
 		F71B1C771D83ED3700340EB0 /* addOrEditFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B1C761D83ED3700340EB0 /* addOrEditFoodViewController.swift */; };
+		F71D49251D8A7AF400F9E877 /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D49241D8A7AF400F9E877 /* StatisticsService.swift */; };
+		F71D49271D8A7B6200F9E877 /* StatisticsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D49261D8A7B6200F9E877 /* StatisticsItem.swift */; };
+		F71D49291D8A808F00F9E877 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D49281D8A808F00F9E877 /* ChartViewController.swift */; };
+		F71D492B1D8A809F00F9E877 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D492A1D8A809F00F9E877 /* DataViewController.swift */; };
 		F794DA371D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */; };
 		F794DA391D81A0DB009FA0CA /* NavigationControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */; };
 		F794DA3B1D81BAA0009FA0CA /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */; };
 		F794DA3D1D81DE24009FA0CA /* FoodDMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */; };
+		F7980AFE1D8989C2002AF51A /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7980AFD1D8989C2002AF51A /* StatisticsViewController.swift */; };
+		F7980B011D89A052002AF51A /* NormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7980B001D89A052002AF51A /* NormalCell.swift */; };
 		F79F9CF51D625DF300909BAA /* VLADIMIR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */; };
 		F7D1B1F01D7E121A00BA0AD3 /* DMFoodTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B1EF1D7E121A00BA0AD3 /* DMFoodTypeCell.swift */; };
 		F7E0CA641D842F1300E625B7 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0CA631D842F1300E625B7 /* StringExtention.swift */; };
@@ -138,10 +144,16 @@
 		F71865921D7F4537003BF4A3 /* FoodTypeDMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTypeDMViewController.swift; sourceTree = "<group>"; };
 		F71B1C741D836A1200340EB0 /* DMFoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFoodCell.swift; sourceTree = "<group>"; };
 		F71B1C761D83ED3700340EB0 /* addOrEditFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOrEditFoodViewController.swift; sourceTree = "<group>"; };
+		F71D49241D8A7AF400F9E877 /* StatisticsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsService.swift; sourceTree = "<group>"; };
+		F71D49261D8A7B6200F9E877 /* StatisticsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsItem.swift; sourceTree = "<group>"; };
+		F71D49281D8A808F00F9E877 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		F71D492A1D8A809F00F9E877 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOrEditFoodTypeViewController.swift; sourceTree = "<group>"; };
 		F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerHelper.swift; sourceTree = "<group>"; };
 		F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDMViewController.swift; sourceTree = "<group>"; };
+		F7980AFD1D8989C2002AF51A /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F7980B001D89A052002AF51A /* NormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCell.swift; sourceTree = "<group>"; };
 		F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = VLADIMIR.TTF; sourceTree = "<group>"; };
 		F7D1B1EF1D7E121A00BA0AD3 /* DMFoodTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFoodTypeCell.swift; sourceTree = "<group>"; };
 		F7E0CA631D842F1300E625B7 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
@@ -197,6 +209,7 @@
 				18AEBE731D315C6C002CA275 /* OrderItem.swift */,
 				18880CED1D270FF900ABF378 /* Cart.swift */,
 				F7E0CA6C1D85683500E625B7 /* TableNumber.swift */,
+				F71D49261D8A7B6200F9E877 /* StatisticsItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -276,6 +289,7 @@
 				18AEBE761D315C8D002CA275 /* NotificationService.swift */,
 				18AEBE841D31A2F5002CA275 /* ImageDataDao.swift */,
 				18AEBE861D31A3D0002CA275 /* ImageDataService.swift */,
+				F71D49241D8A7AF400F9E877 /* StatisticsService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -295,6 +309,9 @@
 				F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */,
 				F71B1C761D83ED3700340EB0 /* addOrEditFoodViewController.swift */,
 				F7E0CA671D85545D00E625B7 /* TableNumbersViewController.swift */,
+				F7980AFD1D8989C2002AF51A /* StatisticsViewController.swift */,
+				F71D49281D8A808F00F9E877 /* ChartViewController.swift */,
+				F71D492A1D8A809F00F9E877 /* DataViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +343,7 @@
 		18B3AE4A1D1B102100389895 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F7980AFF1D89A043002AF51A /* NormalCell */,
 				F7E0CA691D855EFF00E625B7 /* TableNumberCell */,
 				F7D1B1EE1D7E11E800BA0AD3 /* DataManagmentCells */,
 				189FE8B71D26E0BB00479632 /* loading */,
@@ -402,6 +420,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7980AFF1D89A043002AF51A /* NormalCell */ = {
+			isa = PBXGroup;
+			children = (
+				F7980B001D89A052002AF51A /* NormalCell.swift */,
+			);
+			name = NormalCell;
+			sourceTree = "<group>";
+		};
 		F7D1B1EE1D7E11E800BA0AD3 /* DataManagmentCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +481,7 @@
 					18B3AE2D1D1B0F8900389895 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 825H48GV9C;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -550,16 +577,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7980AFE1D8989C2002AF51A /* StatisticsViewController.swift in Sources */,
 				185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */,
 				18AEBE771D315C8D002CA275 /* NotificationService.swift in Sources */,
 				F7E0CA641D842F1300E625B7 /* StringExtention.swift in Sources */,
 				18AEBE821D31A2D0002CA275 /* DaoUtil.swift in Sources */,
+				F71D49291D8A808F00F9E877 /* ChartViewController.swift in Sources */,
 				F7E0CA6B1D855F1300E625B7 /* TableNumberCell.swift in Sources */,
 				187359721D2543CF00053227 /* CartCell.swift in Sources */,
 				18AEBE7F1D31A1AA002CA275 /* GenericDomain.swift in Sources */,
 				189FE8BB1D26EC4600479632 /* FoodService.swift in Sources */,
 				18880CEE1D270FF900ABF378 /* Cart.swift in Sources */,
 				F71B1C751D836A1200340EB0 /* DMFoodCell.swift in Sources */,
+				F71D492B1D8A809F00F9E877 /* DataViewController.swift in Sources */,
 				189FE8B91D26E0CF00479632 /* EZLoadingActivity.swift in Sources */,
 				180D1A441D25C30F00431466 /* OrderCell.swift in Sources */,
 				F71865931D7F4537003BF4A3 /* FoodTypeDMViewController.swift in Sources */,
@@ -590,12 +620,15 @@
 				18B3AE571D1B12A900389895 /* SwiftyJSON.swift in Sources */,
 				F7E0CA681D85545D00E625B7 /* TableNumbersViewController.swift in Sources */,
 				180D1A3C1D25B07600431466 /* NotificationViewController.swift in Sources */,
+				F71D49271D8A7B6200F9E877 /* StatisticsItem.swift in Sources */,
 				185BCF8C1D26B1110000D51D /* FoodTypesService.swift in Sources */,
 				18AEBE871D31A3D0002CA275 /* ImageDataService.swift in Sources */,
+				F7980B011D89A052002AF51A /* NormalCell.swift in Sources */,
 				18AEBE851D31A2F5002CA275 /* ImageDataDao.swift in Sources */,
 				184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */,
 				18B3AE5C1D1B139200389895 /* RestaurantApp.xcdatamodeld in Sources */,
 				189FE8BD1D26EC7800479632 /* Food.swift in Sources */,
+				F71D49251D8A7AF400F9E877 /* StatisticsService.swift in Sources */,
 				F794DA391D81A0DB009FA0CA /* NavigationControllerHelper.swift in Sources */,
 				181522621D286B450003A032 /* OrderService.swift in Sources */,
 				F794DA371D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift in Sources */,
@@ -752,6 +785,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RestaurantApp-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -770,6 +804,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RestaurantApp-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
