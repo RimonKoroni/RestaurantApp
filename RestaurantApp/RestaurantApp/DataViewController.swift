@@ -8,20 +8,34 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
+class DataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var notificationCount: UILabel!
+    @IBOutlet weak var keyHeader: UILabel!
+    @IBOutlet weak var valueHeader: UILabel!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var lang : String!
     var statisticsData : [StatisticsItem]!
+    var reportType : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationControllerHelper.configureNavigationController(self, title: "DataTitle")
+        NavigationControllerHelper.configureNavigationController(self, title: "statisticsTitle")
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
+        
+        if reportType == 1 {
+            keyHeader.text = NSLocalizedString("date", comment: "")
+            valueHeader.text = NSLocalizedString("count", comment: "")
+        } else if reportType == 2 {
+            keyHeader.text = NSLocalizedString("foodName", comment: "")
+            valueHeader.text = NSLocalizedString("percentage", comment: "")
+        } else {
+            keyHeader.text = NSLocalizedString("foodTypeName", comment: "")
+            valueHeader.text = NSLocalizedString("percentage", comment: "")
+        }
     }
     
     
@@ -39,6 +53,23 @@ class DataViewController: UIViewController {
     @IBAction func goToHome(sender: AnyObject) {
         let adminStartViewController = storyboard!.instantiateViewControllerWithIdentifier("AdminStartViewController") as! AdminStartViewController
         self.presentViewController(adminStartViewController, animated:true, completion:nil)
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.statisticsData.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("dataStatisticsCell") as! DataStatisticsCell
+        cell.key.text = statisticsData[indexPath.row].key
+        cell.value.text = String(statisticsData[indexPath.row].value)
+        
+        return cell
+
     }
     
     

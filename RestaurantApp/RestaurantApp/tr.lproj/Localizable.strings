@@ -50,3 +50,8 @@
 "month" = "Ay";
 "week" = "Hafta";
 "year" = "Yıl";
+"date" = "Tarih";
+"count" = "Saymak";
+"foodName" = "Gıda Adı";
+"percentage" = "Yüzde";
+"foodTypeName" = "Gıda Tür Ad";

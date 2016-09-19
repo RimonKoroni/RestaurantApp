@@ -19,7 +19,7 @@ class ChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationControllerHelper.configureNavigationController(self, title: "chartTitle")
+        NavigationControllerHelper.configureNavigationController(self, title: "statisticsTitle")
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
     }

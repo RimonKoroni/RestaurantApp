@@ -1,24 +1,165 @@
 
-/* Class = "UILabel"; text = "Welcome"; ObjectID = "3BF-2V-z7H"; */
-"3BF-2V-z7H.text" = "Welcome";
+/* Class = "UILabel"; text = "Report Type"; ObjectID = "1b7-zJ-Iwd"; */
+"1b7-zJ-Iwd.text" = "Report Type";
 
-/* Class = "UILabel"; text = "2"; ObjectID = "92U-ha-oEm"; */
-"92U-ha-oEm.text" = "2";
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "2aD-4b-7d6"; */
+"2aD-4b-7d6.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "hoşgeldin"; ObjectID = "3BF-2V-z7H"; */
+"3BF-2V-z7H.text" = "hoşgeldin";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "3BG-uJ-5mh"; */
+"3BG-uJ-5mh.text" = "2";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "70V-YY-LnU"; */
+"70V-YY-LnU.text" = "Statistics";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "73z-Ql-jvo"; */
+"73z-Ql-jvo.text" = "Home";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "7Y9-Aq-w45"; */
+"7Y9-Aq-w45.text" = "2";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "88C-Kc-zr9"; */
+"88C-Kc-zr9.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "8He-Uz-WHQ"; */
+"8He-Uz-WHQ.text" = "Sandwiches";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "958-YQ-qyP"; */
+"958-YQ-qyP.text" = "2";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "9Bp-SU-LZc"; */
+"9Bp-SU-LZc.text" = "Do you want to delete? ";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "9qU-rH-h6e"; */
+"9qU-rH-h6e.text" = "Data Management";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "ARF-NR-49b"; */
+"ARF-NR-49b.text" = "Notifications";
+
+/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "AXx-52-XO1"; */
+"AXx-52-XO1.text" = "Sandwiches";
+
+/* Class = "UIButton"; normalTitle = "Month"; ObjectID = "Arx-a8-GhQ"; */
+"Arx-a8-GhQ.normalTitle" = "Month";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "Bu5-Qs-0ff"; */
+"Bu5-Qs-0ff.text" = "Notifications";
+
+/* Class = "UITextField"; placeholder = "Arabic title"; ObjectID = "CYO-i3-BYk"; */
+"CYO-i3-BYk.placeholder" = "Arabic title";
 
 /* Class = "UIButton"; normalTitle = "Start"; ObjectID = "CeI-Uu-DSS"; */
 "CeI-Uu-DSS.normalTitle" = "Start";
 
-/* Class = "UILabel"; text = "Notifications"; ObjectID = "DAZ-zJ-Ta4"; */
-"DAZ-zJ-Ta4.text" = "Notifications";
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "CyU-YB-syN"; */
+"CyU-YB-syN.text" = "Data Management";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "DDN-iB-br0"; */
+"DDN-iB-br0.text" = "Data Management";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "DS3-AP-6hh"; */
+"DS3-AP-6hh.text" = "2";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "GXB-Ko-Y36"; */
+"GXB-Ko-Y36.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "HOd-OJ-d2V"; */
+"HOd-OJ-d2V.text" = "Table Numbers";
 
 /* Class = "UILabel"; text = "10:22"; ObjectID = "HPg-FC-vzg"; */
 "HPg-FC-vzg.text" = "10:22";
 
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "Hhe-d3-PfG"; */
+"Hhe-d3-PfG.text" = "Statistics";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "IkR-vg-Bln"; */
+"IkR-vg-Bln.text" = "Statistics";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "MFU-19-i1W"; */
+"MFU-19-i1W.text" = "Statistics";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NUb-GV-B8Y"; */
+"NUb-GV-B8Y.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Turkish title"; ObjectID = "Nos-Xn-k91"; */
+"Nos-Xn-k91.placeholder" = "Turkish title";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "OAr-59-5tz"; */
+"OAr-59-5tz.text" = "Notifications";
+
+/* Class = "UILabel"; text = "TL"; ObjectID = "Ojd-xI-dso"; */
+"Ojd-xI-dso.text" = "TL";
+
+/* Class = "UITextField"; placeholder = "English title"; ObjectID = "PAR-pt-zjs"; */
+"PAR-pt-zjs.placeholder" = "English title";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PIo-hj-eoY"; */
+"PIo-hj-eoY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "PYY-Mq-4aS"; */
+"PYY-Mq-4aS.text" = "Home";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "PeI-Nn-huu"; */
+"PeI-Nn-huu.text" = "2";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "ROc-AE-Sol"; */
+"ROc-AE-Sol.text" = "Statistics";
+
 /* Class = "UILabel"; text = "10"; ObjectID = "RPI-Ni-Mfu"; */
 "RPI-Ni-Mfu.text" = "10";
 
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "RUY-6K-elr"; */
+"RUY-6K-elr.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "SeK-QQ-Y7Y"; */
+"SeK-QQ-Y7Y.text" = "Home";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T0e-xj-JZU"; */
+"T0e-xj-JZU.text" = "Label";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "TFg-2g-CHd"; */
+"TFg-2g-CHd.text" = "Home";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "Tiw-RZ-7pL"; */
+"Tiw-RZ-7pL.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "UaS-Jn-f79"; */
+"UaS-Jn-f79.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "VYD-Ew-Zhc"; */
+"VYD-Ew-Zhc.text" = "Do you want to delete? ";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "WAf-9u-0MK"; */
+"WAf-9u-0MK.text" = "2";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "Y0E-K5-YM5"; */
+"Y0E-K5-YM5.text" = "Data Management";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "Y6n-2p-cnP"; */
+"Y6n-2p-cnP.text" = "To";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Z0d-x2-taL"; */
+"Z0d-x2-taL.text" = "2";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "aIz-kB-6l0"; */
+"aIz-kB-6l0.text" = "2";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "bDU-ce-rNQ"; */
+"bDU-ce-rNQ.text" = "Notifications";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "bFZ-Xj-Ngf"; */
+"bFZ-Xj-Ngf.text" = "Statistics";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "bac-b0-bQv"; */
+"bac-b0-bQv.text" = "Notifications";
+
 /* Class = "UIButton"; normalTitle = "US"; ObjectID = "c4a-MS-aUA"; */
 "c4a-MS-aUA.normalTitle" = "US";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ce5-86-nBA"; */
+"ce5-86-nBA.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "d2h-kB-mmC"; */
 "d2h-kB-mmC.text" = "1";
@@ -26,17 +167,104 @@
 /* Class = "UILabel"; text = "Notifications"; ObjectID = "dBd-Xg-GvV"; */
 "dBd-Xg-GvV.text" = "Notifications";
 
+/* Class = "UITextField"; placeholder = "Price"; ObjectID = "dEX-h5-Sl1"; */
+"dEX-h5-Sl1.placeholder" = "Price";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "dLs-u3-hZj"; */
+"dLs-u3-hZj.text" = "Home";
+
+/* Class = "UITextField"; placeholder = "New"; ObjectID = "daA-Sw-rQK"; */
+"daA-Sw-rQK.placeholder" = "New";
+
+/* Class = "UIButton"; normalTitle = "Clients Requests"; ObjectID = "dsK-6j-bv0"; */
+"dsK-6j-bv0.normalTitle" = "Clients Requests";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "grr-S8-lAC"; */
+"grr-S8-lAC.text" = "Label";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "haO-6h-Cbm"; */
+"haO-6h-Cbm.text" = "Home";
+
 /* Class = "UILabel"; text = "2"; ObjectID = "in5-3g-DmD"; */
 "in5-3g-DmD.text" = "2";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "jIn-wX-BBb"; */
+"jIn-wX-BBb.text" = "Data Management";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "jZd-lW-Dde"; */
+"jZd-lW-Dde.text" = "Notifications";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "k7X-5l-7U9"; */
+"k7X-5l-7U9.text" = "Table Numbers";
+
+/* Class = "UILabel"; text = "Per"; ObjectID = "kMm-2Y-EvF"; */
+"kMm-2Y-EvF.text" = "Per";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "kc6-D8-phl"; */
+"kc6-D8-phl.text" = "Home";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "klr-Ko-riP"; */
+"klr-Ko-riP.text" = "2";
 
 /* Class = "UILabel"; text = "Sandwiches"; ObjectID = "lkx-Ip-U2p"; */
 "lkx-Ip-U2p.text" = "Sandwiches";
 
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "lpV-2s-EQy"; */
+"lpV-2s-EQy.text" = "Notifications";
+
+/* Class = "UITextField"; placeholder = "Arabic title"; ObjectID = "mG8-2J-C6w"; */
+"mG8-2J-C6w.placeholder" = "Arabic title";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "mme-5e-XIF"; */
+"mme-5e-XIF.text" = "Home";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mn8-MD-wwj"; */
+"mn8-MD-wwj.text" = "Label";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "nGw-2X-kE4"; */
+"nGw-2X-kE4.text" = "Table Numbers";
+
 /* Class = "UILabel"; text = "Home"; ObjectID = "nbs-2P-lOW"; */
 "nbs-2P-lOW.text" = "Home";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "t8D-xn-w7Q"; */
-"t8D-xn-w7Q.text" = "Home";
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "o2V-42-agq"; */
+"o2V-42-agq.text" = "Notifications";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "qX8-0G-ZkF"; */
+"qX8-0G-ZkF.text" = "Statistics";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "qsN-kE-wig"; */
+"qsN-kE-wig.text" = "From";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rp4-s5-AaK"; */
+"rp4-s5-AaK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Is Valid"; ObjectID = "s3e-NH-Tkn"; */
+"s3e-NH-Tkn.text" = "Is Valid";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "sgG-Uz-evl"; */
+"sgG-Uz-evl.text" = "Do you want to delete? ";
+
+/* Class = "UITextField"; placeholder = "English title"; ObjectID = "tEu-TF-duE"; */
+"tEu-TF-duE.placeholder" = "English title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ucz-Gy-iQe"; */
+"ucz-Gy-iQe.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Turkish title"; ObjectID = "wnU-Gx-zzo"; */
+"wnU-Gx-zzo.placeholder" = "Turkish title";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "xYZ-w6-7jd"; */
+"xYZ-w6-7jd.text" = "Home";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "yVr-AV-TVV"; */
+"yVr-AV-TVV.text" = "Notifications";
 
 /* Class = "UILabel"; text = "Table"; ObjectID = "yaL-0S-PM1"; */
 "yaL-0S-PM1.text" = "Table";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "zkU-5W-aFg"; */
+"zkU-5W-aFg.text" = "Data Management";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "zla-28-Y5v"; */
+"zla-28-Y5v.text" = "1";

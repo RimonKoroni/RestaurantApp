@@ -1,24 +1,165 @@
 
-/* Class = "UILabel"; text = "Welcome"; ObjectID = "3BF-2V-z7H"; */
+/* Class = "UILabel"; text = "Report Type"; ObjectID = "1b7-zJ-Iwd"; */
+"1b7-zJ-Iwd.text" = "نوع التقرير";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "2aD-4b-7d6"; */
+"2aD-4b-7d6.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "hoşgeldin"; ObjectID = "3BF-2V-z7H"; */
 "3BF-2V-z7H.text" = "أهلا بك";
 
-/* Class = "UILabel"; text = "2"; ObjectID = "92U-ha-oEm"; */
-"92U-ha-oEm.text" = "2";
+/* Class = "UILabel"; text = "2"; ObjectID = "3BG-uJ-5mh"; */
+"3BG-uJ-5mh.text" = "2";
 
-/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "CeI-Uu-DSS"; */
-"CeI-Uu-DSS.normalTitle" = "ابدأ";
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "70V-YY-LnU"; */
+"70V-YY-LnU.text" = "الاحصائيات";
 
-/* Class = "UILabel"; text = "Notifications"; ObjectID = "DAZ-zJ-Ta4"; */
-"DAZ-zJ-Ta4.text" = "الإشعارات";
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "73z-Ql-jvo"; */
+"73z-Ql-jvo.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "7Y9-Aq-w45"; */
+"7Y9-Aq-w45.text" = "2";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "88C-Kc-zr9"; */
+"88C-Kc-zr9.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "8He-Uz-WHQ"; */
+"8He-Uz-WHQ.text" = "السندويش";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "958-YQ-qyP"; */
+"958-YQ-qyP.text" = "2";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "9Bp-SU-LZc"; */
+"9Bp-SU-LZc.text" = "Do you want to delete? ";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "9qU-rH-h6e"; */
+"9qU-rH-h6e.text" = "إدارة البيانات";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "ARF-NR-49b"; */
+"ARF-NR-49b.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "AXx-52-XO1"; */
+"AXx-52-XO1.text" = "السندويش";
+
+/* Class = "UIButton"; normalTitle = "الشهر"; ObjectID = "Arx-a8-GhQ"; */
+"Arx-a8-GhQ.normalTitle" = "الشهر";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "Bu5-Qs-0ff"; */
+"Bu5-Qs-0ff.text" = "الإشعارات";
+
+/* Class = "UITextField"; placeholder = "الأسم بالعربية"; ObjectID = "CYO-i3-BYk"; */
+"CYO-i3-BYk.placeholder" = "الأسم بالعربية";
+
+/* Class = "UIButton"; normalTitle = "إبدأ"; ObjectID = "CeI-Uu-DSS"; */
+"CeI-Uu-DSS.normalTitle" = "إبدأ";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "CyU-YB-syN"; */
+"CyU-YB-syN.text" = "إدارة البيانات";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "DDN-iB-br0"; */
+"DDN-iB-br0.text" = "إدارة البيانات";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "DS3-AP-6hh"; */
+"DS3-AP-6hh.text" = "2";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "GXB-Ko-Y36"; */
+"GXB-Ko-Y36.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "HOd-OJ-d2V"; */
+"HOd-OJ-d2V.text" = "أرقام الطاولات";
 
 /* Class = "UILabel"; text = "10:22"; ObjectID = "HPg-FC-vzg"; */
 "HPg-FC-vzg.text" = "10:22";
 
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "Hhe-d3-PfG"; */
+"Hhe-d3-PfG.text" = "الاحصائيات";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "IkR-vg-Bln"; */
+"IkR-vg-Bln.text" = "الاحصائيات";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "MFU-19-i1W"; */
+"MFU-19-i1W.text" = "الاحصائيات";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NUb-GV-B8Y"; */
+"NUb-GV-B8Y.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "الاسم بالتركية"; ObjectID = "Nos-Xn-k91"; */
+"Nos-Xn-k91.placeholder" = "الاسم بالتركية";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "OAr-59-5tz"; */
+"OAr-59-5tz.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "TL"; ObjectID = "Ojd-xI-dso"; */
+"Ojd-xI-dso.text" = "TL";
+
+/* Class = "UITextField"; placeholder = "الاسم بالاجنبية"; ObjectID = "PAR-pt-zjs"; */
+"PAR-pt-zjs.placeholder" = "الاسم بالاجنبية";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PIo-hj-eoY"; */
+"PIo-hj-eoY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "PYY-Mq-4aS"; */
+"PYY-Mq-4aS.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "PeI-Nn-huu"; */
+"PeI-Nn-huu.text" = "2";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "ROc-AE-Sol"; */
+"ROc-AE-Sol.text" = "الاحصائيات";
+
 /* Class = "UILabel"; text = "10"; ObjectID = "RPI-Ni-Mfu"; */
 "RPI-Ni-Mfu.text" = "10";
 
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "RUY-6K-elr"; */
+"RUY-6K-elr.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "SeK-QQ-Y7Y"; */
+"SeK-QQ-Y7Y.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T0e-xj-JZU"; */
+"T0e-xj-JZU.text" = "Label";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "TFg-2g-CHd"; */
+"TFg-2g-CHd.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "Tiw-RZ-7pL"; */
+"Tiw-RZ-7pL.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "UaS-Jn-f79"; */
+"UaS-Jn-f79.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "VYD-Ew-Zhc"; */
+"VYD-Ew-Zhc.text" = "Do you want to delete? ";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "WAf-9u-0MK"; */
+"WAf-9u-0MK.text" = "2";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "Y0E-K5-YM5"; */
+"Y0E-K5-YM5.text" = "إدارة البيانات";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "Y6n-2p-cnP"; */
+"Y6n-2p-cnP.text" = "إلى";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Z0d-x2-taL"; */
+"Z0d-x2-taL.text" = "2";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "aIz-kB-6l0"; */
+"aIz-kB-6l0.text" = "2";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "bDU-ce-rNQ"; */
+"bDU-ce-rNQ.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "bFZ-Xj-Ngf"; */
+"bFZ-Xj-Ngf.text" = "الاحصائيات";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "bac-b0-bQv"; */
+"bac-b0-bQv.text" = "الإشعارات";
+
 /* Class = "UIButton"; normalTitle = "US"; ObjectID = "c4a-MS-aUA"; */
 "c4a-MS-aUA.normalTitle" = "US";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ce5-86-nBA"; */
+"ce5-86-nBA.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "d2h-kB-mmC"; */
 "d2h-kB-mmC.text" = "1";
@@ -26,17 +167,104 @@
 /* Class = "UILabel"; text = "Notifications"; ObjectID = "dBd-Xg-GvV"; */
 "dBd-Xg-GvV.text" = "الإشعارات";
 
+/* Class = "UITextField"; placeholder = "Price"; ObjectID = "dEX-h5-Sl1"; */
+"dEX-h5-Sl1.placeholder" = "السعر";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "dLs-u3-hZj"; */
+"dLs-u3-hZj.text" = "الصفحة الرئيسية";
+
+/* Class = "UITextField"; placeholder = "جديد"; ObjectID = "daA-Sw-rQK"; */
+"daA-Sw-rQK.placeholder" = "جديد";
+
+/* Class = "UIButton"; normalTitle = "طلبات الزبون"; ObjectID = "dsK-6j-bv0"; */
+"dsK-6j-bv0.normalTitle" = "طلبات الزبون";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "grr-S8-lAC"; */
+"grr-S8-lAC.text" = "Label";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "haO-6h-Cbm"; */
+"haO-6h-Cbm.text" = "الصفحة الرئيسية";
+
 /* Class = "UILabel"; text = "2"; ObjectID = "in5-3g-DmD"; */
 "in5-3g-DmD.text" = "2";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "jIn-wX-BBb"; */
+"jIn-wX-BBb.text" = "إدارة البيانات";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "jZd-lW-Dde"; */
+"jZd-lW-Dde.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "k7X-5l-7U9"; */
+"k7X-5l-7U9.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "خلال"; ObjectID = "kMm-2Y-EvF"; */
+"kMm-2Y-EvF.text" = "خلال";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "kc6-D8-phl"; */
+"kc6-D8-phl.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "klr-Ko-riP"; */
+"klr-Ko-riP.text" = "2";
 
 /* Class = "UILabel"; text = "Sandwiches"; ObjectID = "lkx-Ip-U2p"; */
 "lkx-Ip-U2p.text" = "السندويش";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "nbs-2P-lOW"; */
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "lpV-2s-EQy"; */
+"lpV-2s-EQy.text" = "الإشعارات";
+
+/* Class = "UITextField"; placeholder = "الأسم بالعربية"; ObjectID = "mG8-2J-C6w"; */
+"mG8-2J-C6w.placeholder" = "الأسم بالعربية";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "mme-5e-XIF"; */
+"mme-5e-XIF.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mn8-MD-wwj"; */
+"mn8-MD-wwj.text" = "Label";
+
+/* Class = "UILabel"; text = "Table Numbers"; ObjectID = "nGw-2X-kE4"; */
+"nGw-2X-kE4.text" = "أرقام الطاولات";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "nbs-2P-lOW"; */
 "nbs-2P-lOW.text" = "الصفحة الرئيسية";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "t8D-xn-w7Q"; */
-"t8D-xn-w7Q.text" = "الصفحة الرئيسية";
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "o2V-42-agq"; */
+"o2V-42-agq.text" = "الإشعارات";
 
-/* Class = "UILabel"; text = "Table"; ObjectID = "yaL-0S-PM1"; */
-"yaL-0S-PM1.text" = "الطاولة";
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "qX8-0G-ZkF"; */
+"qX8-0G-ZkF.text" = "الاحصائيات";
+
+/* Class = "UILabel"; text = "من"; ObjectID = "qsN-kE-wig"; */
+"qsN-kE-wig.text" = "من";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rp4-s5-AaK"; */
+"rp4-s5-AaK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "هل هو فعال"; ObjectID = "s3e-NH-Tkn"; */
+"s3e-NH-Tkn.text" = "هل هو فعال";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "sgG-Uz-evl"; */
+"sgG-Uz-evl.text" = "Do you want to delete? ";
+
+/* Class = "UITextField"; placeholder = "الاسم بالاجنبية"; ObjectID = "tEu-TF-duE"; */
+"tEu-TF-duE.placeholder" = "الاسم بالاجنبية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ucz-Gy-iQe"; */
+"ucz-Gy-iQe.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "الاسم بالتركية"; ObjectID = "wnU-Gx-zzo"; */
+"wnU-Gx-zzo.placeholder" = "الاسم بالتركية";
+
+/* Class = "UILabel"; text = "الصفحة الرئيسية"; ObjectID = "xYZ-w6-7jd"; */
+"xYZ-w6-7jd.text" = "الصفحة الرئيسية";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "yVr-AV-TVV"; */
+"yVr-AV-TVV.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "جدول"; ObjectID = "yaL-0S-PM1"; */
+"yaL-0S-PM1.text" = "جدول";
+
+/* Class = "UILabel"; text = "Data Management"; ObjectID = "zkU-5W-aFg"; */
+"zkU-5W-aFg.text" = "إدارة البيانات";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "zla-28-Y5v"; */
+"zla-28-Y5v.text" = "1";

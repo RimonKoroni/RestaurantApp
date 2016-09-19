@@ -51,3 +51,8 @@
 "month" = "Month";
 "week" = "Week";
 "year" = "Year";
+"date" = "Date";
+"count" = "Count";
+"foodName" = "Food Name";
+"percentage" = "Percentage";
+"foodTypeName" = "Food Type Name";

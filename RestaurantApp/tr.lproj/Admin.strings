@@ -1,42 +1,270 @@
 
-/* Class = "UILabel"; text = "Welcome"; ObjectID = "3BF-2V-z7H"; */
-"3BF-2V-z7H.text" = "Hoşgeldiniz";
+/* Class = "UILabel"; text = "Rapor tipi"; ObjectID = "1b7-zJ-Iwd"; */
+"1b7-zJ-Iwd.text" = "Rapor tipi";
 
-/* Class = "UILabel"; text = "2"; ObjectID = "92U-ha-oEm"; */
-"92U-ha-oEm.text" = "2";
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "2aD-4b-7d6"; */
+"2aD-4b-7d6.text" = "Masa Numaraları";
 
-/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "CeI-Uu-DSS"; */
+/* Class = "UILabel"; text = "hoşgeldin"; ObjectID = "3BF-2V-z7H"; */
+"3BF-2V-z7H.text" = "hoşgeldin";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "3BG-uJ-5mh"; */
+"3BG-uJ-5mh.text" = "2";
+
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "70V-YY-LnU"; */
+"70V-YY-LnU.text" = "Istatistik";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "73z-Ql-jvo"; */
+"73z-Ql-jvo.text" = "Ev";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "7Y9-Aq-w45"; */
+"7Y9-Aq-w45.text" = "2";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "88C-Kc-zr9"; */
+"88C-Kc-zr9.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Sandviç"; ObjectID = "8He-Uz-WHQ"; */
+"8He-Uz-WHQ.text" = "Sandviç";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "958-YQ-qyP"; */
+"958-YQ-qyP.text" = "2";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "9Bp-SU-LZc"; */
+"9Bp-SU-LZc.text" = "Do you want to delete? ";
+
+/* Class = "UILabel"; text = "Veri yönetimi"; ObjectID = "9qU-rH-h6e"; */
+"9qU-rH-h6e.text" = "Veri yönetimi";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "ARF-NR-49b"; */
+"ARF-NR-49b.text" = "Bildirimler";
+
+/* Class = "UILabel"; text = "Sandviç"; ObjectID = "AXx-52-XO1"; */
+"AXx-52-XO1.text" = "Sandviç";
+
+/* Class = "UIButton"; normalTitle = "Ay"; ObjectID = "Arx-a8-GhQ"; */
+"Arx-a8-GhQ.normalTitle" = "Ay";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "Bu5-Qs-0ff"; */
+"Bu5-Qs-0ff.text" = "Bildirimler";
+
+/* Class = "UITextField"; placeholder = "Arapça başlık"; ObjectID = "CYO-i3-BYk"; */
+"CYO-i3-BYk.placeholder" = "Arapça başlık";
+
+/* Class = "UIButton"; normalTitle = "Başlama"; ObjectID = "CeI-Uu-DSS"; */
 "CeI-Uu-DSS.normalTitle" = "Başlama";
 
-/* Class = "UILabel"; text = "Notifications"; ObjectID = "DAZ-zJ-Ta4"; */
-"DAZ-zJ-Ta4.text" = "Bildirimler";
+/* Class = "UILabel"; text = "Veri yönetimi"; ObjectID = "CyU-YB-syN"; */
+"CyU-YB-syN.text" = "Veri yönetimi";
+
+/* Class = "UILabel"; text = "Veri yönetimi"; ObjectID = "DDN-iB-br0"; */
+"DDN-iB-br0.text" = "Veri yönetimi";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "DS3-AP-6hh"; */
+"DS3-AP-6hh.text" = "2";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "GXB-Ko-Y36"; */
+"GXB-Ko-Y36.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "HOd-OJ-d2V"; */
+"HOd-OJ-d2V.text" = "Masa Numaraları";
 
 /* Class = "UILabel"; text = "10:22"; ObjectID = "HPg-FC-vzg"; */
 "HPg-FC-vzg.text" = "10:22";
 
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "Hhe-d3-PfG"; */
+"Hhe-d3-PfG.text" = "Istatistik";
+
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "IkR-vg-Bln"; */
+"IkR-vg-Bln.text" = "Istatistik";
+
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "MFU-19-i1W"; */
+"MFU-19-i1W.text" = "Istatistik";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NUb-GV-B8Y"; */
+"NUb-GV-B8Y.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Türk başlık"; ObjectID = "Nos-Xn-k91"; */
+"Nos-Xn-k91.placeholder" = "Türk başlık";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "OAr-59-5tz"; */
+"OAr-59-5tz.text" = "Bildirimler";
+
+/* Class = "UILabel"; text = "TL"; ObjectID = "Ojd-xI-dso"; */
+"Ojd-xI-dso.text" = "TL";
+
+/* Class = "UITextField"; placeholder = "İngilizce başlık"; ObjectID = "PAR-pt-zjs"; */
+"PAR-pt-zjs.placeholder" = "İngilizce başlık";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PIo-hj-eoY"; */
+"PIo-hj-eoY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "PYY-Mq-4aS"; */
+"PYY-Mq-4aS.text" = "Ev";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "PeI-Nn-huu"; */
+"PeI-Nn-huu.text" = "2";
+
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "ROc-AE-Sol"; */
+"ROc-AE-Sol.text" = "Istatistik";
+
 /* Class = "UILabel"; text = "10"; ObjectID = "RPI-Ni-Mfu"; */
 "RPI-Ni-Mfu.text" = "10";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "RUY-6K-elr"; */
+"RUY-6K-elr.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "SeK-QQ-Y7Y"; */
+"SeK-QQ-Y7Y.text" = "Ev";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T0e-xj-JZU"; */
+"T0e-xj-JZU.text" = "Label";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "TFg-2g-CHd"; */
+"TFg-2g-CHd.text" = "Ev";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "Tiw-RZ-7pL"; */
+"Tiw-RZ-7pL.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "UaS-Jn-f79"; */
+"UaS-Jn-f79.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "VYD-Ew-Zhc"; */
+"VYD-Ew-Zhc.text" = "Do you want to delete? ";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "WAf-9u-0MK"; */
+"WAf-9u-0MK.text" = "2";
+
+/* Class = "UILabel"; text = "Veri yönetimi"; ObjectID = "Y0E-K5-YM5"; */
+"Y0E-K5-YM5.text" = "Veri yönetimi";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "Y6n-2p-cnP"; */
+"Y6n-2p-cnP.text" = "Kime";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Z0d-x2-taL"; */
+"Z0d-x2-taL.text" = "2";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "aIz-kB-6l0"; */
+"aIz-kB-6l0.text" = "2";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "bDU-ce-rNQ"; */
+"bDU-ce-rNQ.text" = "Bildirimler";
+
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "bFZ-Xj-Ngf"; */
+"bFZ-Xj-Ngf.text" = "Istatistik";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "bac-b0-bQv"; */
+"bac-b0-bQv.text" = "Bildirimler";
 
 /* Class = "UIButton"; normalTitle = "US"; ObjectID = "c4a-MS-aUA"; */
 "c4a-MS-aUA.normalTitle" = "US";
 
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ce5-86-nBA"; */
+"ce5-86-nBA.normalTitle" = "Button";
+
 /* Class = "UILabel"; text = "1"; ObjectID = "d2h-kB-mmC"; */
 "d2h-kB-mmC.text" = "1";
 
-/* Class = "UILabel"; text = "Notifications"; ObjectID = "dBd-Xg-GvV"; */
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "dBd-Xg-GvV"; */
 "dBd-Xg-GvV.text" = "Bildirimler";
+
+/* Class = "UITextField"; placeholder = "Fiyat"; ObjectID = "dEX-h5-Sl1"; */
+"dEX-h5-Sl1.placeholder" = "Fiyat";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "dLs-u3-hZj"; */
+"dLs-u3-hZj.text" = "Ev";
+
+/* Class = "UITextField"; placeholder = "Yeni"; ObjectID = "daA-Sw-rQK"; */
+"daA-Sw-rQK.placeholder" = "Yeni";
+
+/* Class = "UIButton"; normalTitle = "Müşteriler İstekler"; ObjectID = "dsK-6j-bv0"; */
+"dsK-6j-bv0.normalTitle" = "Müşteriler İstekler";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "grr-S8-lAC"; */
+"grr-S8-lAC.text" = "Label";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "haO-6h-Cbm"; */
+"haO-6h-Cbm.text" = "Ev";
 
 /* Class = "UILabel"; text = "2"; ObjectID = "in5-3g-DmD"; */
 "in5-3g-DmD.text" = "2";
 
-/* Class = "UILabel"; text = "Sandwiches"; ObjectID = "lkx-Ip-U2p"; */
-"lkx-Ip-U2p.text" = "Sandwiches";
+/* Class = "UILabel"; text = "Veri yönetimi"; ObjectID = "jIn-wX-BBb"; */
+"jIn-wX-BBb.text" = "Veri yönetimi";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "nbs-2P-lOW"; */
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "jZd-lW-Dde"; */
+"jZd-lW-Dde.text" = "Bildirimler";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "k7X-5l-7U9"; */
+"k7X-5l-7U9.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Başına"; ObjectID = "kMm-2Y-EvF"; */
+"kMm-2Y-EvF.text" = "Başına";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "kc6-D8-phl"; */
+"kc6-D8-phl.text" = "Ev";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "klr-Ko-riP"; */
+"klr-Ko-riP.text" = "2";
+
+/* Class = "UILabel"; text = "Sandviç"; ObjectID = "lkx-Ip-U2p"; */
+"lkx-Ip-U2p.text" = "Sandviç";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "lpV-2s-EQy"; */
+"lpV-2s-EQy.text" = "Bildirimler";
+
+/* Class = "UITextField"; placeholder = "Arapça başlık"; ObjectID = "mG8-2J-C6w"; */
+"mG8-2J-C6w.placeholder" = "Arapça başlık";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "mme-5e-XIF"; */
+"mme-5e-XIF.text" = "Ev";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mn8-MD-wwj"; */
+"mn8-MD-wwj.text" = "Label";
+
+/* Class = "UILabel"; text = "Masa Numaraları"; ObjectID = "nGw-2X-kE4"; */
+"nGw-2X-kE4.text" = "Masa Numaraları";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "nbs-2P-lOW"; */
 "nbs-2P-lOW.text" = "Ev";
 
-/* Class = "UILabel"; text = "Home"; ObjectID = "t8D-xn-w7Q"; */
-"t8D-xn-w7Q.text" = "Ev";
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "o2V-42-agq"; */
+"o2V-42-agq.text" = "Bildirimler";
+
+/* Class = "UILabel"; text = "Istatistik"; ObjectID = "qX8-0G-ZkF"; */
+"qX8-0G-ZkF.text" = "Istatistik";
+
+/* Class = "UILabel"; text = "Kimden"; ObjectID = "qsN-kE-wig"; */
+"qsN-kE-wig.text" = "Kimden";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rp4-s5-AaK"; */
+"rp4-s5-AaK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Geçerli midir"; ObjectID = "s3e-NH-Tkn"; */
+"s3e-NH-Tkn.text" = "Geçerli midir";
+
+/* Class = "UILabel"; text = "Do you want to delete? "; ObjectID = "sgG-Uz-evl"; */
+"sgG-Uz-evl.text" = "Do you want to delete? ";
+
+/* Class = "UITextField"; placeholder = "İngilizce başlık"; ObjectID = "tEu-TF-duE"; */
+"tEu-TF-duE.placeholder" = "İngilizce başlık";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ucz-Gy-iQe"; */
+"ucz-Gy-iQe.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Türk başlık"; ObjectID = "wnU-Gx-zzo"; */
+"wnU-Gx-zzo.placeholder" = "Türk başlık";
+
+/* Class = "UILabel"; text = "Ev"; ObjectID = "xYZ-w6-7jd"; */
+"xYZ-w6-7jd.text" = "Ev";
+
+/* Class = "UILabel"; text = "Bildirimler"; ObjectID = "yVr-AV-TVV"; */
+"yVr-AV-TVV.text" = "Bildirimler";
 
 /* Class = "UILabel"; text = "Table"; ObjectID = "yaL-0S-PM1"; */
-"yaL-0S-PM1.text" = "tablo";
+"yaL-0S-PM1.text" = "Masa";
+
+/* Class = "UILabel"; text = "Veri yönetimi"; ObjectID = "zkU-5W-aFg"; */
+"zkU-5W-aFg.text" = "Veri yönetimi";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "zla-28-Y5v"; */
+"zla-28-Y5v.text" = "1";
