@@ -284,6 +284,8 @@ class StatisticsViewController: UIViewController {
         if segue.identifier == "showDataSegue" {
             let viewController = segue.destinationViewController as! DataViewController
             viewController.statisticsData = self.statisticsItems
+            viewController.reportType = self.selectedReportType
+            viewController.dateType = self.selectedDateType
         }
     }
     

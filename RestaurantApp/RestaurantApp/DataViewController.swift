@@ -19,6 +19,8 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     var lang : String!
     var statisticsData : [StatisticsItem]!
     var reportType : Int!
+    var dateType : Int!
+    var countsSum : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +29,30 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
         addLeftNavItemOnView ()
         
         if reportType == 1 {
-            keyHeader.text = NSLocalizedString("date", comment: "")
+            if self.dateType == 1 {
+                keyHeader.text = NSLocalizedString("week", comment: "") + " - " +  NSLocalizedString("month", comment: "") + " - " + NSLocalizedString("year", comment: "")
+            } else if self.dateType == 2 {
+                keyHeader.text = NSLocalizedString("month", comment: "") + " - " + NSLocalizedString("year", comment: "")
+            } else {
+                keyHeader.text = NSLocalizedString("year", comment: "")
+            }
             valueHeader.text = NSLocalizedString("count", comment: "")
         } else if reportType == 2 {
             keyHeader.text = NSLocalizedString("foodName", comment: "")
             valueHeader.text = NSLocalizedString("percentage", comment: "")
+            for item in self.statisticsData {
+                self.countsSum += item.value
+            }
         } else {
             keyHeader.text = NSLocalizedString("foodTypeName", comment: "")
             valueHeader.text = NSLocalizedString("percentage", comment: "")
+            for item in self.statisticsData {
+                self.countsSum += item.value
+            }
         }
+        
+        statisticsData.sortInPlace({$0.value > $1.value})
+        
     }
     
     
@@ -65,9 +82,24 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("dataStatisticsCell") as! DataStatisticsCell
-        cell.key.text = statisticsData[indexPath.row].key
-        cell.value.text = String(statisticsData[indexPath.row].value)
-        
+        if lang == "ar" {
+            var array = statisticsData[indexPath.row].key.characters.split{$0 == "_"}.map(String.init)
+            var key = array[array.count - 1]
+            if self.dateType == 1 {
+                key += " - " + array[1] + " - " + array[0]
+            } else if self.dateType == 2 {
+                key += " - " + array[0]
+            }
+            
+            cell.key.text = key
+        } else {
+            cell.key.text = statisticsData[indexPath.row].key.stringByReplacingOccurrencesOfString("_", withString: " - ")
+        }
+        if reportType != 1 {
+            cell.value.text = String(statisticsData[indexPath.row].value * 100 / self.countsSum) + "%"
+        } else {
+            cell.value.text = String(statisticsData[indexPath.row].value)
+        }
         return cell
 
     }
