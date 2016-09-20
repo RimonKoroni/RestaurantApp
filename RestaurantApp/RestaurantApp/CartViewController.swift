@@ -52,7 +52,8 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
             self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
         } else {
-            self.navigationController?.popViewControllerAnimated(true)
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+            self.navigationController!.popToViewController(viewControllers[0], animated: true);
         }
     }
     
