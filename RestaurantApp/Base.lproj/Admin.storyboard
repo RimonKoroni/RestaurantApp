@@ -202,7 +202,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="65Q-18-LHN" kind="relationship" relationship="rootViewController" id="GMZ-HZ-x8A"/>
+                        <segue destination="65Q-18-LHN" kind="relationship" relationship="rootViewController" id="1zL-la-Xea"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN0-H1-Juk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -996,7 +996,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Hgi-Wf-ZLY"/>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-Ml-OLG">
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-ax-jQ1"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGB-qO-7F3">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39u-6r-19k">
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="RQp-Oh-jbh"/>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="RQp-Oh-jbh" firstAttribute="top" secondItem="39u-6r-19k" secondAttribute="top" id="0tN-OS-J6t"/>
+                                                    <constraint firstAttribute="width" constant="600" id="IW0-f4-hfu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="RQp-Oh-jbh" secondAttribute="trailing" id="KD5-hr-SOH"/>
+                                                    <constraint firstAttribute="height" constant="500" id="Pkb-et-3wG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="RQp-Oh-jbh" secondAttribute="bottom" id="cNY-c2-AGJ"/>
+                                                    <constraint firstItem="RQp-Oh-jbh" firstAttribute="leading" secondItem="39u-6r-19k" secondAttribute="leading" id="iX7-8W-Mcx"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="39u-6r-19k" firstAttribute="centerY" secondItem="fGB-qO-7F3" secondAttribute="centerY" id="0Pg-dI-RzX"/>
+                                            <constraint firstItem="39u-6r-19k" firstAttribute="centerX" secondItem="fGB-qO-7F3" secondAttribute="centerX" id="mLi-rv-dZM"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzS-6O-KVn">
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodDetailsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="axS-Hd-s3V"/>
@@ -1016,9 +1038,6 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="O3o-ax-jQ1" firstAttribute="top" secondItem="0wd-Ml-OLG" secondAttribute="top" id="CFQ-Mr-JX6"/>
-                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="3EL-Sn-r9M" userLabel="Footer">
                                 <subviews>
@@ -1240,6 +1259,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chartView" destination="39u-6r-19k" id="ouE-QE-DGT"/>
+                        <outlet property="containerView" destination="fGB-qO-7F3" id="mux-EF-Zmc"/>
                         <outlet property="notificationCount" destination="Z0d-x2-taL" id="hh4-U6-UX8"/>
                         <outlet property="notificationView" destination="6yE-d0-1hA" id="Z1B-5Q-f1z"/>
                     </connections>
@@ -5107,8 +5128,8 @@
         <image name="uploadImageIcon" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HxC-HZ-l6W"/>
-        <segue reference="Btk-2J-CCj"/>
-        <segue reference="ZMn-2y-91V"/>
+        <segue reference="ZNj-ub-0R3"/>
+        <segue reference="ifp-7H-wwo"/>
+        <segue reference="5Qc-kd-kBP"/>
     </inferredMetricsTieBreakers>
 </document>

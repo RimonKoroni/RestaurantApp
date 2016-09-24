@@ -49,7 +49,7 @@ class StatisticsViewController: UIViewController {
         fillTables()
         self.datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
         self.datePicker.setDate(NSDate(), animated: false)
-        
+        self.reportTypeButton.setTitle(self.reportTypes[0], forState: .Normal)
     }
     
     func fillTables() {
@@ -180,10 +180,15 @@ class StatisticsViewController: UIViewController {
         statisticsService.getStatisticData(self.selectedReportType, dateType: self.selectedDateType, fromDate: self.fromDateString!, toDate: self.toDateString!, lang: self.lang, onComplition: {
             (statisticsItems) -> Void in
             self.statisticsItems = statisticsItems
+            
             dispatch_sync(dispatch_get_main_queue(), {
                 EZLoadingActivity.hide()
                 self.view.userInteractionEnabled = true
-                self.performSegueWithIdentifier(segueId, sender: self)
+                if self.statisticsItems.count == 0 {
+                    self.view.makeToast(message: NSLocalizedString("emptyStatistics", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+                } else {
+                    self.performSegueWithIdentifier(segueId, sender: self)
+                }
             })
         })
 
@@ -191,6 +196,7 @@ class StatisticsViewController: UIViewController {
     
     
     @IBAction func showChart(sender: AnyObject) {
+        
         if self.fromDateString == nil || self.toDateString == nil {
             self.view.makeToast(message: NSLocalizedString("askToFillFields", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
         } else {
@@ -279,6 +285,7 @@ class StatisticsViewController: UIViewController {
         if segue.identifier == "showChartSegue" {
             let viewController = segue.destinationViewController as! ChartViewController
             viewController.statisticsData = self.statisticsItems
+            viewController.reportType = self.selectedReportType
         }
         
         if segue.identifier == "showDataSegue" {

@@ -55,3 +55,4 @@
 "foodName" = "إسم الطعام";
 "percentage" = "النسبة المئوية";
 "foodTypeName" = "إسم الصنف";
+"emptyStatistics" = "لا يوجد هناك بيانات!";

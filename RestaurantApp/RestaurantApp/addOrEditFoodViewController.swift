@@ -147,6 +147,8 @@ class addOrEditFoodViewController: UIViewController, UITextViewDelegate, UIImage
     }
     
     @IBAction func confirmAction(sender: AnyObject) {
+        let price = self.price.text
+        self.price.text = price!.stringByReplacingOccurrencesOfString(" ", withString: "")
         if self.arabicTitle.text == "" || self.englishTitle.text == "" || self.turkishTitle.text == "" || self.imageView.image == nil || self.price.text == "" {
             self.view.makeToast(message: NSLocalizedString("askToFillFields", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
         } else if self.price.text!.doubleValue == nil {

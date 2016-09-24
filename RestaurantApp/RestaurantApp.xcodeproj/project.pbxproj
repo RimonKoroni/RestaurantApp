@@ -63,6 +63,15 @@
 		F71D49271D8A7B6200F9E877 /* StatisticsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D49261D8A7B6200F9E877 /* StatisticsItem.swift */; };
 		F71D49291D8A808F00F9E877 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D49281D8A808F00F9E877 /* ChartViewController.swift */; };
 		F71D492B1D8A809F00F9E877 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D492A1D8A809F00F9E877 /* DataViewController.swift */; };
+		F7875A681D8F5105004B1B7F /* DataStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7875A671D8F5105004B1B7F /* DataStatisticsCell.swift */; };
+		F789450D1D95621500E58B0D /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789450B1D95621500E58B0D /* PNBar.swift */; };
+		F789450E1D95621500E58B0D /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789450C1D95621500E58B0D /* PNBarChart.swift */; };
+		F78945131D95622500E58B0D /* PNChartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789450F1D95622500E58B0D /* PNChartConfig.swift */; };
+		F78945141D95622500E58B0D /* PNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78945101D95622500E58B0D /* PNChartDelegate.swift */; };
+		F78945151D95622500E58B0D /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78945121D95622500E58B0D /* PNValue.swift */; };
+		F78945191D95623200E58B0D /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78945161D95623200E58B0D /* PNChartLabel.swift */; };
+		F789451A1D95623200E58B0D /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78945171D95623200E58B0D /* PNLineChart.swift */; };
+		F789451B1D95623200E58B0D /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78945181D95623200E58B0D /* PNLineChartData.swift */; };
 		F794DA371D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */; };
 		F794DA391D81A0DB009FA0CA /* NavigationControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */; };
 		F794DA3B1D81BAA0009FA0CA /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */; };
@@ -104,9 +113,6 @@
 		189FE8BA1D26EC4600479632 /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
 		189FE8BC1D26EC7800479632 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		18AEBE651D31586B002CA275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Admin.storyboard; sourceTree = "<group>"; };
-		18AEBE671D315915002CA275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Admin.strings; sourceTree = "<group>"; };
-		18AEBE691D315918002CA275 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Admin.strings; sourceTree = "<group>"; };
-		18AEBE6B1D31591B002CA275 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Admin.strings; sourceTree = "<group>"; };
 		18AEBE6D1D315969002CA275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		18AEBE6F1D31596D002CA275 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		18AEBE711D31596F002CA275 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -148,12 +154,25 @@
 		F71D49261D8A7B6200F9E877 /* StatisticsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsItem.swift; sourceTree = "<group>"; };
 		F71D49281D8A808F00F9E877 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		F71D492A1D8A809F00F9E877 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		F7875A671D8F5105004B1B7F /* DataStatisticsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStatisticsCell.swift; sourceTree = "<group>"; };
+		F789450B1D95621500E58B0D /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNBar.swift; path = ChartLib/PNBarChart/PNBar.swift; sourceTree = "<group>"; };
+		F789450C1D95621500E58B0D /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNBarChart.swift; path = ChartLib/PNBarChart/PNBarChart.swift; sourceTree = "<group>"; };
+		F789450F1D95622500E58B0D /* PNChartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNChartConfig.swift; path = ChartLib/PNChartConfig.swift; sourceTree = "<group>"; };
+		F78945101D95622500E58B0D /* PNChartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNChartDelegate.swift; path = ChartLib/PNChartDelegate.swift; sourceTree = "<group>"; };
+		F78945111D95622500E58B0D /* PNChartSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNChartSwift.h; path = ChartLib/PNChartSwift.h; sourceTree = "<group>"; };
+		F78945121D95622500E58B0D /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNValue.swift; path = ChartLib/PNValue.swift; sourceTree = "<group>"; };
+		F78945161D95623200E58B0D /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNChartLabel.swift; path = ChartLib/PNLineChart/PNChartLabel.swift; sourceTree = "<group>"; };
+		F78945171D95623200E58B0D /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNLineChart.swift; path = ChartLib/PNLineChart/PNLineChart.swift; sourceTree = "<group>"; };
+		F78945181D95623200E58B0D /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNLineChartData.swift; path = ChartLib/PNLineChart/PNLineChartData.swift; sourceTree = "<group>"; };
 		F794DA361D81A025009FA0CA /* AddOrEditFoodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOrEditFoodTypeViewController.swift; sourceTree = "<group>"; };
 		F794DA381D81A0DB009FA0CA /* NavigationControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerHelper.swift; sourceTree = "<group>"; };
 		F794DA3A1D81BA9F009FA0CA /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		F794DA3C1D81DE24009FA0CA /* FoodDMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDMViewController.swift; sourceTree = "<group>"; };
 		F7980AFD1D8989C2002AF51A /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		F7980B001D89A052002AF51A /* NormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCell.swift; sourceTree = "<group>"; };
+		F79906151D904D53009DCC06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Admin.strings; sourceTree = "<group>"; };
+		F79906171D905029009DCC06 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Admin.strings; sourceTree = "<group>"; };
+		F79906191D90535A009DCC06 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Admin.strings; sourceTree = "<group>"; };
 		F79F9CF41D625C4E00909BAA /* VLADIMIR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = VLADIMIR.TTF; sourceTree = "<group>"; };
 		F7D1B1EF1D7E121A00BA0AD3 /* DMFoodTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFoodTypeCell.swift; sourceTree = "<group>"; };
 		F7E0CA631D842F1300E625B7 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
@@ -343,6 +362,7 @@
 		18B3AE4A1D1B102100389895 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F7875A661D8F50DD004B1B7F /* Statistics Cell */,
 				F7980AFF1D89A043002AF51A /* NormalCell */,
 				F7E0CA691D855EFF00E625B7 /* TableNumberCell */,
 				F7D1B1EE1D7E11E800BA0AD3 /* DataManagmentCells */,
@@ -361,6 +381,7 @@
 		18B3AE4B1D1B102900389895 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F78944F71D955A4800E58B0D /* ChartLib */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -418,6 +439,46 @@
 				F1E72EAD3F0C137FC1E71068 /* Pods_RestaurantApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7875A661D8F50DD004B1B7F /* Statistics Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F7875A671D8F5105004B1B7F /* DataStatisticsCell.swift */,
+			);
+			name = "Statistics Cell";
+			sourceTree = "<group>";
+		};
+		F78944F71D955A4800E58B0D /* ChartLib */ = {
+			isa = PBXGroup;
+			children = (
+				F789450F1D95622500E58B0D /* PNChartConfig.swift */,
+				F78945101D95622500E58B0D /* PNChartDelegate.swift */,
+				F78945111D95622500E58B0D /* PNChartSwift.h */,
+				F78945121D95622500E58B0D /* PNValue.swift */,
+				F78945001D955A7500E58B0D /* PNBarChart */,
+				F78944FF1D955A6100E58B0D /* PNLineChart */,
+			);
+			name = ChartLib;
+			sourceTree = "<group>";
+		};
+		F78944FF1D955A6100E58B0D /* PNLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				F78945161D95623200E58B0D /* PNChartLabel.swift */,
+				F78945171D95623200E58B0D /* PNLineChart.swift */,
+				F78945181D95623200E58B0D /* PNLineChartData.swift */,
+			);
+			name = PNLineChart;
+			sourceTree = "<group>";
+		};
+		F78945001D955A7500E58B0D /* PNBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				F789450B1D95621500E58B0D /* PNBar.swift */,
+				F789450C1D95621500E58B0D /* PNBarChart.swift */,
+			);
+			name = PNBarChart;
 			sourceTree = "<group>";
 		};
 		F7980AFF1D89A043002AF51A /* NormalCell */ = {
@@ -580,6 +641,9 @@
 				F7980AFE1D8989C2002AF51A /* StatisticsViewController.swift in Sources */,
 				185EF3A91D1F2116009AFFAB /* ButtonLabel.swift in Sources */,
 				18AEBE771D315C8D002CA275 /* NotificationService.swift in Sources */,
+				F78945151D95622500E58B0D /* PNValue.swift in Sources */,
+				F789450E1D95621500E58B0D /* PNBarChart.swift in Sources */,
+				F78945131D95622500E58B0D /* PNChartConfig.swift in Sources */,
 				F7E0CA641D842F1300E625B7 /* StringExtention.swift in Sources */,
 				18AEBE821D31A2D0002CA275 /* DaoUtil.swift in Sources */,
 				F71D49291D8A808F00F9E877 /* ChartViewController.swift in Sources */,
@@ -601,8 +665,10 @@
 				1861EDF81D28601D00E136F0 /* UIViewToast.swift in Sources */,
 				18074B341D207FDA0090098A /* CartViewController.swift in Sources */,
 				F7D1B1F01D7E121A00BA0AD3 /* DMFoodTypeCell.swift in Sources */,
+				F78945191D95623200E58B0D /* PNChartLabel.swift in Sources */,
 				18AEBE7D1D31A11C002CA275 /* ImageData.swift in Sources */,
 				18D75FC31D208BF7004A2013 /* iCarousel.m in Sources */,
+				F789451A1D95623200E58B0D /* PNLineChart.swift in Sources */,
 				18B3AE761D1B3F8000389895 /* FoodTypesViewController.swift in Sources */,
 				185BCF8E1D26B3490000D51D /* FoodType.swift in Sources */,
 				18B3AE741D1B36FB00389895 /* dropDownMenuCell.swift in Sources */,
@@ -610,17 +676,20 @@
 				18B3AE321D1B0F8A00389895 /* AppDelegate.swift in Sources */,
 				F71B1C771D83ED3700340EB0 /* addOrEditFoodViewController.swift in Sources */,
 				185BCF901D26CCCF0000D51D /* ImageView.swift in Sources */,
+				F789450D1D95621500E58B0D /* PNBar.swift in Sources */,
 				180D1A411D25BFD500431466 /* OrderViewController.swift in Sources */,
 				F794DA3B1D81BAA0009FA0CA /* UIViewControllerExtention.swift in Sources */,
 				180D1A3F1D25B99900431466 /* NotificationCell.swift in Sources */,
 				18B3AE561D1B12A900389895 /* RestApiManager.swift in Sources */,
 				F794DA3D1D81DE24009FA0CA /* FoodDMViewController.swift in Sources */,
 				18AEBE751D315C6D002CA275 /* OrderItem.swift in Sources */,
+				F789451B1D95623200E58B0D /* PNLineChartData.swift in Sources */,
 				18AEBE791D315CC1002CA275 /* Date.swift in Sources */,
 				18B3AE571D1B12A900389895 /* SwiftyJSON.swift in Sources */,
 				F7E0CA681D85545D00E625B7 /* TableNumbersViewController.swift in Sources */,
 				180D1A3C1D25B07600431466 /* NotificationViewController.swift in Sources */,
 				F71D49271D8A7B6200F9E877 /* StatisticsItem.swift in Sources */,
+				F7875A681D8F5105004B1B7F /* DataStatisticsCell.swift in Sources */,
 				185BCF8C1D26B1110000D51D /* FoodTypesService.swift in Sources */,
 				18AEBE871D31A3D0002CA275 /* ImageDataService.swift in Sources */,
 				F7980B011D89A052002AF51A /* NormalCell.swift in Sources */,
@@ -628,6 +697,7 @@
 				184C94701D1C6B60004A165E /* FoodCollectionViewCell.swift in Sources */,
 				18B3AE5C1D1B139200389895 /* RestaurantApp.xcdatamodeld in Sources */,
 				189FE8BD1D26EC7800479632 /* Food.swift in Sources */,
+				F78945141D95622500E58B0D /* PNChartDelegate.swift in Sources */,
 				F71D49251D8A7AF400F9E877 /* StatisticsService.swift in Sources */,
 				F794DA391D81A0DB009FA0CA /* NavigationControllerHelper.swift in Sources */,
 				181522621D286B450003A032 /* OrderService.swift in Sources */,
@@ -675,9 +745,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				18AEBE651D31586B002CA275 /* Base */,
-				18AEBE671D315915002CA275 /* en */,
-				18AEBE691D315918002CA275 /* tr */,
-				18AEBE6B1D31591B002CA275 /* ar */,
+				F79906151D904D53009DCC06 /* en */,
+				F79906171D905029009DCC06 /* ar */,
+				F79906191D90535A009DCC06 /* tr */,
 			);
 			name = Admin.storyboard;
 			path = ..;

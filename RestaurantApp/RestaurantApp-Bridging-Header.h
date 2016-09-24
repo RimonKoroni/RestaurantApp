@@ -11,5 +11,6 @@
 
 
 #import "iCarousel.h"
+#import "PNChartSwift.h"
 
 #endif /* RestaurantApp_Bridging_Header_h */

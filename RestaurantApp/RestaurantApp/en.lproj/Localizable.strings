@@ -56,3 +56,4 @@
 "foodName" = "Food Name";
 "percentage" = "Percentage";
 "foodTypeName" = "Food Type Name";
+"emptyStatistics" = "There is no data!";
