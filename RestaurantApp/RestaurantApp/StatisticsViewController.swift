@@ -49,7 +49,7 @@ class StatisticsViewController: UIViewController {
         fillTables()
         self.datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
         self.datePicker.setDate(NSDate(), animated: false)
-        self.reportTypeButton.setTitle(self.reportTypes[0], forState: .Normal)
+        self.dateTypeButton.setTitle(self.dateTypes[0], forState: .Normal)
     }
     
     func fillTables() {
