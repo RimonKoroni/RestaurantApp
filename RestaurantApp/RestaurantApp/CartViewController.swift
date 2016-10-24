@@ -102,20 +102,21 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
         let cartsData = NSKeyedArchiver.archivedDataWithRootObject(carts)
         userDefaults.setObject(cartsData, forKey: "carts")
         userDefaults.synchronize()
-        self.view.makeToast(message: NSLocalizedString("rejectOrderMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
         self.carts.removeAll()
         self.cartTableView.reloadData()
         self.totalPrice.text = "0.0TL"
         noCartsLabel.hidden = false
-        goToPreviousController()
+        goToPreviousController(NSLocalizedString("rejectOrderMessage", comment: ""))
     }
     
-    func goToPreviousController() {
+    func goToPreviousController(message : String) {
         if self.fromMenu {
-            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
-            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2] , animated: true)
+            self.navigationController?.topViewController!.view.makeToast(message: message, duration: HRToastDefaultDuration, position: HRToastPositionTop)
         } else {
             self.navigationController?.popViewControllerAnimated(true)
+            self.navigationController?.topViewController!.view.makeToast(message: message, duration: HRToastDefaultDuration, position: HRToastPositionTop)
         }
     }
     
@@ -126,7 +127,6 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
             orderService.sendOrder({ (status) -> Void in
                 dispatch_sync(dispatch_get_main_queue(), {
                     if status == 1 {
-                        self.view.makeToast(message: NSLocalizedString("acceptOrderSuccessMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
                         self.carts.removeAll()
                         self.cartTableView.reloadData()
                         let data = NSUserDefaults.standardUserDefaults().objectForKey("carts") as? NSData
@@ -136,7 +136,7 @@ class CartViewController: UIViewController , UITableViewDelegate, UITableViewDat
                         self.userDefaults.setObject(cartsData, forKey: "carts")
                         self.userDefaults.synchronize()
                         self.totalPrice.text = "0.0TL"
-                        self.goToPreviousController()
+                        self.goToPreviousController(NSLocalizedString("acceptOrderSuccessMessage", comment: ""))
                     } else {
                         self.view.makeToast(message: NSLocalizedString("acceptOrderFaildMessage", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
                     }
