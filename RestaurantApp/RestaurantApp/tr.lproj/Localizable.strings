@@ -56,3 +56,5 @@
 "percentage" = "Yüzde";
 "foodTypeName" = "Gıda Tür Ad";
 "emptyStatistics" = "Veri yok!";
+"fromToDateValidation" = "Tarihten itibaren bugüne kadar az olmalıdır!";
+

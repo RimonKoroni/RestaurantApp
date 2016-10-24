@@ -17,15 +17,16 @@ class PNChartLabel: UILabel {
         backgroundColor = UIColor.clearColor()
         textAlignment = NSTextAlignment.Center
         userInteractionEnabled = true
-        transform = CGAffineTransformMakeRotation(45)
+        //transform = CGAffineTransformMakeRotation(45)
         lineBreakMode = .ByWordWrapping
         numberOfLines = 0
-        
         //transform = CGAffineTransformMakeScale(-1, 1);
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 
 }

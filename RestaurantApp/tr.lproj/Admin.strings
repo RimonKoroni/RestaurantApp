@@ -268,3 +268,15 @@
 
 /* Class = "UILabel"; text = "1"; ObjectID = "zla-28-Y5v"; */
 "zla-28-Y5v.text" = "1";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "rlE-SF-rgS"; */
+"rlE-SF-rgS.text" = "Başlama zamanı";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "N96-3n-461"; */
+"N96-3n-461.text" = "Bitiş zamanı";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "HZt-Id-UP9"; */
+"HZt-Id-UP9.text" = "Zaman";
+
+/* Class = "UILabel"; text = "Requests"; ObjectID = "vIk-NH-eZg"; */
+"vIk-NH-eZg.text" = "Istekler";

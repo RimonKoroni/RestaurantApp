@@ -14,6 +14,10 @@ class ChartViewController: UIViewController , PNChartDelegate{
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var notificationCount: UILabel!
+    @IBOutlet weak var xAxisLabel: UILabel!
+    @IBOutlet weak var yAxisLabel: UILabel!
+    @IBOutlet weak var startDate: UILabel!
+    @IBOutlet weak var endDate: UILabel!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var lang : String!
@@ -24,46 +28,69 @@ class ChartViewController: UIViewController , PNChartDelegate{
     var fromDate : String!
     var toDate : String!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationControllerHelper.configureNavigationController(self, title: "statisticsTitle")
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         fillAxis()
+        self.yAxisLabel.transform = CGAffineTransformMakeRotation(-89.55)
+        startDate.text = self.fromDate
+        endDate.text = self.toDate
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
+    }
+    
     
     override func viewDidLayoutSubviews() {
         drawChart()
     }
     
     func fillAxis() {
-        for item in statisticsData {
-            if reportType == 1 {
+        if reportType == 1 {
+            for item in statisticsData {
                 xAxis.append(item.key.stringByReplacingOccurrencesOfString("_", withString: "-"))
-            } else {
-                xAxis.append(item.key)
+                yAxis.append(CGFloat(item.value))
             }
-            yAxis.append(CGFloat(item.value))
+        } else {
+            statisticsData.sortInPlace({$0.value > $1.value})
+            var i = 0
+            for item in statisticsData {
+                if i < 4 {
+                    xAxis.append(item.key)
+                    yAxis.append(CGFloat(item.value))
+                    i += 1
+                } else {
+                    break
+                }
+            }
         }
     }
     
     func drawChart() {
         
         if self.reportType == 1 {
-            let lineChart:PNLineChart = PNLineChart(frame: CGRect(x: 25, y: 25, width: 550, height: 450))
+            self.xAxisLabel.hidden = false
+            self.yAxisLabel.hidden = false
+            let lineChart:PNLineChart = PNLineChart(frame: CGRect(x: 50, y: 50, width: 500, height: 400))
             
-            lineChart.showLabel = true
+            lineChart.showLabel = false
             lineChart.backgroundColor = UIColor.clearColor()
             lineChart.xLabels = xAxis
-            lineChart.showCoordinateAxis = true
+            lineChart.showCoordinateAxis = false
             lineChart.delegate = self
             lineChart.axisWidth = 2
+            
             // Line Chart Nr.1
             var data01Array: [CGFloat] = yAxis
             let data01:PNLineChartData = PNLineChartData()
             data01.color = PNGreenColor
             data01.itemCount = data01Array.count
-            data01.inflexionPointStyle = PNLineChartData.PNLineChartPointStyle.PNLineChartPointStyleCycle
+            data01.inflexionPointStyle = PNLineChartData.PNLineChartPointStyle.PNLineChartPointStyleNone
             data01.getData = ({(index: Int) -> PNLineChartDataItem in
                 let yValue:CGFloat = data01Array[index]
                 let item = PNLineChartDataItem(y: yValue)
@@ -74,6 +101,8 @@ class ChartViewController: UIViewController , PNChartDelegate{
             lineChart.strokeChart()
             self.chartView.addSubview(lineChart)
         } else {
+            self.xAxisLabel.hidden = true
+            self.yAxisLabel.hidden = true
             let barChart = PNBarChart(frame: CGRect(x: 0, y: 0, width: 600, height: 500))
             barChart.backgroundColor = UIColor.clearColor()
     

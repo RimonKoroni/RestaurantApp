@@ -71,6 +71,9 @@
 /* Class = "UILabel"; text = "10:22"; ObjectID = "HPg-FC-vzg"; */
 "HPg-FC-vzg.text" = "10:22";
 
+/* Class = "UILabel"; text = "Time"; ObjectID = "HZt-Id-UP9"; */
+"HZt-Id-UP9.text" = "Time";
+
 /* Class = "UILabel"; text = "Statistics"; ObjectID = "Hhe-d3-PfG"; */
 "Hhe-d3-PfG.text" = "Statistics";
 
@@ -79,6 +82,9 @@
 
 /* Class = "UILabel"; text = "Statistics"; ObjectID = "MFU-19-i1W"; */
 "MFU-19-i1W.text" = "Statistics";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "N96-3n-461"; */
+"N96-3n-461.text" = "End Time";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NUb-GV-B8Y"; */
 "NUb-GV-B8Y.normalTitle" = "Button";
@@ -236,6 +242,9 @@
 /* Class = "UILabel"; text = "From"; ObjectID = "qsN-kE-wig"; */
 "qsN-kE-wig.text" = "From";
 
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "rlE-SF-rgS"; */
+"rlE-SF-rgS.text" = "Start Time";
+
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rp4-s5-AaK"; */
 "rp4-s5-AaK.normalTitle" = "Button";
 
@@ -250,6 +259,9 @@
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "ucz-Gy-iQe"; */
 "ucz-Gy-iQe.text" = "Label";
+
+/* Class = "UILabel"; text = "Requests"; ObjectID = "vIk-NH-eZg"; */
+"vIk-NH-eZg.text" = "Requests";
 
 /* Class = "UITextField"; placeholder = "Turkish title"; ObjectID = "wnU-Gx-zzo"; */
 "wnU-Gx-zzo.placeholder" = "Turkish title";

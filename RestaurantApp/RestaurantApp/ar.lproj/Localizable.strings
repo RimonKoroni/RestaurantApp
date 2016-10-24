@@ -56,3 +56,4 @@
 "percentage" = "النسبة المئوية";
 "foodTypeName" = "إسم الصنف";
 "emptyStatistics" = "لا يوجد هناك بيانات!";
+"fromToDateValidation" = "تاريخ البداية يجب أن يكون أقل من تاريخ الانتهاء!";

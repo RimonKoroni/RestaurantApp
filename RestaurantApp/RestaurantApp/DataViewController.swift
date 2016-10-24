@@ -55,6 +55,10 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
+    }
     
     func refreshNotification(count : Int) {
         dispatch_async(dispatch_get_main_queue()) {

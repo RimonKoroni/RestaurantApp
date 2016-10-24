@@ -19,12 +19,13 @@ class StatisticsService {
         let sreviceUrl = "\(serverUrl)/WebServiceProject/MobileServlet/StatisticsRest/getStatistics/\(reportType)/\(dateType)/" + fromDate + "/" + toDate + "/" + lang
         
         RestApiManager.makeHTTPGetRequest(sreviceUrl, onCompletion: {(finalJsonResponse , error) -> Void in
+            //print(finalJsonResponse)
             var result : [StatisticsItem] = []
-            let statisticsItems = finalJsonResponse.dictionary
+            let statisticsItems = finalJsonResponse.array
             
             if statisticsItems != nil {
-                for (key,value) in statisticsItems! {
-                    result.append(StatisticsItem(key: key, value: value.int!))
+                for item in statisticsItems! {
+                    result.append(StatisticsItem(json: item))
                 }
             }
             onComplition(statisticsItems: result)

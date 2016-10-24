@@ -57,3 +57,4 @@
 "percentage" = "Percentage";
 "foodTypeName" = "Food Type Name";
 "emptyStatistics" = "There is no data!";
+"fromToDateValidation" = "From date must be less than To date!";

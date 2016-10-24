@@ -52,6 +52,11 @@ class StatisticsViewController: UIViewController {
         self.dateTypeButton.setTitle(self.dateTypes[0], forState: .Normal)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        notificationView.layer.cornerRadius = 15
+        self.refreshNotification(self.userDefaults.valueForKey("notification") as! Int)
+    }
+    
     func fillTables() {
         self.reportTypes = [NSLocalizedString("clientRequest", comment: ""), NSLocalizedString("bestFoodType", comment: ""), NSLocalizedString("bestFood", comment: "")]
         self.dateTypes = [NSLocalizedString("week", comment: ""), NSLocalizedString("month", comment: ""), NSLocalizedString("year", comment: "")]
@@ -196,17 +201,21 @@ class StatisticsViewController: UIViewController {
     
     
     @IBAction func showChart(sender: AnyObject) {
-        
         if self.fromDateString == nil || self.toDateString == nil {
             self.view.makeToast(message: NSLocalizedString("askToFillFields", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+        } else if NSDate(dateString: self.fromDateString!).isGreaterThanDate(NSDate(dateString: self.toDateString!)){
+            self.view.makeToast(message: NSLocalizedString("fromToDateValidation", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
         } else {
             getStatistics("showChartSegue")
         }
     }
     
     @IBAction func showData(sender: AnyObject) {
+        
         if self.fromDateString == nil || self.toDateString == nil {
             self.view.makeToast(message: NSLocalizedString("askToFillFields", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
+        } else if NSDate(dateString: self.fromDateString!).isGreaterThanDate(NSDate(dateString: self.toDateString!)){
+            self.view.makeToast(message: NSLocalizedString("fromToDateValidation", comment: ""), duration: HRToastDefaultDuration, position: HRToastPositionTop)
         } else {
             getStatistics("showDataSegue")
         }
@@ -286,6 +295,8 @@ class StatisticsViewController: UIViewController {
             let viewController = segue.destinationViewController as! ChartViewController
             viewController.statisticsData = self.statisticsItems
             viewController.reportType = self.selectedReportType
+            viewController.fromDate = self.fromDateString
+            viewController.toDate = self.toDateString
         }
         
         if segue.identifier == "showDataSegue" {

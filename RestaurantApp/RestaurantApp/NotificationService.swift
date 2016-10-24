@@ -66,7 +66,7 @@ class NotificationService {
                     }
                     
                     if let naviationController = topController as? UINavigationController{
-                        if let  notificationVC = naviationController.viewControllers[0] as? NotificationViewController {
+                        if let  notificationVC = naviationController.topViewController as? NotificationViewController {
                             
                             let temp = self.userDefaults.valueForKey("notification") as! Int
                             if count > temp {
@@ -76,39 +76,39 @@ class NotificationService {
                             notificationVC.refreshNotification(count)
                         }
                         
-                        if let  orderVC = naviationController.viewControllers[0] as? OrderViewController {
+                        if let  orderVC = naviationController.topViewController as? OrderViewController {
                             orderVC.refreshNotification(count)
                         }
                         
-                        if let  foodTypeDMVC = naviationController.viewControllers[0] as? FoodTypeDMViewController {
+                        if let  foodTypeDMVC = naviationController.topViewController as? FoodTypeDMViewController {
                             foodTypeDMVC.refreshNotification(count)
                         }
                         
-                        if let  addOrEditFoodTypeVC = naviationController.viewControllers[0] as? AddOrEditFoodTypeViewController {
+                        if let  addOrEditFoodTypeVC = naviationController.topViewController as? AddOrEditFoodTypeViewController {
                             addOrEditFoodTypeVC.refreshNotification(count)
                         }
                         
-                        if let  foodDmVC = naviationController.viewControllers[0] as? FoodDMViewController {
+                        if let  foodDmVC = naviationController.topViewController as? FoodDMViewController {
                             foodDmVC.refreshNotification(count)
                         }
                         
-                        if let  addOrEditFoodVC = naviationController.viewControllers[0] as? addOrEditFoodViewController {
+                        if let  addOrEditFoodVC = naviationController.topViewController as? addOrEditFoodViewController {
                             addOrEditFoodVC.refreshNotification(count)
                         }
                         
-                        if let  tableNumberVC = naviationController.viewControllers[0] as? TableNumbersViewController {
+                        if let  tableNumberVC = naviationController.topViewController as? TableNumbersViewController {
                             tableNumberVC.refreshNotification(count)
                         }
                         
-                        if let  statisticsVC = naviationController.viewControllers[0] as? StatisticsViewController {
+                        if let  statisticsVC = naviationController.topViewController as? StatisticsViewController {
                             statisticsVC.refreshNotification(count)
                         }
                         
-                        if let  chartVC = naviationController.viewControllers[0] as? ChartViewController {
+                        if let  chartVC = naviationController.topViewController as? ChartViewController {
                             chartVC.refreshNotification(count)
                         }
                         
-                        if let  dataVC = naviationController.viewControllers[0] as? DataViewController {
+                        if let  dataVC = naviationController.topViewController as? DataViewController {
                             dataVC.refreshNotification(count)
                         }
                     }
