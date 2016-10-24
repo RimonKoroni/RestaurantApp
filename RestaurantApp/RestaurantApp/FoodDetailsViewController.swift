@@ -25,6 +25,7 @@ class FoodDetailsViewController: UIViewController , iCarouselDelegate, iCarousel
         lang = userDefaults.valueForKey("lang") as! String
         addLeftNavItemOnView ()
         carousel.type = .Linear
+        carousel.scrollSpeed = 0.1
         self.title = self.foodType.getName(lang)
         loadFoods()
         
