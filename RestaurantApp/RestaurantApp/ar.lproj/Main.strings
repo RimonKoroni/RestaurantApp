@@ -41,6 +41,12 @@
 /* Class = "UILabel"; text = "10"; ObjectID = "bOH-PQ-0XJ"; */
 "bOH-PQ-0XJ.text" = "10";
 
+/* Class = "UILabel"; text = "Confirm Order"; ObjectID = "vJi-d6-kgI"; */
+"vJi-d6-kgI.text" = "تثبيت الطلب";
+
+/* Class = "UILabel"; text = "Reject Order"; ObjectID = "fGa-b9-IM7"; */
+"fGa-b9-IM7.text" = "إلغاء الطلب";
+
 /* Class = "UIButton"; normalTitle = "US"; ObjectID = "c4a-MS-aUA"; */
 "c4a-MS-aUA.normalTitle" = "US";
 

@@ -47,6 +47,9 @@
 /* Class = "UILabel"; text = "Table number"; ObjectID = "dBd-Xg-GvV"; */
 "dBd-Xg-GvV.text" = "Table number";
 
+/* Class = "UILabel"; text = "Reject Order"; ObjectID = "fGa-b9-IM7"; */
+"fGa-b9-IM7.text" = "Reject Order";
+
 /* Class = "UILabel"; text = "Menu"; ObjectID = "jzK-tf-BPm"; */
 "jzK-tf-BPm.text" = "Menu";
 
@@ -55,6 +58,9 @@
 
 /* Class = "UILabel"; text = "Menu"; ObjectID = "nbs-2P-lOW"; */
 "nbs-2P-lOW.text" = "Menu";
+
+/* Class = "UILabel"; text = "Confirm Order"; ObjectID = "vJi-d6-kgI"; */
+"vJi-d6-kgI.text" = "Confirm Order";
 
 /* Class = "UILabel"; text = "Home"; ObjectID = "yFM-Y8-c5l"; */
 "yFM-Y8-c5l.text" = "Home";

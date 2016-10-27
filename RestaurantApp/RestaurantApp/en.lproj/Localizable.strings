@@ -14,9 +14,9 @@
 "rejectOrderMessage" = "The order is canceled";
 "noCartMessage" = "There is no items!";
 "acceptOrderErrorMessage" = "There is no item for send!";
-"acceptOrderSuccessMessage" = "The order is requested successfuly";
-"acceptOrderFaildMessage" = "The order is not requested successfuly";
-"serveOrderFaildMessage" = "The order is not served successfuly!";
+"acceptOrderSuccessMessage" = "The order has been send successfuly";
+"acceptOrderFaildMessage" = "The order hasn't been send";
+"serveOrderFaildMessage" = "The order is not served!";
 "serveOrderSuccessMessage" = "The order is served successfuly!";
 "noNotificationMessage" = "There is no notification!";
 "changeLanguageTitle" = "Language Changed!";
