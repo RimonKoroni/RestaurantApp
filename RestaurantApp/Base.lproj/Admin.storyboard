@@ -22,7 +22,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartImage" translatesAutoresizingMaskIntoConstraints="NO" id="bEE-QK-HK4" userLabel="background"/>
@@ -73,7 +73,7 @@
                                         <rect key="frame" x="0.0" y="28" width="130" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Za-a2-QNZ" id="L1M-He-Xmm">
-                                            <frame key="frameInset" width="130" height="35.5"/>
+                                            <frame key="frameInset" width="130" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbT-0h-yLS">
@@ -218,7 +218,7 @@
                         <viewControllerLayoutGuide type="bottom" id="st9-Gd-AQR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C29-lW-2Bf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BN7-ua-mEd"/>
@@ -792,7 +792,7 @@
                                                     <constraint firstAttribute="width" constant="60" id="Fee-Zq-mT3"/>
                                                     <constraint firstAttribute="height" constant="60" id="yRi-NQ-e3C"/>
                                                 </constraints>
-                                                <state key="normal" image="acceptCart"/>
+                                                <state key="normal" image="accept"/>
                                                 <connections>
                                                     <action selector="acceptDeleteAction:" destination="Wyd-ii-cB6" eventType="touchUpInside" id="5os-0H-ZzW"/>
                                                     <action selector="selectDate:" destination="65Q-18-LHN" eventType="touchUpInside" id="QW7-wZ-N5T"/>
@@ -803,7 +803,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="WER-T1-gPd"/>
                                                     <constraint firstAttribute="width" constant="60" id="hLg-YG-Zic"/>
                                                 </constraints>
-                                                <state key="normal" image="rejectCart"/>
+                                                <state key="normal" image="reject"/>
                                                 <connections>
                                                     <action selector="cancelDateModel:" destination="65Q-18-LHN" eventType="touchUpInside" id="5uF-IX-3dd"/>
                                                     <action selector="rejectDeleteAction:" destination="Wyd-ii-cB6" eventType="touchUpInside" id="Ysd-Ym-Mjl"/>
@@ -844,7 +844,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fD6-zY-qUe" id="BwZ-D6-eoq">
-                                                    <frame key="frameInset" width="300" height="43.5"/>
+                                                    <frame key="frameInset" width="300" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-xj-JZU">
@@ -893,7 +893,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wPt-UK-kZ3" id="l7j-Aw-ccl">
-                                                    <frame key="frameInset" width="300" height="43.5"/>
+                                                    <frame key="frameInset" width="300" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grr-S8-lAC">
@@ -990,7 +990,7 @@
                         <viewControllerLayoutGuide type="bottom" id="g9N-vU-Llk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v02-wO-ZKG">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Hgi-Wf-ZLY"/>
@@ -1354,7 +1354,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XVm-uJ-JHu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zx5-YZ-vdR">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="FNl-b3-h14"/>
@@ -1371,10 +1371,10 @@
                                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DMFoodTypeCell" id="gXx-cp-Dtv" customClass="DMFoodTypeCell" customModule="RestaurantApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="748" height="200"/>
+                                                        <rect key="frame" x="0.0" y="1" width="355" height="200"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXx-cp-Dtv" id="YJz-MI-836">
-                                                            <frame key="frameInset" width="748" height="200"/>
+                                                            <frame key="frameInset" width="355" height="200"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ugH-iq-ejM">
@@ -1802,7 +1802,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="g1Z-a3-qmc"/>
                                                     <constraint firstAttribute="width" constant="60" id="oGq-GJ-JeQ"/>
                                                 </constraints>
-                                                <state key="normal" image="acceptCart"/>
+                                                <state key="normal" image="accept"/>
                                                 <connections>
                                                     <action selector="acceptDeleteAction:" destination="0Gd-54-Upz" eventType="touchUpInside" id="gQZ-vh-Vdy"/>
                                                 </connections>
@@ -1812,7 +1812,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="sc2-fK-INF"/>
                                                     <constraint firstAttribute="width" constant="60" id="wJ6-tp-u4g"/>
                                                 </constraints>
-                                                <state key="normal" image="rejectCart"/>
+                                                <state key="normal" image="reject"/>
                                                 <connections>
                                                     <action selector="rejectDeleteAction:" destination="0Gd-54-Upz" eventType="touchUpInside" id="XsS-2Z-5OW"/>
                                                 </connections>
@@ -1889,7 +1889,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BOX-mB-Lgm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ckg-IM-o5W">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-sQ-Elx"/>
@@ -1906,10 +1906,10 @@
                                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DMFoodCell" id="MNf-6E-o6k" customClass="DMFoodCell" customModule="RestaurantApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="748" height="200"/>
+                                                        <rect key="frame" x="0.0" y="1" width="355" height="200"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MNf-6E-o6k" id="Eg1-db-pZD">
-                                                            <frame key="frameInset" width="748" height="200"/>
+                                                            <frame key="frameInset" width="355" height="200"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b5V-UF-Mhw">
@@ -2333,7 +2333,7 @@
                                                     <constraint firstAttribute="width" constant="60" id="OC9-ZI-X1Z"/>
                                                     <constraint firstAttribute="height" constant="60" id="pkS-UF-dj3"/>
                                                 </constraints>
-                                                <state key="normal" image="acceptCart"/>
+                                                <state key="normal" image="accept"/>
                                                 <connections>
                                                     <action selector="acceptDeleteAction:" destination="Wyd-ii-cB6" eventType="touchUpInside" id="9DJ-Fo-AbB"/>
                                                 </connections>
@@ -2343,7 +2343,7 @@
                                                     <constraint firstAttribute="width" constant="60" id="Dxb-N3-S79"/>
                                                     <constraint firstAttribute="height" constant="60" id="Y4Z-IX-1HX"/>
                                                 </constraints>
-                                                <state key="normal" image="rejectCart"/>
+                                                <state key="normal" image="reject"/>
                                                 <connections>
                                                     <action selector="rejectDeleteAction:" destination="Wyd-ii-cB6" eventType="touchUpInside" id="2kK-kn-pxO"/>
                                                 </connections>
@@ -2419,7 +2419,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CwO-Lb-l78"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nbl-TL-Fja">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-XE-aC8"/>
@@ -3042,7 +3042,7 @@
                         <viewControllerLayoutGuide type="bottom" id="x0k-u7-m6g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hvD-O7-Z4K">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Sgw-w1-5YB"/>
@@ -3457,7 +3457,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6c6-Bk-PJX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ued-7j-UOb">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="yVT-or-zbk"/>
@@ -3473,11 +3473,11 @@
                                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableNumberCell" id="PRI-BH-t2r" customClass="TableNumberCell" customModule="RestaurantApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="748" height="120"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableNumberCell" id="PRI-BH-t2r" customClass="TableNumberCell" customModule="RestaurantApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="1" width="363" height="120"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PRI-BH-t2r" id="EvN-tL-APl">
-                                                            <frame key="frameInset" width="748" height="120"/>
+                                                            <frame key="frameInset" width="363" height="120"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HwR-l0-wC7">
@@ -3652,7 +3652,7 @@
                                                     <constraint firstAttribute="width" constant="60" id="LII-C9-W08"/>
                                                     <constraint firstAttribute="height" constant="60" id="qRF-oK-yoF"/>
                                                 </constraints>
-                                                <state key="normal" image="acceptCart"/>
+                                                <state key="normal" image="accept"/>
                                                 <connections>
                                                     <action selector="acceptDeleteAction:" destination="Wyd-ii-cB6" eventType="touchUpInside" id="1us-zJ-pLl"/>
                                                     <action selector="acceptDeleteAction:" destination="Y46-1h-sGU" eventType="touchUpInside" id="Qgg-F9-mzh"/>
@@ -3663,7 +3663,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="Sjb-yj-wGb"/>
                                                     <constraint firstAttribute="width" constant="60" id="oDP-y5-vWn"/>
                                                 </constraints>
-                                                <state key="normal" image="rejectCart"/>
+                                                <state key="normal" image="reject"/>
                                                 <connections>
                                                     <action selector="rejectDeleteAction:" destination="Y46-1h-sGU" eventType="touchUpInside" id="SCe-3o-kNd"/>
                                                     <action selector="rejectDeleteAction:" destination="Wyd-ii-cB6" eventType="touchUpInside" id="vqu-Cp-hVn"/>
@@ -3941,7 +3941,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CKF-kh-jtf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hUq-23-IeJ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="yNf-rg-1HC"/>
@@ -3955,11 +3955,11 @@
                                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="notificationCell" id="8SN-Pi-tsA" customClass="NotificationCell" customModule="RestaurantApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1" width="748" height="200"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="notificationCell" id="8SN-Pi-tsA" customClass="NotificationCell" customModule="RestaurantApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1" width="355" height="200"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8SN-Pi-tsA" id="q2V-Fl-7hh">
-                                                    <frame key="frameInset" width="748" height="200"/>
+                                                    <frame key="frameInset" width="355" height="200"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aI6-Gc-LvM">
@@ -4359,7 +4359,7 @@
                         <viewControllerLayoutGuide type="bottom" id="biK-mx-WFr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bbE-kC-Zxb">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bfp-HL-hdC"/>
@@ -4376,10 +4376,10 @@
                                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderCell" id="vFQ-1p-4kk" customClass="OrderCell" customModule="RestaurantApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="748" height="200"/>
+                                                        <rect key="frame" x="0.0" y="1" width="355" height="200"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vFQ-1p-4kk" id="rng-aB-z8r">
-                                                            <frame key="frameInset" width="748" height="200"/>
+                                                            <frame key="frameInset" width="355" height="200"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2em-77-DJN">
@@ -4512,7 +4512,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="Ihx-7i-oU0"/>
                                                     <constraint firstAttribute="height" constant="100" id="lzj-TK-5oJ"/>
                                                 </constraints>
-                                                <state key="normal" image="acceptCart"/>
+                                                <state key="normal" image="accept"/>
                                                 <connections>
                                                     <action selector="acceptOrder:" destination="hkL-vo-nk4" eventType="touchUpInside" id="1Pt-0Z-8al"/>
                                                 </connections>
@@ -4811,7 +4811,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AKJ-kM-i5f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SU6-5a-U70">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ych-TO-dfu"/>
@@ -4864,10 +4864,10 @@
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dataStatisticsCell" id="uhm-xd-gdq" customClass="DataStatisticsCell" customModule="RestaurantApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="748" height="85"/>
+                                                        <rect key="frame" x="0.0" y="28" width="363" height="85"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uhm-xd-gdq" id="7mK-7y-ZZD">
-                                                            <frame key="frameInset" width="748" height="85"/>
+                                                            <frame key="frameInset" width="363" height="85"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lws-7E-SZg">
@@ -5198,7 +5198,7 @@
         <image name="StartButton" width="251" height="56"/>
         <image name="StartImage" width="768" height="1024"/>
         <image name="US" width="256" height="256"/>
-        <image name="acceptCart" width="100" height="100"/>
+        <image name="accept" width="100" height="100"/>
         <image name="addCircleIcon" width="100" height="100"/>
         <image name="appBackground" width="548" height="584"/>
         <image name="chartCircleIcon" width="100" height="100"/>
@@ -5218,7 +5218,7 @@
         <image name="navigationBar" width="1024" height="200"/>
         <image name="notificationIcon" width="100" height="100"/>
         <image name="plusIcon" width="512" height="512"/>
-        <image name="rejectCart" width="100" height="100"/>
+        <image name="reject" width="62" height="62"/>
         <image name="rejectIcon" width="256" height="256"/>
         <image name="tableNumberIcon" width="100" height="100"/>
         <image name="textFieldBackground" width="465" height="156"/>
