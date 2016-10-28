@@ -76,6 +76,7 @@ class ChartViewController: UIViewController , PNChartDelegate{
     
     func drawChart() {
         
+        
         if self.reportType == 1 {
             self.xAxisLabel.hidden = false
             self.yAxisLabel.hidden = false
