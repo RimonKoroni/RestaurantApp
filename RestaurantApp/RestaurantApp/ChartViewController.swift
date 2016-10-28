@@ -18,6 +18,9 @@ class ChartViewController: UIViewController , PNChartDelegate{
     @IBOutlet weak var yAxisLabel: UILabel!
     @IBOutlet weak var startDate: UILabel!
     @IBOutlet weak var endDate: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var centerTime: UILabel!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     var lang : String!
@@ -76,9 +79,25 @@ class ChartViewController: UIViewController , PNChartDelegate{
         if self.reportType == 1 {
             self.xAxisLabel.hidden = false
             self.yAxisLabel.hidden = false
+            if xAxis.count != 1 {
+                self.startTime.hidden = false
+                self.endTime.hidden = false
+                self.centerTime.hidden = false
+                self.startTime.text = xAxis[0]
+                self.endTime.text = xAxis[xAxis.count - 1]
+                if xAxis.count > 2 {
+                    self.centerTime.text = xAxis[xAxis.count / 2]
+                } else {
+                    self.centerTime.hidden = true
+                }
+            } else {
+                self.startTime.hidden = true
+                self.endTime.hidden = true
+                self.centerTime.hidden = true
+            }
+            
             let lineChart:PNLineChart = PNLineChart(frame: CGRect(x: 50, y: 50, width: 500, height: 400))
             
-            lineChart.showLabel = false
             lineChart.backgroundColor = UIColor.clearColor()
             lineChart.xLabels = xAxis
             lineChart.showCoordinateAxis = false
@@ -103,6 +122,9 @@ class ChartViewController: UIViewController , PNChartDelegate{
         } else {
             self.xAxisLabel.hidden = true
             self.yAxisLabel.hidden = true
+            self.startTime.hidden = true
+            self.endTime.hidden = true
+            self.centerTime.hidden = true
             let barChart = PNBarChart(frame: CGRect(x: 0, y: 0, width: 600, height: 500))
             barChart.backgroundColor = UIColor.clearColor()
     
